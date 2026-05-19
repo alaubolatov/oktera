@@ -1,0 +1,27 @@
+languageCode: "fi"
+subject: "Uusi kirjautumisilmoitus"
+title: "Uusi kirjautuminen havaittu Okta-tilillesi"
+greeting: "Hyvä ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: 'Sinun <strong>Okta</strong>-tili
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  kirjautui juuri sisään uudelta tai tunnistamattomalta laitteelta, selaimelta tai sovellukselta.'
+paragraph2: "<strong>Kirjautumistiedot</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Et tunnista tätä toimintaa?</strong>
+  <br />
+  Tilisi on saattanut joutua vaaraan; suosittelemme ilmoittamaan epäilyttävästä toiminnasta organisaatiollesi."
+paragraph4: "Tilisi turvallisuus on meille erittäin tärkeää ja haluamme varmistaa, että saat tiedon tärkeistä tapahtumista."
+paragraph5: "Emme voineet varmistaa, oletko aiemmin kirjautunut tällä laitteella. Tämä ilmoitus on yleinen, jos kirjaudut uudella laitteella, uudella selaimella, olet poistanut evästeet tai käytät Oktaa incognito-tilassa."
+reportSuspiciousActivityButtonText: "Ilmoita epäilyttävästä toiminnasta"
+footerText: "Tämä on automaattinen sähköposti. Vastauksia ei seurata eikä niihin vastata."
+footerWithDateTimeText: "Tämä on automaattinen sähköposti, joka on luotu ${request.date} klo ${request.time}. Vastauksia ei seurata eikä niihin vastata."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sijainti: München<br />
+  Rekisteri: München HRB 248534"

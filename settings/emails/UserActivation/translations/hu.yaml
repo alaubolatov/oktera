@@ -1,0 +1,22 @@
+languageCode: "hu"
+subject: "Aktiválja a fiókját"
+title: "Aktiválja a fiókját"
+greeting: "Kedves ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Köszönöm a regisztrációt."
+paragraph2: "A <strong> Knauf </strong> <strong>Okta</strong> használja a webes alkalmazások kezelését, és létrehozott egy Okta felhasználói fiókot az Ön számára.
+  Kérjük, kattintson a következő linkre az e -mail címének ellenőrzéséhez, és beállítja a jelszavát a fiók aktiválásához:"
+paragraph3: "Ez a link a ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)} -ben jár le."
+paragraph4: 'A felhasználóneved 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  .<br />
+  A szervezet bejelentkezési oldala az'
+paragraph5: "Ha nehézségekbe ütközik a fiókjához való hozzáféréshez, elküldheti a súgó kérést:"
+activateAccountButtonText: "Aktiválja a fiókját"
+footerText: "Ez egy automatizált e-mail. A válaszokat nem figyelik meg vagy nem válaszolnak."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ülés: München <br />
+  Regisztráció: München HRB 248534"

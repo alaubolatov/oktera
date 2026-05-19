@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="none" />
+    <link rel="shortcut icon" href="https://account.knauf.com/favicon.ico" type="image/x-icon"/>
+
+    <title>{{orgName}} - {{errorSummary}}</title>
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/sections/errors-v2.css">
+</head>
+<body>
+    <div class="login-bg-image" style="background-image: {{bgImageUrl}}"></div>
+    <div class="widget">
+        <div class="container">
+            <div class="header">
+                <img alt="{{orgName}}" src="{{orgLogo}}" class="org-logo">
+            </div>
+            <div class="illustration">
+                <!-- Show HTTP error code if exists -->
+                {{#httpStatusCode}}
+                <div class="error-code">{{httpStatusCode}}</div>
+                {{/httpStatusCode}}
+                <!-- Show generic error image if not  -->
+                {{^httpStatusCode}}
+                <img alt="{{errorSummary}}" src="/assets/img/icons/alert.png" />
+                {{/httpStatusCode}}
+            </div>
+            <div class="content">
+                <h2 class="o-form-title">{{errorSummary}}</h2>
+                <p class="o-form-explain">{{{errorDescription}}}</p>
+                <a href="/" class="button">{{back}}</a>
+
+                {{#technicalDetails}}
+                <div class="footer">
+                    <a class="non-link">Technical details</a> <span class="dropdown-arrow">&#9662;</span>
+                    <p class="technical-details">{{technicalDetails}}</p>
+                </div>
+                {{/technicalDetails}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

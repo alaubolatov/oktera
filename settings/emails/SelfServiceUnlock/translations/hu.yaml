@@ -1,0 +1,19 @@
+languageCode: "hu"
+subject: "Fiók feloldása"
+title: "Okta -fiók feloldását kérte"
+greeting: "Kedves ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "A <strong>Okta</strong> fiókjához feloldási kérelmet nyújtottak be. Ha nem ön nyújtotta be ezt a kérést, kérjük, azonnal vegye fel a kapcsolatot a rendszergazdával."
+paragraph2: 'Kattintson erre a linkre a felhasználónév fiókjának feloldásához 
+  <strong>
+  <a style="color: #334870; text-decoration: none"> ${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Ez a link a ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)} -ben jár le."
+paragraph4: "Ha nehézségekbe ütközik a fiókjához való hozzáféréshez, küldjön súgó kérést az adminisztrátorának:"
+unlockAccountButtonText: "Fiók feloldása"
+recoveryCode: "Helyreállítási kód"
+footerText: "Ez egy automatizált e-mail. A válaszokat nem figyelik meg vagy nem válaszolnak."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ülés: München <br />
+  Regisztráció: München HRB 248534"

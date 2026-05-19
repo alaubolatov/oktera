@@ -1,0 +1,39 @@
+Password:
+  Default Policy:
+    Password Settings:
+      Minimum length: 12
+
+      Complexity requirements:
+        Lower case letter: true
+        Upper case letter: true
+        Number (0-9): true
+        Symbol: false
+        ######
+        Does not contain part of username: false
+        Does not contain first name: false
+        Does not contain last name: false
+
+      Common password check:
+        Restrict use of common passwords: true
+
+      Password age:
+        Enforce password history for last `n` passwords: 0
+        Minimum password age in hours: 0
+        Password expires after `n` days: 0
+        Prompt user `n ` days before password expires: 0
+
+      Lock out:
+        Lock out user after `n` unsuccessful attempts: 10
+        Account is automatically unlocked after `n` minutes: 0
+        Show lock out failures: false
+        Send lockout email to user: true
+
+    Account Recovery:
+      Self-service recovery options:
+        SMS: false
+        Voice call: false
+        Email: true
+        Reset/Unlock recovery emails are valid for `n` minutes: 2880 # 48 hours
+
+      Additional self-service recovery option:
+        Security question: false

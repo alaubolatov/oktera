@@ -1,0 +1,23 @@
+languageCode: "nl-NL"
+subject: "Wachtwoord account resetten"
+title: "Okta wachtwoord reset gevraagd"
+greeting: "Beste ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1:
+  "Er is een wachtwoord reset verzoek gedaan voor je <strong>Okta</strong> account.
+  Als je dit verzoek niet hebt gedaan, neem dan onmiddellijk contact op met je systeembeheerder."
+paragraph2: 'Klik op deze link om het wachtwoord voor je gebruikersnaam
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  opnieuw in te stellen:'
+paragraph3: "Deze link vervalt over ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4: "Als je moeilijkheden ondervindt bij het openen van je account,
+  stuur dan een e-mail met verzoek om hulp naar:"
+paragraph5: "Kan de link niet gebruiken? Voer in plaats daarvan de code in:"
+resetPasswordButtonText: "Reset wachtwoord"
+footerText: "Dit is een geautomatiseerde e-mail. Antwoorden worden niet gecontroleerd of beantwoord."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sitz: München<br />
+  Register: München HRB 248534"

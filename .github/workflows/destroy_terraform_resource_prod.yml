@@ -1,0 +1,48 @@
+name: Destroy Terraform Resource from State (PROD)
+
+concurrency: prod
+
+on:
+  workflow_dispatch:
+    inputs:
+      resource_ID:
+        type: string
+        description:
+          'The resource identifier to be removed from terraform state.
+          Note: Single-quote this value and make sure any single-quotes are escaped within the value.'
+        required: true
+      force_destroy:
+        type: boolean
+        description: 'Force destroy resources with prevent_destroy lifecycle rule (temporarily removes the rule)'
+        required: false
+        default: false
+
+jobs:
+  approval:
+    runs-on: [ubuntu-latest]
+    environment: with-approval
+
+    steps:
+      - name: Approval
+        run: echo 'Destroy operation is approved'
+
+  destroy_terraform_resource_prod:
+    needs: approval
+    uses: ./.github/workflows/_destroy_terraform_resource.yml
+    with:
+      environment: prod
+      resource_ID: ${{ inputs.resource_ID }}
+      force_destroy: ${{ inputs.force_destroy }}
+
+      AZURE_BACKEND_RESOURCE_GROUP_NAME: 'rg-kul-prod-tfstate-westeurope'
+      AZURE_BACKEND_STORAGE_ACCOUNT_NAME: 'kulprodtfstatewesteurope'
+      AZURE_BACKEND_CONTAINER_NAME: 'prodtfstate'
+      AZURE_BACKEND_KEY: 'okta-prod'
+      KEY_VAULT_NAME: kv-kul-prod-001
+      KEY_VAULT_OKTA_API_TOKEN_KEY: kul-prod-OKTA-API-KEY
+      OKTA_ORG_NAME: 'knaufcustomer'
+      OKTA_BASE_URL: 'okta.com'
+      TF_VAR_accountLinkURL: 'account.knauf.com'
+      TF_VAR_emailSubjectSuffix: ''
+      TF_VAR_supportEmail: 'app-support@knauf.com'
+    secrets: inherit

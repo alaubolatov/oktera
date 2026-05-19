@@ -1,0 +1,18 @@
+languageCode: "it"
+subject: "Sblocca conto"
+title: "Richiesto sblocco account Okta"
+greeting: "Caro ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "È stata effettuata una richiesta di sblocco dell’account per il tuo account. Se non hai effettuato tu questa richiesta, contatta immediatamente il tuo amministratore. Qualcuno potrebbe tentare di accedere al tuo account."
+paragraph2: "Se hai fatto questa richiesta: il tuo account non è bloccato e dovresti essere in grado di accedere. Se hai problemi ad accedere, prova a reimpostare la password o a contattare il tuo amministratore."
+paragraph3: "Se riscontri difficoltà nell’accesso al tuo account, invia una richiesta di aiuto al tuo amministratore:"
+paragraph4: 'Vai alla tua pagina 
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Aiuto per l’accesso</strong>
+  </a>. 
+  Quindi fare clic sul collegamento Richiedi assistenza.'
+footerText: "Questa è un’e-mail automatizzata. Non rispondere a questa e-mail."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Seat: München <br />
+  Register: München HRB 248534"

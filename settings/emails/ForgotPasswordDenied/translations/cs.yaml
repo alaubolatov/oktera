@@ -1,0 +1,18 @@
+languageCode: cs
+subject: "Obnovení hesla k účtu "
+title: Žádost o obnovení hesla Okta
+greeting: "Vážený/Vážená ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1:
+  Byl zadán požadavek na obnovu hesla k Vašemu účtu Okta. Pokud jste tento
+  požadavek nepodali, neprodleně kontaktujte správce systému.
+paragraph2:
+  "V současné době může heslo obnovit pouze správce. Žádost o pomoc zašlete
+  na adresu: "
+footerText:
+  Jedná se o automatický e-mail. Odpovědi nejsou monitorovány ani na ně
+  není odpovídáno.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Umístění: Munich <br />
+  Rejstříku: Munich HRB 248534"

@@ -1,0 +1,55 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+skinparam sequence {
+    ArrowColor black
+    ActorBorderColor BACBFC
+    ActorBackgroundColor BACBFC
+    LifeLineBorderColor blue
+    LifeLineBackgroundColor lightblue
+
+    ParticipantBorderColor D6E0FD
+    ParticipantBackgroundColor D6E0FD
+}
+
+skinparam NoteBackgroundColor SmokeWhite
+
+== Authentication ==
+
+autonumber
+
+actor User
+participant "Frontend\n(Browser)" as Frontend
+participant "Next Backend\n(NextAuth)" as NextBackend
+participant "Okta AuthorizationServer\n(default)" as AuthorizationServer
+
+User -> Frontend: Open restricted page
+activate Frontend
+Frontend -> NextBackend: get session
+activate NextBackend
+NextBackend -> Frontend: return session or redirect
+deactivate NextBackend
+Frontend -> AuthorizationServer: Redirect to Okta /authorize \n(use clienId, redirect_uri, state, scope)
+activate AuthorizationServer
+AuthorizationServer -> AuthorizationServer: Authenticate user
+AuthorizationServer --> Frontend: Okta login form (if not already logged in)
+User --> Frontend: Provide credentials
+Frontend --> AuthorizationServer: Okta login
+AuthorizationServer -> Frontend: return redirect with authorization code (redirect_uri of step 4)\n
+Frontend -> NextBackend: follow redirect\n(send authorization code)
+activate NextBackend
+NextBackend -> AuthorizationServer: request access token \n(use authorization code, clientId, client secret)
+AuthorizationServer -> NextBackend: return id token and access token
+deactivate AuthorizationServer
+NextBackend -> Frontend: Return next-auth session-token\n(JWT token with Okta id and access tokens as attributes)
+note right
+    NextBackend wraps
+    access token in JWT
+    session-token
+end note
+deactivate Frontend
+deactivate AuthorizationServer
+deactivate NextBackend
+
+
+@enduml

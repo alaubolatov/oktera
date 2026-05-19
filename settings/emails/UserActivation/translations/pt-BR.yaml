@@ -1,0 +1,23 @@
+languageCode: "pt-BR"
+subject: "Ativar a sua conta"
+title: "Ativar a sua conta"
+greeting: "Caro ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Obrigado pelo seu registo."
+paragraph2: "<strong>Knauf</strong> está a utilizar o <strong>Okta
+  </strong> para gerir as suas aplicações web e criou uma conta de utilizador Okta para si.
+  Clique no link a seguir para verificar seu endereço de e-mail e definir sua senha para ativar sua conta:"
+paragraph3: "Esta ligação expira em ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}."
+paragraph4: 'O seu nome de utilizador é 
+  <strong> 
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a> 
+  </strong>.
+  <br /> 
+  A página de início de sessão da sua organização é'
+paragraph5: "Se tiver dificuldades em aceder à sua conta, pode enviar um pedido de ajuda para:"
+activateAccountButtonText: "Ativar a sua conta"
+footerText: "Este é um correio eletrónico automatizado. As respostas não são monitorizadas ou respondidas. "
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 Munique"
+footerAddress2: "Sede: Munique <br />
+  Registo: Munique HRB 248534"

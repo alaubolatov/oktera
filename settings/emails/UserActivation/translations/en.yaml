@@ -1,0 +1,23 @@
+languageCode: "en"
+subject: "Activate your account"
+title: "Activate your account"
+greeting: "Dear ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Thank you for your registration."
+paragraph2: "<strong>Knauf</strong> is using <strong>Okta</strong> to manage your web applications
+  and has created an Okta user account for you. Please click the following link to verify
+  your email address and set your password to activate your account:"
+paragraph3: "This link expires in ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}."
+paragraph4: 'Your username is
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  <br />
+  Your organization''s sign-in page is'
+paragraph5: "If you experience difficulties accessing your account, you can send a help request to:"
+activateAccountButtonText: "Activate Account"
+footerText: "This is an automated email. Replies are not monitored or answered."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Location: Munich<br />
+  Register: Munich HRB 248534"

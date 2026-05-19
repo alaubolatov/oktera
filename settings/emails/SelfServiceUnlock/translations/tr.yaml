@@ -1,0 +1,21 @@
+languageCode: "tr"
+subject: "Kilitli hesabı kullanıma açma"
+title: "Kilitli Okta Hesabını kullanıma açma talebi alındı"
+greeting: "Sayın ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Kilitli <strong>Okta</strong> hesabınız için bir hesap kilidi kaldırma
+  talebinde bulunuldu. Bu talep size ait değilse, lütfen hemen sistem yöneticinizle iletişime geçin."
+paragraph2:
+  'Kullanıcı adınız 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>''a ait şifreyi sıfırlamak için bu bağlantıya tıklayın.'
+paragraph3: "Bu bağlantı ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)} içerisinde geçerliliğini kaybedecektir."
+paragraph4: "Hesabınıza erişmekte sorun yaşıyorsanız, yöneticinize yardım talebi gönderin:"
+unlockAccountButtonText: "Kilitli Hesabı Kullanıma Aç"
+recoveryCode: "Kurtarma kodu"
+footerText: "Bu otomatik bir e -postadır. Yanıtlar takip edilmez ya da cevaplanmaz."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Konum: Munich <br />
+  Tescili: Munich HRB 248534"

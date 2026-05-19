@@ -1,0 +1,32 @@
+---
+Email:
+  key: okta_email
+  active?: true
+  settings:
+    tokenLifetimeInMinutes: 30
+    allowedFor: any
+
+Google Authenticator:
+  key: google_otp
+  active?: true
+  settings:
+    allowedFor: any
+
+Okta Verify:
+  key: okta_verify
+  active?: true
+  settings:
+    allowedFor: any
+    userVerification: PREFERRED
+
+Password:
+  key: okta_password
+  active?: true
+
+Phone:
+  key: phone_number
+  active?: true
+  settings:
+    allowedFor: any
+    allowedMethods: [sms]
+

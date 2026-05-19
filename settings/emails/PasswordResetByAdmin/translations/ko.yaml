@@ -1,0 +1,15 @@
+languageCode: "ko"
+subject: "계정 비밀번호 재설정"
+title: "관리자가 Okta 비밀번호를 재설정했습니다"
+greeting: "안녕하세요 ${f.escapeHtml($!user.profile.firstName)}님,"
+paragraph1: "귀하의 <strong>Okta</strong> 비밀번호는 <strong>Knauf</strong>의 시스템 관리자 ${f.escapeHtml($!technicalContact.fullName)} 님에 의해 재설정되었습니다."
+paragraph2: '다음 링크를 클릭하여 사용자 이름 <strong><a style="color: #334870; text-decoration: none">${user.profile.login}</a></strong>의 비밀번호를 재설정하세요:'
+paragraph3: "이 링크는 ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)} 후에 만료됩니다."
+paragraph4: "계정에 접속하는 데 어려움이 있으시면 관리자에게 도움을 요청해 주세요:"
+resetPasswordButtonText: "비밀번호 재설정"
+footerText: "이 메일은 자동으로 발송되었습니다. 회신은 확인되거나 답변되지 않습니다."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "본사: 뮌헨 <br /> 
+  등록: 뮌헨 HRB 248534"

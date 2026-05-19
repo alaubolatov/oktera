@@ -1,0 +1,149 @@
+<div
+  style="
+    background-color: #ffffff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+  "
+>
+  <table
+    style="max-width: 600px; float: none; margin: 0 auto"
+    border="0"
+    valign="top"
+    align="left"
+  >
+    <tbody>
+      ${banner}
+      <tr bgcolor="#ffffff">
+        <td>
+          <table
+            bgcolor="#ffffff"
+            style="
+              font-family: Arial, sans-serif;
+              font-size: 14px;
+              line-height: 22px;
+              padding: 24px;
+              border-top: 0.5px solid #b3bac9;
+              width: 100%;
+              color: #334870;
+            "
+          >
+            <tbody>
+              <tr>
+                <td
+                  style="
+                    color: #001a4c;
+                    font-size: 16px;
+                    line-height: 28px;
+                    font-weight: 600;
+                    letter-spacing: 0.01em;
+                  "
+                >
+                  ${title}
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px; vertical-align: bottom">
+                  ${greeting}
+                </td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px">${paragraph1}</td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px">${paragraph2}</td>
+              </tr>
+
+              <tr>
+                <td align="center" style="border: none; padding: 24px 0 0 0">
+                  <table border="0" valign="top" style="font-size: inherit">
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div
+                            style="
+                              display: inline-block;
+                              padding: 15px 36px;
+                              text-align: center;
+                              cursor: pointer;
+                              color: #fff;
+                              border-radius: 4px;
+                              background-color: #003778;
+                              border: 1px solid #003778;
+                            "
+                          >
+                            <a
+                              id="unlock-account-link"
+                              href="$${baseURL}/signin/unlock"
+                              style="text-decoration: none; cursor: pointer"
+                            >
+                              <span
+                                style="
+                                  font-size: 14px;
+                                  line-height: 18px;
+                                  font-weight: bold;
+                                  color: #fff;
+                                  text-transform: capitalize;
+                                  cursor: pointer;
+                                "
+                              >
+                                ${unlockAccountButtonText}
+                              </span>
+                            </a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding-top: 24px">
+                  ${paragraph3}
+                  <a
+                    href="mailto:${supportEmail}"
+                    style="text-decoration: none; color: #334870"
+                  >
+                    <strong>${supportEmail}</strong>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <table
+            style="
+              background-color: #f2f4f6;
+              text-align: left;
+              padding: 24px;
+              font-size: 12px;
+              line-height: 18px;
+              letter-spacing: 0.005em;
+              color: #808ca5;
+              width: 100%;
+            "
+          >
+            <tbody>
+              <tr>
+                <td style="padding: inherit">${footerText}</td>
+              </tr>
+              <tr>
+                <td style="padding-top: 16px; padding-bottom: 16px">
+                  ${footerAddress1}
+                </td>
+              </tr>
+              <tr>
+                <td>${footerAddress2}</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

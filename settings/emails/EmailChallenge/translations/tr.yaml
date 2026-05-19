@@ -1,0 +1,22 @@
+languageCode: tr
+subject: "Gerekli Eylem: Tek kullanımlık doğrulama kodu"
+title: "Gerekli Eylem: Tek kullanımlık doğrulama kodu"
+greeting: Sayın ${f.escapeHtml($!user.profile.firstName)},
+paragraph1:
+  Kimlik doğrulama için kullanılabilecek tek seferlik bir kod talebinde
+  bulunulduğu için bu e-postayı alıyorsunuz.
+paragraph2: "Doğrulama için lütfen aşağıdaki kodu girin:"
+paragraph3:
+  Bu e -postayı yanlışlıkla aldığınızı düşünüyorsanız, lütfen sistem yöneticinize
+  ulaşın.
+paragraph4: "Ya da aşağıdaki düğmeye tıklayın:"
+paragraph5:
+  Bu bağlantı ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}
+  içerisinde geçerliliğini kaybedecektir.
+signInButtonText: "Giriş yap"
+footerText: Bu otomatik bir e -postadır. Yanıtlar takip edilmez ya da cevaplanmaz.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Konum: Munich <br />
+  Tescili: Munich HRB 248534"

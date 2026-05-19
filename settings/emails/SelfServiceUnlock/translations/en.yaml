@@ -1,0 +1,19 @@
+languageCode: "en"
+subject: "Unlock account"
+title: "Okta account unlock requested"
+greeting: "Dear ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "An account unlock request was made for your <strong>Okta</strong> account. If you did not make this request, please contact your system administrator immediately."
+paragraph2: 'Click this link to unlock the account for your username
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "This link expires in ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)}."
+paragraph4: "If you experience difficulties accessing your account, send a help request to your administrator:"
+unlockAccountButtonText: "Unlock account"
+recoveryCode: "Recovery code"
+footerText: "This is an automated email. Replies are not monitored or answered."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Seat: München <br />
+  Register: München HRB 248534"

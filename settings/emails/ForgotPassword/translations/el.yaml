@@ -1,0 +1,21 @@
+languageCode: "el"
+subject: "Επαναφορά κωδικού πρόσβασης λογαριασμού"
+title: "OΖητήθηκε επαναφορά κωδικού πρόσβασης Okta"
+greeting: "Αγαπητέ ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1:
+  "Έγινε αίτηση επαναφοράς κωδικού πρόσβασης για το λογαριασμό σας <strong>Okta</strong>.
+  Εάν δεν κάνατε αυτό το αίτημα, παρακαλούμε επικοινωνήστε αμέσως με το διαχειριστή του συστήματός σας."
+paragraph2: 'Κάντε κλικ σε αυτόν τον σύνδεσμο για να επαναφέρετε τον κωδικό πρόσβασης για το όνομα χρήστη σας
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}:</a>
+  </strong>'
+paragraph3: "Αυτός ο σύνδεσμος λήγει σε ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4: "Εάν αντιμετωπίζετε δυσκολίες στην πρόσβαση στο λογαριασμό σας, μπορείτε να στείλετε ένα αίτημα βοήθειας στη διεύθυνση:"
+paragraph5: "Δεν μπορείτε να χρησιμοποιήσετε τον σύνδεσμο; Εισάγετε τον κωδικό:"
+resetPasswordButtonText: "Επαναφορά κωδικού πρόσβασης"
+footerText: "Αυτό είναι ένα αυτοματοποιημένο μήνυμα ηλεκτρονικού ταχυδρομείου. Οι απαντήσεις δεν παρακολουθούνται ούτε απαντώνται.."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Έδρα: Μόναχο <br />
+  Μητρώο: Μόναχο HRB 248534"

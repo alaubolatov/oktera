@@ -1,0 +1,116 @@
+﻿Language name or code;en;ro
+UserActivation_subject;Activate your account;Activați-vă contul
+ForgotPassword_subject;Account password reset ;Resetarea parolei contului 
+ForgotPasswordDenied_subject;Account password reset ;Resetarea parolei contului 
+PasswordResetByAdmin_subject;Account password reset;Resetarea parolei contului
+SelfServiceUnlock_subject;Unlock account;Deblocați contul
+AccountLockout_subject;Account locked;Cont blocat
+NewSignOnNotification_subject;New sign-on notification;Notificare de conectare nouă
+EmailChallenge_subject;Action Required: One-time verification code ;Acțiunea necesară: Cod de verificare de unică folosință 
+UserActivation_title;Activate your account;Activați-vă contul
+ForgotPassword_title;Okta password reset requested;S-a solicitat resetarea parolei Okta
+PasswordResetByAdmin_title;Okta password reset by administrator ;Parola Okta a fost resetată de administrator 
+ForgotPasswordDenied_title;Okta password reset requested;S-a solicitat resetarea parolei Okta
+SelfServiceUnlock_title;Okta account unlock requested ;S-a solicitat deblocarea contului Okta 
+AccountLockout_title;Account locked;Cont blocat
+NewSignOnNotification_title;New sign-on detected for your Okta account ;S-a detectat o conectare nouă pentru contul dvs. Okta 
+EmailChallenge_title;Action Required: One-time verification code ;Acțiunea necesară: Cod de verificare de unică folosință 
+greeting;Dear ${f.escapeHtml($!user.profile.firstName)}, ;Dragă ${f.escapeHtml($!user.profile.firstName)}, 
+UserActivation_paragraph1;Thank you for your registration. ;Vă mulțumim pentru că v-ați înregistrat. 
+UserActivation_paragraph2;"<strong>Knauf</strong> is using <strong>Okta</strong> to manage your web applications and has created an Okta user account for you.
+Please click the following link to verify your email address and set your password to activate your account: ";"<strong>Knauf</strong> utilizează <strong>Okta</strong> pentru a vă gestiona aplicațiile web și a creat un cont de utilizator Okta pentru dvs.
+Faceți clic pe următorul link pentru a vă verifica adresa de e-mail și pentru a vă seta parola pentru a vă activa contul: "
+ForgotPasswordDenied_paragraph1;A password reset request was made for your Okta account. If you did not make this request, please contact your system administrator immediately.;S-a făcut o solicitare de resetare a parolei pentru contul dvs. Okta. Dacă nu ați făcut această solicitare, contactați imediat administratorul de sistem.
+PasswordResetByAdmin_paragraph1;Your Okta password has been reset by your system administrator ${f.escapeHtml($!technicalContact.fullName)} at Knauf. ;Parola dvs. Okta a fost resetată de administratorul dvs. de sistem ${f.escapeHtml($!technicalContact.fullName)} din cadrul Knauf. 
+PasswordResetByAdmin_paragraph2;"Click this link to reset the password for your username <strong><a style=""color: #334870; text-decoration: none"">${user.profile.login}</a></strong>: ";"Faceți clic pe acest link pentru a reseta parola pentru numele dvs. de utilizator <strong><a style=""color: #334870; text-decoration: none"">${user.profile.login}</a></strong>: "
+ForgotPassword_paragraph1;A password reset request was made for your <strong>Okta</strong> account. If you did not make this request, please contact your system administrator immediately. ;S-a făcut o solicitare de resetare a parolei pentru contul dvs. <strong>Okta</strong>. Dacă nu ați făcut această solicitare, contactați imediat administratorul de sistem. 
+ForgotPassword_paragraph2;"Click this link to reset the password for your username <strong><a style=""color: #334870; text-decoration: none"">${user.profile.login}</a></strong>: ";"Faceți clic pe acest link pentru a reseta parola pentru numele dvs. de utilizator <strong><a style=""color: #334870; text-decoration: none"">${user.profile.login}</a></strong>: "
+SelfServiceUnlock_paragraph1;An account unlock request was made for your <strong>Okta</strong> account. If you did not make this request, please contact your system administrator immediately. ;S-a făcut o solicitare de deblocare a contului pentru contul dvs. <strong>Okta</strong>. Dacă nu ați făcut această solicitare, contactați imediat administratorul de sistem. 
+SelfServiceUnlock_paragraph2;"Click this link to unlock the account for your username <strong><a style=""color: #334870; text-decoration: none"">${user.profile.login}</a></strong>:";"Faceți clic pe acest link pentru a debloca contul pentru numele dvs. de utilizator <strong><a style=""color: #334870; text-decoration: none"">${user.profile.login}</a></strong>:"
+AccountLockout_paragraph1;Your <strong>Okta</strong> account has been locked due to too many failed login attempts.;Contul dvs. <strong>Okta</strong> a fost blocat din cauza prea multor încercări eșuate de conectare.
+AccountLockout_paragraph2;To reset your account, it may be possible to use the link below: ;Pentru a vă reseta contul, puteți utiliza linkul de mai jos: 
+NewSignOnNotification_paragraph1;"Your <strong>Okta</strong> account <strong><a style=""color: #334870; text-decoration: none"">${user.profile.login}</a></strong> was just used to sign-in from a new or unrecognized device, browser, or application. ";"Contul dvs. <strong>Okta</strong> <strong><a style=""color: #334870; text-decoration: none"">${user.profile.login}</a></strong> tocmai s-a utilizat pentru conectare de pe un dispozitiv, un browser, o aplicație nerecunoscut/ă. "
+NewSignOnNotification_paragraph2;"<strong>Sign-In Details</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}";"<strong>Detalii de conectare</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+NewSignOnNotification_paragraph3;"<strong>Don't recognize this activity? </strong>
+<br />
+Your account may have been compromised; we recommend reporting the suspicious activity to your organization. ";"<strong>Nu recunoașteți această activitate? </strong>
+<br />
+Este posibil ca contul dvs. să fi fost compromis; vă recomandăm să raportați activitatea suspectă organizației dvs. "
+EmailChallenge_paragraph1;You are receiving this email because a request was made for a one-time code that can be used for authentication.;Primiți acest e-mail deoarece s-a făcut o solicitare pentru un cod de unică folosință care poate fi utilizat pentru autentificare.
+EmailChallenge_paragraph2;Please enter the following code for verification: ;Vă rugăm să introduceți următorul cod pentru verificare: 
+UserActivation_activateAccountButtonText;Activate your account;Activați-vă contul
+UserActivation_paragraph3;This link expires in ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}.;Acest link expiră în ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}.
+ForgotPassword_resetPasswordButtonText;Reset Password;Resetați parola
+ForgotPassword_paragraph3;This link expires in ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}. ;Acest link expiră în ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}. 
+PasswordResetByAdmin_resetPasswordButtonText;Reset Password;Resetați parola
+PasswordResetByAdmin_paragraph3;This link expires in ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}. ;Acest link expiră în ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}. 
+SelfServiceUnlock_unlockAccountButtonText;Unlock account <unlock account link>;Deblocați contul <unlock account link>
+SelfServiceUnlock_paragraph3;"This link expires in ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)}
+.";"Acest link expiră în ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)}
+."
+AccountLockout_unlockAccountButtonText;Unlock account;Deblocați contul
+NewSignOnNotification_reportSuspiciousActivityButtonText;Report Suspicious Activity;Raportați activitatea suspectă
+UserActivation_paragraph4;"Your username is <strong> <a style=""color: #334870; text-decoration: none""> ${user.profile.login} </a> </strong> <br /> Your organization's sign-in page is ";"Numele dvs. de utilizator este <strong> <a style=""color: #334870; text-decoration: none""> ${user.profile.login} </a> </strong> <br /> Pagina de conectare a organizației dvs. este "
+UserActivation_paragraph5;If you experience difficulties accessing your account, you can send a help request to:;Dacă întâmpinați dificultăți la accesarea contului dvs., puteți trimite o solicitare de ajutor la:
+ForgotPasswordDenied_paragraph2;At this time your password can only be reset by an administrator. Please send a help request to: ;În acest moment, parola dvs. poate fi resetată numai de un administrator. Vă rugăm să trimiteți o solicitare de ajutor la: 
+ForgotPassword_paragraph4;If you experience difficulties accessing your account, send a help request to your administrator:;Dacă întâmpinați dificultăți la accesarea contului, trimiteți o solicitare de ajutor administratorului:
+PasswordResetByAdmin_paragraph4;If you experience difficulties accessing your account, send a help request to your administrator:;Dacă întâmpinați dificultăți la accesarea contului, trimiteți o solicitare de ajutor administratorului:
+SelfServiceUnlock_paragraph4;If you experience difficulties accessing your account, send a help request to your administrator:;Dacă întâmpinați dificultăți la accesarea contului, trimiteți o solicitare de ajutor administratorului:
+AccountLockout_paragraph3;If that doesn't work, or if you did not initiate these login attempts, please contact your administrator:  ;Dacă acest lucru nu funcționează sau dacă nu ați inițiat aceste încercări de conectare, vă rugăm să contactați administratorul:  
+NewSignOnNotification_paragraph4;The security of your account is very important to us and we want to ensure that you are updated when important actions are taken. ;Securitatea contului dvs. este foarte importantă pentru noi și dorim să ne asigurăm că sunteți informat când se întreprind acțiuni importante. 
+NewSignOnNotification_paragraph5;We were unable to determine if you had previously signed in with this device before. This notification is common if you are signing in a new device, a new browser, have deleted your cookies or are accessing Okta in Incognito Mode. ;Nu am putut stabili dacă v-ați conectat anterior de pe acest dispozitiv. Această notificare este obișnuită dacă vă conectați de pe un dispozitiv nou, un browser nou, dacă ați șters modulele cookie sau ați accesat Okta în modul incognito. 
+EmailChallenge_paragraph3;If you believe you have received this email in error, please reach out to your system administrator.;Dacă sunteți de părere că ați primit acest e-mail din greșeală, vă rugăm să contactați administratorul de sistem.
+footerText;This is an automated email. Replies are not monitored or answered. ;Acesta este un e-mail generat automat. Răspunsurile nu sunt monitorizate și nu se răspunde la acestea. 
+footerWithDateTimeText;This is an automated email generated on ${request.date} at ${request.time}. Replies are not monitored or answered.;Acesta este un e-mail generat automat în ${request.date} la ${request.time}. Răspunsurile nu sunt monitorizate și nu se răspunde la acestea.
+footerAddress1;"Knauf Digital GmbH <br />
+Landshuter Allee 10 <br /> 80637 München";"Knauf Digital GmbH <br />
+Landshuter Allee 10 <br /> 80637 München"
+footerAddress2;"Seat: München <br />
+Register: München HRB 248534";"Sediul social: München <br />
+Registrul Comerțului: München HRB 248534"
+;Monday;Luni
+;Tuesday;Marți
+;Wednesday;Miercuri
+;Thursday;Joi
+;Friday;Vineri
+;Saturday;Sâmbătă
+;Sunday;Duminică
+;January;Ianuarie
+;February;Februarie
+;March;Martie
+;April;Aprilie
+;May;Mai
+;June;Iunie
+;July;Iulie
+;August;August
+;September;Septembrie
+;October;Octombrie
+;November;Noiembrie
+;December;Decembrie
+;This is an automated email generated on ${request.date} at ${request.time}. Replies are not monitored or answered.;Acesta este un e-mail generat automat în ${request.date} la ${request.time}. Răspunsurile nu sunt monitorizate și nu se răspunde la acestea.
+;Login to Knauf;Conectați-vă la Knauf
+;Email address;Adresa de e-mail
+;Remember me;Memorare utilizator
+;Sign In;Conectare
+;Invalid email address;Adresă de e-mail invalidă
+;Please enter a username;Introduceți un nume de utilizator
+;Please enter a password;Introduceți o parolă
+;Reset Password;Resetați parola
+;Email or username;Adresă de e-mail sau nume de utilizator
+;Back to sign in;Revenire la conectare
+;Reset via Email;Resetați prin e-mail
+;Email sent!;E-mailul a fost trimis!
+;Email has been sent to {0} with instructions on resetting your password.;S-a trimis un e-mail către {0} cu instrucțiuni despre resetarea parolei.
+;Unable to sign in;Conectare imposibilă
+;Your account is locked because of too many authentication attempts;Contul dvs. este blocat din cauza prea multor încercări de autentificare
+;Forgot password?;Ați uitat parola?
+;Don't have an Account?;Nu aveți un cont?
+;Sign up for free;Înregistrați-vă gratuit

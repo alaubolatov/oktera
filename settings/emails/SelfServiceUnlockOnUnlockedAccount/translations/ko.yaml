@@ -1,0 +1,14 @@
+languageCode: "ko"
+subject: "계정 잠금 해제"
+title: "Okta 계정 잠금 해제 요청"
+greeting: "안녕하세요 ${f.escapeHtml($!user.profile.firstName)}님,"
+paragraph1: "귀하의 계정에 대한 계정 잠금 해제 요청이 있었습니다. 본인이 요청하지 않았다면, 관리자에게 즉시 문의하세요. 누군가 귀하의 계정에 접근하려고 시도했을 수 있습니다."
+paragraph2: "요청을 본인이 했을 경우: 계정이 잠금 상태가 아니며 로그인할 수 있어야 합니다. 로그인에 문제가 있는 경우 비밀번호를 재설정하거나 관리자에게 문의하세요."
+paragraph3: "계정에 접속하는 데 어려움을 겪으시면 관리자에게 도움 요청을 보내세요:"
+paragraph4: '<a href="${baseURL}/help/login" style="text-decoration: none; color: #334870"><strong>로그인 도움말</strong></a> 페이지로 이동하세요. 그런 다음 도움 요청 링크를 클릭하세요.'
+footerText: "이 메일은 자동으로 발송되었습니다. 회신은 확인되거나 답변되지 않습니다."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "본사: 뮌헨 <br /> 
+  등록: 뮌헨 HRB 248534"

@@ -1,0 +1,14 @@
+languageCode: "pt-BR"
+subject: "Conta bloqueada"
+title: "Conta bloqueada"
+greeting: "Caro ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "A sua conta <strong>Okta</strong> foi bloqueada devido a demasiadas tentativas de início de sessão falhadas."
+paragraph2: "Para repor a sua conta, poderá ser possível utilizar a ligação abaixo:"
+paragraph3: "Se isso não funcionar, ou se não tiver iniciado estas tentativas de início de sessão, contacte o seu administrador:"
+unlockAccountButtonText: "Desbloquear conta"
+footerText: "Este é um correio eletrónico automatizado. As respostas não são monitorizadas ou respondidas. "
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 Munique"
+footerAddress2: "Sede: Munique <br />
+  Registo: Munique HRB 248534"

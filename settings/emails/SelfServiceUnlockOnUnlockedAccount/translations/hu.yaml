@@ -1,0 +1,18 @@
+languageCode: "hu"
+subject: "Fiók feloldása"
+title: "Okta -fiók feloldását kérte"
+greeting: "Kedves ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Fiókfeloldási kérelem érkezett a fiókjához. Ha nem Ön nyújtotta be ezt a kérést, azonnal forduljon a rendszergazdához. Valaki megpróbálhat hozzáférni a fiókjához."
+paragraph2: "Ha mégis benyújtotta ezt a kérést: fiókja nincs zárolva, és be kell tudnia jelentkeznie. Ha problémái vannak a bejelentkezéssel, próbálja meg visszaállítani jelszavát, vagy lépjen kapcsolatba a rendszergazdával."
+paragraph3: "Ha nehézségei vannak a fiókhoz való hozzáféréssel, küldjön segítségkérést rendszergazdájának:"
+paragraph4: 'Nyissa meg a 
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Bejelentkezési súgó</strong>
+  </a>
+  oldalt. Ezután kattintson a Segítség kérése hivatkozásra.'
+footerText: "Ez egy automatizált e-mail. A válaszokat nem figyelik meg vagy nem válaszolnak."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ülés: München <br />
+  Regisztráció: München HRB 248534"

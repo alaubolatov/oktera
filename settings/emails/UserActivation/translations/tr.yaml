@@ -1,0 +1,28 @@
+languageCode: tr
+subject: Hesabınızı etkinleştirin
+title: Hesabınızı etkinleştirin
+greeting: Sayın ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: Kayıt olduğunuz için teşekkür ederiz.
+paragraph2:
+  "<strong>Knauf</strong>, web uygulamalarınızı yönetmek için <strong>Okta</strong>'yı
+  kullanıyor ve sizin için bir Okta kullanıcı hesabı oluşturdu.
+  E -posta adresinizi doğrulamak için lütfen aşağıdaki bağlantıya tıklayın ve hesabınızı
+  etkinleştirmek için şifrenizi belirleyin:"
+paragraph3:
+  Bu bağlantı ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}
+  içerisinde geçerliliğini kaybedecektir.
+paragraph4:
+  'Kullanıcı adınız 
+  <strong> 
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a> 
+  </strong> 
+  <br />
+  Kuruluşunuzun oturum açma sayfası'
+paragraph5: "Hesabınıza erişmekte zorluk çekiyorsanız, belirtilen adrese yardım isteği gönderebilirsiniz: "
+activateAccountButtonText: Hesabınızı etkinleştirin
+footerText: Bu otomatik bir e -postadır. Yanıtlar takip edilmez ya da cevaplanmaz.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Konum: Munich <br />
+  Tescili: Munich HRB 248534"

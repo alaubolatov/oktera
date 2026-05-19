@@ -1,0 +1,23 @@
+languageCode: "da"
+subject: "Nulstilling af adgangskode"
+title: "Okta adgangskode nulstillet af administrator"
+greeting: "Kære ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1:
+  "Din Okta-adgangskode er nulstillet af din systemadministrator ${f.escapeHtml($!technicalContact.fullName)}
+  på Knauf."
+paragraph2:
+  'Klik på dette link for at nulstille adgangskoden til dit brugernavn 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Dette link udløber efter ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4:
+  "Hvis du oplever vanskeligheder med at få adgang til din konto, skal du
+  sende en anmodning om hjælp til din administrator:"
+resetPasswordButtonText: "Nulstil adgangskode"
+footerText: "Dette er en automatiseret e-mail. Svar modtages og besvares ikke."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Beliggenhed: Munich <br />
+  Register: Munich HRB 248534"

@@ -1,0 +1,16 @@
+languageCode: "de"
+subject: "Konto gesperrt"
+title: "Konto gesperrt"
+greeting: "Hallo ${f.escapeHtml($!user.profile.firstName)} ${f.escapeHtml($!user.profile.lastName)},"
+paragraph1: "Ihr <strong>Okta</strong>-Konto wurde aufgrund von zu vielen fehlgeschlagenen Anmeldeversuchen gesperrt."
+paragraph2: "Um Ihr Konto zurückzusetzen, können Sie möglicherweise den unten stehenden Link verwenden:"
+paragraph3: "Wenn Sie Schwierigkeiten beim Zugriff auf Ihr Konto haben, senden Sie eine Hilfeanfrage an Ihren Administrator:"
+unlockAccountButtonText: "Konto freischalten"
+footerText:
+  'Dies ist eine automatisierte E-Mail. Die Antworten werden nicht geprüft oder
+  beantwortet'
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sitz: München<br />
+  Register: München HRB 248534'

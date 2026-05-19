@@ -1,0 +1,20 @@
+languageCode: "fr"
+subject: "Action requise: code de vérification à usage unique"
+title: "Action requise: code de vérification à usage unique"
+greeting: "Bonjour ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Vous recevez ce courrier électronique car une demande
+  d’émission de code à usage unique a été effectuée en vue d’une
+  authentification."
+paragraph2: "Veuillez saisir le code de vérification suivant:"
+paragraph3: "Si vous pensez avoir reçu ce courrier électronique par erreur,
+  veuillez contacter votre administrateur système."
+paragraph4: "Ou cliquez sur le bouton ci-dessous :"
+paragraph5: "Ce lien expire dans ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}."
+signInButtonText: "Se connecter"
+footerText: "Cet e-mail a été généré automatiquement. Les réponses à cet e-mail ne seront ni lues, ni traitées."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München <br />
+  Allemagne"
+footerAddress2: "Siège: Munich<br />
+  Registre: Munich HRB 248534"

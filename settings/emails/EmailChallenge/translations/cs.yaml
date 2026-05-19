@@ -1,0 +1,23 @@
+languageCode: cs
+subject: "Požadovaná akce: Jednorázový ověřovací kód"
+title: "Požadovaná akce: Jednorázový ověřovací kód"
+greeting: "Vážený/Vážená ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1:
+  Tento e-mail jste obdrželi, protože byla podána žádost o jednorázový kód,
+  který lze použít k ověření.
+paragraph2: "Zadejte prosím následující kód pro ověření:"
+paragraph3:
+  Pokud se domníváte, že jste tento e -mail obdrželi omylem, obraťte se
+  na správce systému.
+paragraph4: "Nebo klikněte na tlačítko níže:"
+paragraph5: Tento odkaz vyprší za ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}.
+signInButtonText: "Přihlásit se"
+footerText:
+  Jedná se o automatický e-mail. Odpovědi nejsou monitorovány ani na ně
+  není odpovídáno.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Umístění: Munich <br />
+  Rejstříku: Munich HRB 248534"
+

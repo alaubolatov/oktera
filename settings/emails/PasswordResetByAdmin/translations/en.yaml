@@ -1,0 +1,18 @@
+languageCode: "en"
+subject: "Account password reset"
+title: "Okta password reset by administrator"
+greeting: "Dear ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Your <strong>Okta</strong> password has been reset by your system administrator ${f.escapeHtml($!technicalContact.fullName)} at <strong>Knauf</strong>."
+paragraph2: 'Click this link to reset the password for your username
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "This link expires in ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4: "If you experience difficulties accessing your account, you can send a help request to:"
+resetPasswordButtonText: "Reset Password"
+footerText: "This is an automated email. Replies are not monitored or answered."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Location: Munich<br />
+  Register: Munich HRB 248534"

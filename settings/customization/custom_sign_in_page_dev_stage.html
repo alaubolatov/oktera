@@ -1,0 +1,1016 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="robots" content="none"/>
+    <link rel="shortcut icon" href="{{faviconUrl}}" type="image/x-icon"/>
+
+    <title>{{pageTitle}}</title>
+    {{{SignInWidgetResources}}}
+    <style>
+        * {
+            font-family: Arial !important;
+        }
+
+        /* hide unwanted links */
+        li:has(> .link.custom),
+        li:has(> .link.js-unlock),
+        li:has(> .link.js-help-link),
+        .link.help.js-help,
+        li:has(> .link.js-custom),
+        a.link.custom,
+        a.link.js-unlock,
+        a.link.js-help-link,
+        a.link.js-help,
+        a.link.js-custom {
+            display: none !important;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        #okta-login-container {
+            flex: 1;
+        }
+
+        /* remove the beacon that is introduced with identity engine */
+        .beacon-container {
+            display: none !important;
+        }
+
+        /* make padding-top consistent between signin steps */
+
+        #okta-sign-in .auth-content, #okta-sign-in.no-beacon .auth-content, .auth-content {
+            padding-top: 40px !important;
+            padding-bottom: 20px !important;
+        }
+
+        #help-links-container {
+            display: block !important;
+        }
+
+        #okta-sign-in .okta-form-title {
+            color: #3C3C3C;
+            font-size: 24px !important;
+            font-weight: 600;
+            line-height: 30px;
+            margin-top: 0;
+            margin-bottom: 40px;
+        }
+
+        header {
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+        }
+
+        header .logo {
+            height: 46px;
+        }
+
+        footer {
+            padding: 27px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #FFF;
+            background-color: #00326D;
+        }
+
+        footer span {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        #okta-sign-in .siw-main-view .custom-checkbox label {
+            font-size: 14px;
+        }
+
+        .custom-legal-links-template {
+            display: block;
+        }
+
+        .custom-legal-link {
+            font-weight: normal !important;
+            color: #fff !important;
+            padding: 0 6px;
+            cursor: pointer;
+        }
+
+        .custom-legal-link:hover {
+            text-decoration: none;
+        }
+
+        @media (max-width: 599px) {
+            #okta-sign-in .auth-content {
+                padding-top: 0;
+            }
+
+            #okta-sign-in.no-beacon .auth-content {
+                padding-top: 0;
+            }
+
+            footer {
+                flex-direction: column;
+                justify-content: space-between;
+                text-align: center;
+                gap: 16px;
+            }
+
+            .custom-legal-links-template {
+                flex-direction: column;
+                display: flex;
+                gap: 24px;
+            }
+
+            #okta-sign-in .okta-custom-buttons-container {
+                flex-direction: column;
+            }
+
+            #okta-sign-in .default-custom-button.link-button {
+                height: initial;
+            }
+
+            .custom-legal-link {
+                padding: 0;
+            }
+        }
+
+        #okta-sign-in .default-custom-button.link-button:last-of-type {
+            margin-bottom: 0 !important;
+        }
+
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            border: 1px solid #B3B3B3;
+            background-color: transparent !important;
+        }
+
+        main#okta-sign-in.auth-container {
+            width: 100%;
+            max-width: 684px;
+        }
+
+        #okta-sign-in.auth-container.main-container {
+            margin: 45px auto 20px;
+        }
+
+        #okta-sign-in .o-form .input-fix {
+            height: 50px;
+        }
+
+        #okta-sign-in.auth-container .okta-form-label #okta-sign-in .siw-main-footer .auth-footer .link {
+            font-size: 12px !important;
+            line-height: 12px !important;
+            font-weight: 400 !important;
+            color: #656565 !important;
+        }
+
+        #okta-sign-in.auth-container .link:hover {
+            text-decoration: none;
+        }
+
+        #okta-sign-in .o-form .input-fix input {
+            padding: 15px;
+        }
+
+        .o-form-input input {
+            background: transparent !important;
+            border: 1px solid #B3B3B3 !important;
+        }
+
+        .o-form-input input:hover {
+            border: 1px solid #818181 !important;
+        }
+
+        .o-form-input input:focus {
+            border: 2px solid #0099DE !important;
+            box-shadow: none !important;
+        }
+
+
+        .o-form-fieldset.o-form-label-top .o-form-input .o-form-explain {
+            display: none;
+        }
+
+        .focused-input {
+            box-shadow: none !important;
+        }
+
+        #okta-sign-in.auth-container .okta-form-input-field {
+            border: 0 none;
+        }
+
+        #okta-sign-in .default-custom-button {
+            font-size: 16px !important;
+            line-height: 22px !important;
+            font-weight: 400 !important;
+            background: transparent;
+            border: none;
+        }
+
+        #okta-sign-in .okta-custom-buttons-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        #okta-sign-in .default-custom-button:hover, #okta-sign-in .default-custom-button:focus {
+            background: transparent;
+        }
+
+        .button {
+            border: 0 none !important;
+            font-weight: bold;
+        }
+
+        .button.button-primary {
+            background-color: #003778 !important;
+            color: #fff !important;
+        }
+
+        #okta-sign-in.auth-container .button-primary {
+            font-size: 16px !important;
+            line-height: 18px !important;
+            background: #003778 !important;
+            color: #fff !important;
+        }
+
+        a {
+            color: #003778 !important;
+            font-weight: bold !important;
+        }
+
+        .okta-sign-in-header {
+            display: none;
+        }
+
+        .custom-sign-up-link-template {
+            font-size: 16px !important;
+            line-height: 22px !important;
+            font-weight: 400 !important;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+
+        .custom-sign-up-link-template a:hover,
+        .custom-sign-up-link-template a:focus,
+        .custom-sign-up-link-template a:active {
+            background-color: transparent;
+        }
+
+        .custom-sign-up-link-template a {
+            line-height: 1.4 !important;
+            height: auto !important;
+            width: auto !important;
+        }
+
+        .custom-sign-up-text {
+            color: #777 !important;
+            font-weight: 400 !important;
+            text-decoration: none;
+            cursor: auto;
+            width: unset !important
+        }
+
+        .custom-sign-up-button {
+            padding-left: 5px !important;
+            width: unset !important
+        }
+
+        @media (min-width: 600px) {
+            #okta-sign-in .auth-content {
+                padding: 60px 110px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <svg width="74" height="38" viewBox="0 0 74 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M51.6678 30.8435C56.4727 30.8435 58.4456 29.292 58.9727 25.5298L61.4219 8.1274H56.463L53.9938 25.6875C53.8719 26.6221 53.303 27.0285 52.1652 27.0285C51.0273 27.0285 50.5397 26.6221 50.6616 25.6875L53.1307 8.1274H48.162L45.7941 25.5298C45.2671 29.3509 46.971 30.8435 51.6678 30.8435ZM37.0559 22.7567L40.0005 11.8571H40.4211L39.6104 22.7567H37.0559ZM30.1988 30.3152H35.0135L36.0823 26.3588H39.3418L39.0476 30.3152H43.935L44.8696 8.1274H36.7101L30.1988 30.3152ZM15.1705 30.3152H19.7328L21.2693 19.3997H21.5326L23.9525 30.3152H28.9289L32.0174 8.1274H27.455L25.8422 19.6191H25.5821L23.2056 8.1274H18.2589L15.1705 30.3152ZM-0.000549316 30.3152H4.96854L6.32054 20.6176H6.82809L8.70837 30.3152H13.7177L11.442 18.5784L16.481 8.1274H11.4717L7.20968 16.9668H6.82931L9.19479 0H4.18547L-0.000549316 30.3152ZM64.7041 37.3548L67.1432 19.7435H71.979L72.506 15.9939H67.6702L68.2306 11.8774H73.4728L73.9999 8.12781H63.789L59.7359 37.3552L64.7041 37.3548Z"
+              fill="#00A0E6"/>
+    </svg>
+</header>
+<div class="login-bg-image" style="background-color: #f1f4f7"></div>
+<div id="okta-login-container"></div>
+<template id="sign-up-link-template" class="custom-sign-up-link-template"></template>
+</template>
+<footer>
+    <template id="custom-links-template" class="custom-legal-links-template"></template>
+    <span>© Knauf Digital GmbH</span>
+</footer>
+<!--
+    "OktaUtil" defines a global OktaUtil object
+    that contains methods used to complete the Okta login flow.
+ -->
+{{{OktaUtil}}}
+
+<script type="text/javascript">
+    // "config" object contains default widget configuration
+    // with any custom overrides defined in your admin settings.
+    const config = OktaUtil.getSignInWidgetConfig();
+
+    const envName = config.helpLinks.custom[0].text.trim();
+    const isProd = envName.length === 0;
+    const envText = isProd ? "" : ` ${envName}`;
+    const signupURL = `${config.helpLinks.custom[0].href}/register`;
+    const legalLinksDomain = config.helpLinks.custom[1].href;
+
+    config.customButtons = [
+        {
+            i18nKey: "customButton.signUpText",
+            className: "custom-sign-up-text",
+        },
+        {
+            i18nKey: "customButton.signUpButton",
+            className: "custom-sign-up-button",
+            click: function () {
+                window.location.href = signupURL;
+            },
+        },
+    ];
+
+    config.i18n = {
+        'en': {
+            "primaryauth.title": "Login to Knauf" + envText,
+            "primaryauth.username.placeholder": "Email",
+            "primaryauth.password.placeholder": "Password",
+            "remember": "Remember me",
+            "primaryauth.submit": "Sign In",
+            "registration.error.userName.invalidEmail": "Invalid email address",
+            "error.username.required": "Please enter a username",
+            "error.password.required": "Please enter a password",
+            "password.reset": "Reset Password",
+            "password.forgot.email.or.username.placeholder": "Email or username",
+            "goback": "Back to sign in",
+            "password.forgot.sendEmail": "Reset via Email",
+            "password.forgot.emailSent.title": "Email sent!",
+            "password.forgot.emailSent.desc": "Email has been sent to {0} with instructions on resetting your password.",
+            "errors.E0000004": "Unable to sign in",
+            "errors.E0000069": "Your account is locked because of too many authentication attempts",
+            "customButton.resetPassword": "Forgot password?",
+            "customButton.signUpText": "Don't have an Account?",
+            "customButton.signUpButton": "Sign up for free",
+            "customButton.imprint": "Legal Notice",
+            "customButton.termsAndConditions": "Terms and conditions",
+            "customButton.privacyPolicy": "Privacy policy",
+            "oie.remember": "Keep me signed in",
+        },
+        'vi': {
+            "primaryauth.title": "Đăng nhập vào Knauf" + envText,
+            "primaryauth.username.placeholder": "Email",
+            "primaryauth.password.placeholder": "Mật khẩu",
+            "remember": "Ghi nhớ tôi",
+            "primaryauth.submit": "Đăng nhập",
+            "registration.error.userName.invalidEmail": "Địa chỉ email không hợp lệ",
+            "error.username.required": "Vui lòng nhập tên người dùng",
+            "error.password.required": "Vui lòng nhập mật khẩu",
+            "password.reset": "Đặt lại mật khẩu",
+            "password.forgot.email.or.username.placeholder": "Email hoặc tên người dùng",
+            "goback": "Quay lại đăng nhập",
+            "password.forgot.sendEmail": "Đặt lại qua Email",
+            "password.forgot.emailSent.title": "Email đã được gửi!",
+            "password.forgot.emailSent.desc": "Email đã được gửi đến {0} với hướng dẫn đặt lại mật khẩu.",
+            "errors.E0000004": "Không thể đăng nhập",
+            "errors.E0000069": "Tài khoản của bạn đã bị khóa do quá nhiều lần thử xác thực",
+            "customButton.resetPassword": "Quên mật khẩu?",
+            "customButton.signUpText": "Chưa có tài khoản?",
+            "customButton.signUpButton": "Đăng ký miễn phí",
+            "customButton.imprint": "Thông báo pháp lý",
+            "customButton.termsAndConditions": "Điều khoản và điều kiện",
+            "customButton.privacyPolicy": "Chính sách bảo mật",
+            "oie.remember": "Giữ tôi đăng nhập",
+        },
+        'id': {
+            "primaryauth.title": "Masuk ke Knauf" + envText,
+            "primaryauth.username.placeholder": "Email",
+            "primaryauth.password.placeholder": "Kata sandi",
+            "remember": "Ingat saya",
+            "primaryauth.submit": "Masuk",
+            "registration.error.userName.invalidEmail": "Alamat email tidak valid",
+            "error.username.required": "Silakan masukkan nama pengguna",
+            "error.password.required": "Silakan masukkan kata sandi",
+            "password.reset": "Atur ulang kata sandi",
+            "password.forgot.email.or.username.placeholder": "Email atau nama pengguna",
+            "goback": "Kembali ke masuk",
+            "password.forgot.sendEmail": "Atur ulang melalui Email",
+            "password.forgot.emailSent.title": "Email telah dikirim!",
+            "password.forgot.emailSent.desc": "Email telah dikirim ke {0} dengan instruksi untuk mengatur ulang kata sandi Anda.",
+            "errors.E0000004": "Tidak dapat masuk",
+            "errors.E0000069": "Akun Anda terkunci karena terlalu banyak percobaan otentikasi",
+            "customButton.resetPassword": "Lupa kata sandi?",
+            "customButton.signUpText": "Belum punya akun?",
+            "customButton.signUpButton": "Daftar gratis",
+            "customButton.imprint": "Pemberitahuan hukum",
+            "customButton.termsAndConditions": "Syarat dan ketentuan",
+            "customButton.privacyPolicy": "Kebijakan privasi",
+            "oie.remember": "Tetap masuk",
+        },
+        'fi': {
+            "primaryauth.title": "Kirjaudu sisään Knauf" + envText,
+            "primaryauth.username.placeholder": "Sähköposti",
+            "primaryauth.password.placeholder": "Salasana",
+            "remember": "Muista minut",
+            "primaryauth.submit": "Kirjaudu sisään",
+            "registration.error.userName.invalidEmail": "Virheellinen sähköpostiosoite",
+            "error.username.required": "Anna käyttäjänimi",
+            "error.password.required": "Anna salasana",
+            "password.reset": "Nollaa salasana",
+            "password.forgot.email.or.username.placeholder": "Sähköposti tai käyttäjänimi",
+            "goback": "Takaisin kirjautumiseen",
+            "password.forgot.sendEmail": "Nollaa sähköpostilla",
+            "password.forgot.emailSent.title": "Sähköposti lähetetty!",
+            "password.forgot.emailSent.desc": "Sähköposti on lähetetty osoitteeseen {0} ohjeilla salasanan nollaamiseksi.",
+            "errors.E0000004": "Kirjautuminen epäonnistui",
+            "errors.E0000069": "Tilisi on lukittu liian monien kirjautumisyritysten vuoksi",
+            "customButton.resetPassword": "Unohtuiko salasana?",
+            "customButton.signUpText": "Eikö sinulla ole tiliä?",
+            "customButton.signUpButton": "Rekisteröidy ilmaiseksi",
+            "customButton.imprint": "Oikeudellinen huomautus",
+            "customButton.termsAndConditions": "Käyttöehdot",
+            "customButton.privacyPolicy": "Tietosuojakäytäntö",
+            "oie.remember": "Pidä minut kirjautuneena",
+        },
+
+        'nl-NL': {
+            "primaryauth.title": "Inloggen bij Knauf" + envText,
+            "primaryauth.username.placeholder": "E-mail",
+            "primaryauth.password.placeholder": "Wachtwoord",
+            "remember": "Onthoud mij",
+            "primaryauth.submit": "Aanmelden",
+            "registration.error.userName.invalidEmail": "Ongeldig e-mailadres",
+            "error.username.required": "Voer een gebruikersnaam in",
+            "error.password.required": "Voer een wachtwoord in",
+            "password.reset": "Wachtwoord resetten",
+            "password.forgot.email.or.username.placeholder": "E-mail of gebruikersnaam",
+            "goback": "Terug naar aanmelden",
+            "password.forgot.sendEmail": "Resetten via e-mail",
+            "password.forgot.emailSent.title": "E-mail verzonden!",
+            "password.forgot.emailSent.desc": "Er is een e-mail verzonden naar {0} met instructies voor het resetten van uw wachtwoord.",
+            "errors.E0000004": "Aanmelden mislukt",
+            "errors.E0000069": "Uw account is geblokkeerd vanwege te veel mislukte authenticatiepogingen",
+            "customButton.resetPassword": "Wachtwoord vergeten?",
+            "customButton.signUpText": "Heeft u nog geen account?",
+            "customButton.signUpButton": "Meld u gratis aan",
+            "customButton.imprint": "Impressum",
+            "customButton.termsAndConditions": "Algemene voorwaarden",
+            "customButton.privacyPolicy": "Privacybeleid",
+            "oie.remember": "Houd mij aangemeld",
+        },
+
+        'de': {
+            "primaryauth.title": "Anmelden bei Knauf" + envText,
+            "primaryauth.username.placeholder": "E-Mail",
+            "primaryauth.password.placeholder": "Passwort",
+            "remember": "Zugangsdaten speichern",
+            "primaryauth.submit": "Anmelden",
+            "registration.error.userName.invalidEmail": "Ungültige E-Mail-Adresse",
+            "error.username.required": "Bitte Benutzernamen eingeben",
+            "error.password.required": "Bitte Passwort eingeben",
+            "password.reset": "Passwort zurücksetzen",
+            "password.forgot.email.or.username.placeholder": "E-Mail oder Benutzername",
+            "goback": "Zurück zur Anmeldung",
+            "password.forgot.sendEmail": "Via E-Mail zurücksetzen",
+            "password.forgot.emailSent.title": "E-Mail versendet!",
+            "password.forgot.emailSent.desc": "Eine E-Mail mit Anweisungen zur Passwortzurücksetzung wurde an {0} gesendet.",
+            "errors.E0000004": "Anmelden nicht möglich",
+            "errors.E0000069": "Ihr Konto wurde aufgrund von zu vielen fehlgeschlagenen Anmeldeversuchen gesperrt.",
+            "customButton.resetPassword": "Passwort vergessen?",
+            "customButton.signUpText": "Sie haben noch kein Konto?",
+            "customButton.signUpButton": "Kostenlose Registrierung",
+            "customButton.imprint": "Impressum",
+            "customButton.termsAndConditions": "Allgemeine Geschäftsbedingungen",
+            "customButton.privacyPolicy": "Datenschutzrichtlinie",
+            "oie.remember": "Ich möchte angemeldet bleiben",
+        },
+
+        'fr': {
+            "primaryauth.title": "Connexion à Knauf" + envText,
+            "primaryauth.username.placeholder": "E-mail",
+            "primaryauth.password.placeholder": "Mot de passe",
+            "remember": "Se souvenir de moi",
+            "primaryauth.submit": "Se connecter",
+            "registration.error.userName.invalidEmail": "Adresse e-mail non valide",
+            "error.username.required": "Veuillez saisir un identifiant",
+            "error.password.required": "Veuillez saisir un mot de passe",
+            "password.reset": "Réinitialiser le mot de passe",
+            "password.forgot.email.or.username.placeholder": "Adresse e-mail ou identifiant",
+            "goback": "Revenir à la page d’inscription",
+            "password.forgot.sendEmail": "Réinitialiser avec l’adresse e-mail",
+            "password.forgot.emailSent.title": "E-mail envoyé !",
+            "password.forgot.emailSent.desc": "Un e-mail contenant les instructions pour réinitialiser le mot de passe a été envoyé à {0}.",
+            "errors.E0000004": "Impossible de se connecter",
+            "errors.E0000069": "Votre compte a été bloqué en raison d’un trop grand nombre de tentatives d’authentification",
+            "customButton.resetPassword": "Mot de passe oublié ?",
+            "customButton.signUpText": "Vous n’avez pas de compte ?",
+            "customButton.signUpButton": "Inscrivez-vous gratuitement",
+            "customButton.imprint": "Mentions légales",
+            "customButton.termsAndConditions": "Conditions d’utilisation",
+            "customButton.privacyPolicy": "Politique de confidentialité",
+            "oie.remember": "Rester connecté",
+        },
+
+        'sv': {
+            "primaryauth.title": "Logga in på Knauf" + envText,
+            "primaryauth.username.placeholder": "E-postadress",
+            "primaryauth.password.placeholder": "Lösenord",
+            "remember": "Kom ihåg mig",
+            "primaryauth.submit": "Logga In",
+            "registration.error.userName.invalidEmail": "Ogiltig e-postadress",
+            "error.username.required": "Ange ett giltigt användarnamn",
+            "error.password.required": "Ange ett giltigt lösenord",
+            "password.reset": "Återställ lösenord",
+            "password.forgot.email.or.username.placeholder": "E-postadress eller användarnamn",
+            "goback": "Tillbaka till inloggning",
+            "password.forgot.sendEmail": "Återställ via e-postmeddelande",
+            "password.forgot.emailSent.title": "E-postmeddelande skickat!",
+            "password.forgot.emailSent.desc": "Ett e-postmeddelande har skickats till {0} med instruktioner om hur du återställer ditt lösenord.",
+            "errors.E0000004": "Kunde inte logga in",
+            "errors.E0000069": "Ditt konto är låst på grund av för många autentiseringsförsök",
+            "customButton.resetPassword": "Glömt lösenordet?",
+            "customButton.signUpText": "Har du inte ett konto?",
+            "customButton.signUpButton": "Registrera dig gratis",
+            "customButton.imprint": "Stämpel",
+            "customButton.termsAndConditions": "Allmänna villkor",
+            "customButton.privacyPolicy": "Sekretesspolicy",
+            "oie.remember": "Håll mig inloggad",
+        },
+
+        'es': {
+            "primaryauth.title": "Iniciar sesión en Knauf" + envText,
+            "primaryauth.username.placeholder": "Dirección de correo electrónico",
+            "primaryauth.password.placeholder": "Contraseña",
+            "remember": "Recuérdame",
+            "primaryauth.submit": "Iniciar sesión",
+            "registration.error.userName.invalidEmail": "Dirección de correo electrónico no válida",
+            "error.username.required": "Por favor, ingrese un nombre de usuario",
+            "error.password.required": "Por favor, ingrese una contraseña",
+            "password.reset": "Restablecer la contraseña",
+            "password.forgot.email.or.username.placeholder": "Correo electrónico o nombre de usuario",
+            "goback": "Volver para iniciar sesión",
+            "password.forgot.sendEmail": "Restablecer por correo electrónico",
+            "password.forgot.emailSent.title": "¡Email enviado!",
+            "password.forgot.emailSent.desc": "El correo electrónico se ha enviado a {0} con instrucciones para restablecer su contraseña.",
+            "errors.E0000004": "No se puede acceder",
+            "errors.E0000069": "Su cuenta está bloqueada debido a demasiados intentos de autenticación",
+            "customButton.resetPassword": "¿Olvidó su contraseña?",
+            "customButton.signUpText": "¿No tiene una cuenta?",
+            "customButton.signUpButton": "Regístrese gratis",
+            // "customButton.resetPassword": "¿Se te olvidó tu contraseña?",
+            // "customButton.signUpText": "¿No tienes una cuenta?",
+            // "customButton.signUpButton": "Registrate gratis",
+            "customButton.imprint": "Impresión",
+            "customButton.termsAndConditions": "Términos y condiciones",
+            "customButton.privacyPolicy": "Política de privacidad",
+            "oie.remember": "Mantenerme conectado",
+        },
+
+        'tr': {
+            "primaryauth.title": "Knauf'a giriş yapın" + envText,
+            "primaryauth.username.placeholder": "E -posta",
+            "primaryauth.password.placeholder": "Şifre",
+            "remember": "Beni Hatırla",
+            "primaryauth.submit": "Kayıt ol",
+            "registration.error.userName.invalidEmail": "Geçersiz e-posta adresi",
+            "error.username.required": "Lütfen bir kullanıcı adı giriniz",
+            "error.password.required": "Lütfen bir şifre giriniz",
+            "password.reset": "Şifreyi yenile",
+            "password.forgot.email.or.username.placeholder": "E-posta ya da kullanıcı adı",
+            "goback": "Oturum Açma Sayfasına Geri Dön",
+            "password.forgot.sendEmail": "E-posta ile sıfırlayın",
+            "password.forgot.emailSent.title": "E-posta gönderildi!",
+            "password.forgot.emailSent.desc": "Parolanızı sıfırlama talimatları e-posta {0} 'a gönderildi.",
+            "errors.E0000004": "Oturum açılamıyor",
+            "errors.E0000069": "Hesabınız çok fazla kimlik doğrulama denemesi nedeniyle kilitlendi",
+            "customButton.resetPassword": "Parolanızı mı unuttunuz?",
+            "customButton.signUpText": "Hesabınız yok mu?",
+            "customButton.signUpButton": "Ücretsiz kaydol",
+            "customButton.imprint": "Künye",
+            "customButton.termsAndConditions": "Şartlar ve koşullar",
+            "customButton.privacyPolicy": "Gizlilik politikası",
+            "oie.remember": "Oturumumu açık tut",
+        },
+
+        'pl': {
+            "primaryauth.title": "Zaloguj się do Knauf" + envText,
+            "primaryauth.username.placeholder": "E-mail",
+            "primaryauth.password.placeholder": "Hasło",
+            "remember": "Zapamiętaj mnie",
+            "primaryauth.submit": "Zaloguj",
+            "registration.error.userName.invalidEmail": "Niepoprawny adres email",
+            "error.username.required": "Proszę, wpisz nazwę użytkownika",
+            "error.password.required": "proszę wprowadzić hasło",
+            "password.reset": "Zresetuj hasło",
+            "password.forgot.email.or.username.placeholder": "Email lub nazwa użytkownika",
+            "goback": "Powrót do logowania",
+            "password.forgot.sendEmail": "Zresetuj za pośrednictwem poczty elektronicznej",
+            "password.forgot.emailSent.title": "E-mail wysłany!",
+            "password.forgot.emailSent.desc": "E -mail z instrukcjami resetowania hasła został wysłany do {0}.",
+            "errors.E0000004": "Zalogowanie jest niemozliwe",
+            "errors.E0000069": "Twoje konto jest zablokowane z powodu zbyt wielu prób uwierzytelnienia",
+            "customButton.resetPassword": "Zapomniałeś hasła?",
+            "customButton.signUpText": "Nie masz konta?",
+            "customButton.signUpButton": "Zarejestruj się za darmo",
+            "customButton.imprint": "Impressum",
+            "customButton.termsAndConditions": "Regulamin",
+            "customButton.privacyPolicy": "Polityka prywatności",
+            "oie.remember": "Zapamiętaj mnie",
+        },
+
+        'cs': {
+            "primaryauth.title": "Přihlaste se do společnosti Knauf" + envText,
+            "primaryauth.username.placeholder": "Emailová adresa",
+            "primaryauth.password.placeholder": "Heslo",
+            "remember": "Zapamatujte si mě",
+            "primaryauth.submit": "Přihlásit se",
+            "registration.error.userName.invalidEmail": "Neplatná emailová adresa",
+            "error.username.required": "Prosím, zadejte uživatelské jméno",
+            "error.password.required": "Prosím, zadejte heslo",
+            "password.reset": "Obnovit heslo",
+            "password.forgot.email.or.username.placeholder": "E-mail nebo uživatelské jméno",
+            "goback": "Zpět k přihlášení",
+            "password.forgot.sendEmail": "Obnovení e-mailem",
+            "password.forgot.emailSent.title": "Email odeslán!",
+            "password.forgot.emailSent.desc": "E -mail byl odeslán na {0} s pokyny pro obnovu hesla.",
+            "errors.E0000004": "Nelze se přihlásit",
+            "errors.E0000069": "Váš účet je uzamčen kvůli příliš mnoha pokusům o ověření",
+            "customButton.resetPassword": "Zapomenuté heslo?",
+            "customButton.signUpText": "Nemáte účet?",
+            "customButton.signUpButton": "Zaregistrujte se zdarma",
+            "customButton.imprint": "Otisk",
+            "customButton.termsAndConditions": "Podmínky a pravidla",
+            "customButton.privacyPolicy": "Zásady ochrany osobních údajů",
+            "oie.remember": "Nechte mě přihlášeného",
+        },
+
+        'da': {
+            "primaryauth.title": "Log ind på Knauf" + envText,
+            "primaryauth.username.placeholder": "E-mail",
+            "primaryauth.password.placeholder": "Adgangskode",
+            "remember": "Husk mig",
+            "primaryauth.submit": "Log ind",
+            "registration.error.userName.invalidEmail": "Ugyldig e-mailadresse",
+            "error.username.required": "Indtast brugernavn",
+            "error.password.required": "Indtast adgangskode",
+            "password.reset": "Nulstil adgangskode",
+            "password.forgot.email.or.username.placeholder": "E-mail eller brugernavn",
+            "goback": "Tilbage til login",
+            "password.forgot.sendEmail": "Nulstil via e-mail",
+            "password.forgot.emailSent.title": "E-mail sendt!",
+            "password.forgot.emailSent.desc": "E-mail er sendt til {0} med instruktioner om nulstilling af din adgangskode.",
+            "errors.E0000004": "Kan ikke logge ind",
+            "errors.E0000069": "Din konto er låst på grund af for mange godkendelsesforsøg",
+            "customButton.resetPassword": "Glemt kodeord?",
+            "customButton.signUpText": "Har du ikke en konto?",
+            "customButton.signUpButton": "Gratis tilmelding",
+            "customButton.imprint": "Aftryk",
+            "customButton.termsAndConditions": "Vilkår og betingelser",
+            "customButton.privacyPolicy": "Politik om beskyttelse af personlige oplysninger",
+            "oie.remember": "Hold mig logget ind",
+        },
+
+        'ro': {
+            "primaryauth.title": "Conectați-vă la Knauf" + envText,
+            "primaryauth.username.placeholder": "E-mail",
+            "primaryauth.password.placeholder": "Parola",
+            "remember": "Memorare utilizator",
+            "primaryauth.submit": "Conectare",
+            "registration.error.userName.invalidEmail": "Adresă de e-mail invalidă",
+            "error.username.required": "Introduceți un nume de utilizator",
+            "error.password.required": "Introduceți o parolă",
+            "password.reset": "Resetați parola",
+            "password.forgot.email.or.username.placeholder": "Adresă de e-mail sau nume de utilizator",
+            "goback": "Revenire la conectare",
+            "password.forgot.sendEmail": "Resetați prin e-mail",
+            "password.forgot.emailSent.title": "E-mailul a fost trimis!",
+            "password.forgot.emailSent.desc": "S-a trimis un e-mail către {0} cu instrucțiuni despre resetarea parolei.",
+            "errors.E0000004": "Conectare imposibilă",
+            "errors.E0000069": "Contul dvs. este blocat din cauza prea multor încercări de autentificare",
+            "customButton.resetPassword": "Ați uitat parola?",
+            "customButton.signUpText": "Nu aveți un cont?",
+            "customButton.signUpButton": "Înregistrați-vă gratuit",
+            "customButton.imprint": "Imprima",
+            "customButton.termsAndConditions": "Termeni și condiții",
+            "customButton.privacyPolicy": "Politica de confidențialitate",
+            "oie.remember": "Păstrați-mă conectat",
+        },
+
+        'it': {
+            "primaryauth.title": "Accedi a Knauf" + envText,
+            "primaryauth.username.placeholder": "E-mail",
+            "primaryauth.password.placeholder": "Parola d'ordine",
+            "remember": "Ricordati di me",
+            "primaryauth.submit": "Registrazione",
+            "registration.error.userName.invalidEmail": "Indirizzo e-mail non valido",
+            "error.username.required": "Si prega di inserire il nome utente",
+            "error.password.required": "Si prega di inserire la password",
+            "password.reset": "Resetta la password",
+            "password.forgot.email.or.username.placeholder": "E-mail o nome utente",
+            "goback": "Torna per accedere",
+            "password.forgot.sendEmail": "Ripristina via e-mail",
+            "password.forgot.emailSent.title": "E-mail inviata!",
+            "password.forgot.emailSent.desc": "L'e-mail è stata inviata a {0} con istruzioni sul ripristino della password.",
+            "errors.E0000004": "Impossibile di accedere",
+            "errors.E0000069": "Il tuo account è bloccato a causa di troppi tentativi di autenticazione",
+            "customButton.resetPassword": "Hai dimenticato la password?",
+            "customButton.signUpText": "Non hai un account?",
+            "customButton.signUpButton": "Iscriviti gratis",
+            "customButton.imprint": "Impronta",
+            "customButton.termsAndConditions": "Termini e Condizioni",
+            "customButton.privacyPolicy": "Politica sulla riservatezza",
+            "oie.remember": "Tienimi connesso",
+        },
+
+        'pt-BR': {
+            "primaryauth.title": "Faça login no Knauf" + envText,
+            "primaryauth.username.placeholder": "Endereço de email",
+            "primaryauth.password.placeholder": "Senha",
+            "remember": "Lembre de mim",
+            "primaryauth.submit": "Entrar",
+            "registration.error.userName.invalidEmail": "Endereço de email invalido",
+            "error.username.required": "Por favor coloque um nome de usuário",
+            "error.password.required": "Por favor insira uma senha",
+            "password.reset": "Redefinir senha",
+            "password.forgot.email.or.username.placeholder": "Email ou nome de usuário",
+            "goback": "Voltar para fazer login",
+            "password.forgot.sendEmail": "Redefinir por e-mail",
+            "password.forgot.emailSent.title": "E-mail enviado!",
+            "password.forgot.emailSent.desc": "Um e-mail foi enviado para {0} com instruções sobre como redefinir sua senha.",
+            "errors.E0000004": "Não foi possível fazer login",
+            "errors.E0000069": "Sua conta está bloqueada devido a muitas tentativas de autenticação",
+            "customButton.resetPassword": "Esqueceu sua senha?",
+            "customButton.signUpText": "Não tem uma conta?",
+            "customButton.signUpButton": "Cadastre-se gratuitamente",
+            "customButton.imprint": "Notícia legal",
+            "customButton.termsAndConditions": "Termos e Condições",
+            "customButton.privacyPolicy": "Política de Privacidade",
+            "oie.remember": "Mantenha-me conectado",
+        },
+
+        'el': {
+            "primaryauth.title": "Σύνδεση στο Knauf" + envText,
+            "primaryauth.username.placeholder": "Διεύθυνση email",
+            "primaryauth.password.placeholder": "Να με θυμάσαι",
+            "primaryauth.submit": "Σύνδεση",
+            "registration.error.userName.invalidEmail": "Μη έγκυρη διεύθυνση email",
+            "error.username.required": "Παρακαλούμε εισάγετε όνομα χρήστη",
+            "error.password.required": "Παρακαλούμε εισάγετε έναν κωδικό πρόσβασης",
+            "password.reset": "Επαναφορά κωδικού πρόσβασης",
+            "password.forgot.email.or.username.placeholder": "Email ή όνομα χρήστη",
+            "goback": "Επιστροφή στη σύνδεση",
+            "password.forgot.sendEmail": "Επαναφορά μέσω Email",
+            "password.forgot.emailSent.title": "Email εστάλη!",
+            "password.forgot.emailSent.desc": "Έχει σταλεί email στο {0} με οδηγίες για την επαναφορά του κωδικού πρόσβασής σας.",
+            "errors.E0000004": "Αδυναμία σύνδεσης",
+            "errors.E0000069": "Ο λογαριασμός σας έχει κλειδωθεί λόγω πολλών αποτυχημένων προσπαθειών σύνδεσης",
+            "customButton.resetPassword": "Ξεχάσατε τον κωδικό πρόσβασης;",
+            "customButton.signUpText": "Δεν έχετε λογαριασμό;",
+            "customButton.signUpButton": "Εγγραφείτε δωρεάν",
+            "customButton.imprint": "Αποτύπωμα",
+            "customButton.termsAndConditions": "Όροι και προϋποθέσεις",
+            "customButton.privacyPolicy": "Πολιτική απορρήτου",
+            "oie.remember": "Κράτα με συνδεδεμένο",
+        },
+
+        'hu': {
+            "primaryauth.title": "Jelentkezzen be a Knaufba" + envText,
+            "primaryauth.username.placeholder": "E-mail cím",
+            "primaryauth.password.placeholder": "Emlékezz rám",
+            "primaryauth.submit": "Bejelentkezés",
+            "registration.error.userName.invalidEmail": "Érvénytelen e-mail cím",
+            "error.username.required": "Kérjük, írjon be egy felhasználónevet",
+            "error.password.required": "Kérjük, írjon be egy jelszót",
+            "password.reset": "A jelszó visszaállítása",
+            "password.forgot.email.or.username.placeholder": "E-mail vagy felhasználónév",
+            "goback": "Vissza a bejelentkezéshez",
+            "password.forgot.sendEmail": "Visszaállítás e-mailben",
+            "password.forgot.emailSent.title": "E-mail elküldve!",
+            "password.forgot.emailSent.desc": "Az e-mailt elküldtük a {0} -re, a jelszó visszaállításának utasításaival.",
+            "errors.E0000004": "Képtelen bejelentkezni",
+            "errors.E0000069": "Fiókját túl sok hitelesítési kísérlet miatt zárják le",
+            "customButton.resetPassword": "Elfelejtette a jelszót?",
+            "customButton.signUpText": "Nincs fiókja?",
+            "customButton.signUpButton": "Iratkozzon fel ingyen",
+            "customButton.imprint": "Lenyomat",
+            "customButton.termsAndConditions": "Feltételek",
+            "customButton.privacyPolicy": "Adatvédelmi irányel",
+            "oie.remember": "Maradjak bejelentkezve",
+        },
+
+        'no': {
+            "primaryauth.title": "Innlogging til Knauf" + envText,
+            "primaryauth.username.placeholder": "E-postadresse",
+            "primaryauth.password.placeholder": "Husk meg",
+            "primaryauth.submit": "Logg på",
+            "registration.error.userName.invalidEmail": "Ugyldig e-postadresse",
+            "error.username.required": "Vennligst skriv inn brukernavn",
+            "error.password.required": "Vennligst skriv inn passord",
+            "password.reset": "Tilbakestill passord",
+            "password.forgot.email.or.username.placeholder": "E-postadresse eller brukernavn",
+            "goback": "Tilbake til innlogging",
+            "password.forgot.sendEmail": "Tilbakestill via e-post",
+            "password.forgot.emailSent.title": "E-post sendt!",
+            "password.forgot.emailSent.desc": "E-post har blitt sendt til {0} med instruksjoner om hvordan du tilbakestiller passordet ditt.",
+            "errors.E0000004": "Kan ikke logge inn",
+            "errors.E0000069": "Kontoen din er låst på grunn av for mange påloggings forsøk",
+            "customButton.resetPassword": "Glemt passord?",
+            "customButton.signUpText": "Har du ikke konto?",
+            "customButton.signUpButton": "Registrer deg gratis",
+            "customButton.imprint": "Trykk",
+            "customButton.termsAndConditions": "Vilkår og betingelser",
+            "customButton.privacyPolicy": "Retningslinjer for personvern",
+            "oie.remember": "Hold meg pålogget",
+        },
+
+        'ko': {
+            "primaryauth.title": "Knauf에 로그인" + envText,
+            "primaryauth.username.placeholder": "이메일 주소",
+            "primaryauth.password.placeholder": "비밀번호를",
+            "remember": "로그인 상태 유지",
+            "primaryauth.submit": "로그인",
+            "registration.error.userName.invalidEmail": "유효하지 않은 이메일 주소입니다",
+            "error.username.required": "사용자 이름을 입력해 주세요",
+            "error.password.required": "비밀번호를 입력해 주세요",
+            "password.reset": "비밀번호 재설정",
+            "password.forgot.email.or.username.placeholder": "이메일 또는 사용자 이름",
+            "goback": "로그인으로 돌아가기",
+            "password.forgot.sendEmail": "이메일로 재설정",
+            "password.forgot.emailSent.title": "이메일 발송 완료!",
+            "password.forgot.emailSent.desc": "비밀번호를 재설정하는 방법에 대한 안내가 {0}(으)로 전송되었습니다.",
+            "errors.E0000004": "로그인할 수 없습니다",
+            "errors.E0000069": "인증 시도가 너무 많아 계정이 잠겼습니다",
+            "customButton.resetPassword": "비밀번호를 잊으셨나요?",
+            "customButton.signUpText": "계정이 없으신가요?",
+            "customButton.signUpButton": "무료로 가입하기",
+            "customButton.imprint": "법적 고지",
+            "customButton.termsAndConditions": "이용약관",
+            "customButton.privacyPolicy": "개인정보 처리방침",
+            "oie.remember": "로그인 상태 유지",
+        },
+
+        'uk': {
+            "primaryauth.title": "Вхід до Кнауф" + envText,
+            "primaryauth.username.placeholder": "Адреса електронної пошти",
+            "primaryauth.password.placeholder": "пароль",
+            "remember": "Запам’ятати мене",
+            "primaryauth.submit": "Увійти",
+            "registration.error.userName.invalidEmail": "Недійсна адреса електронної пошти",
+            "error.username.required": "Будь ласка введіть ім'я користувача",
+            "error.password.required": "Будь ласка введіть пароль",
+            "password.reset": "Скинути пароль",
+            "password.forgot.email.or.username.placeholder": "Адреса електронної пошти або ім'я користувача",
+            "goback": "Назад до входу",
+            "password.forgot.sendEmail": "Скинути через електронну пошту",
+            "password.forgot.emailSent.title": "Електронний лист надіслано!",
+            "password.forgot.emailSent.desc": "На адресу {0} надіслано електронного листа з інструкціями щодо скидання пароля.",
+            "errors.E0000004": "Не вдається увійти",
+            "errors.E0000069": "Ваш обліковий запис заблоковано через занадто багато спроб автентифікації",
+            "customButton.resetPassword": "Забули пароль?",
+            "customButton.signUpText": "Не маєте облікового запису?",
+            "customButton.signUpButton": "Зареєструйтесь безкоштовно",
+            "customButton.imprint": "Імпринт",
+            "customButton.termsAndConditions": "Умови та положення",
+            "customButton.privacyPolicy": "Політика конфіденційності",
+            "oie.remember": "Запам’ятати мене",
+        }
+    };
+
+    var supportedLanguagesOkta = {
+        en: "en",
+        "nl-NL": "nl-NL",
+        de: "de",
+        fr: "fr",
+        fi: "fi",
+        sv: "en",   // no Swedish support at the moment
+        es: "es",
+        tr: "tr",
+        pl: "pl",
+        cs: "cs",
+        da: "da",
+        ro: "ro",
+        it: "it",
+        vi: "vi",
+        id: "id",
+        'pt-BR': "pt-BR",
+        el: "el",
+        nb: "no",
+        no: "no",
+        nn: "no",
+        hu: "hu",
+        ko: "ko",
+        uk: "uk",
+    };
+
+    var supportedLanguagesCMS = {
+        en: "en",
+        'nl-NL': "nl-NL",
+        de: "de",
+        fr: "fr-FR",
+        fi: "fi-FI",
+        sv: "sv-SE",
+        es: "es-ES",
+        tr: "tr-TR",
+        pl: "pl-PL",
+        cs: "cs-CZ",
+        da: "da-DK",
+        ro: "ro-RO",
+        it: "it-IT",
+        vi: "en",
+        id: "en",
+        'pt-BR': "pt-PT",
+        pt: "pt-PT",
+        el: "el-GR",
+        nb: "no-NO",
+        no: "no-NO",
+        nn: "no-NO",
+        hu: "hu-HU",
+        ko: "en",
+        uk: "en"
+    };
+
+
+    config.language = supportedLanguagesOkta[config.language] || 'en';
+    const legalLinksConfig = [
+        {
+            i18n: "customButton.imprint",
+            href: isProd ? `${legalLinksDomain}/legal-notice` : legalLinksDomain,
+        },
+        {
+            i18n: "customButton.termsAndConditions",
+            href: `https://knauf.com/${supportedLanguagesCMS[config.language]}/terms-and-conditions`,
+        },
+        {
+            i18n: "customButton.privacyPolicy",
+            href: isProd ? `${legalLinksDomain}/privacy-policy` : legalLinksDomain,
+        },
+    ];
+
+    function createCustomLegalLinks() {
+        var legalLinksInFooterTemplate = document.getElementById(
+            "custom-links-template"
+        );
+
+        if (!legalLinksInFooterTemplate || legalLinksInFooterTemplate.children.length > 0) {
+            return;
+        }
+
+        for (var i = 0; i < legalLinksConfig.length; i++) {
+            var item = legalLinksConfig[i];
+            var link = document.createElement("a");
+            link.classList.add("custom-legal-link");
+            link.innerHTML = config.i18n[config.language][item.i18n];
+            link.setAttribute("href", item.href);
+            legalLinksInFooterTemplate.appendChild(link);
+        }
+    }
+
+    createCustomLegalLinks();
+
+    // Render the Okta Sign-In Widget
+    var oktaSignIn = new OktaSignIn(config);
+
+    oktaSignIn.renderEl(
+        {el: '#okta-login-container'},
+        OktaUtil.completeLogin,
+        function (error) {
+            // Logs errors that occur when configuring the widget.
+            // Remove or replace this with your own custom error handler.
+            console.log(error.message, error);
+        }
+    );
+
+    /*******************************************************
+     *          REMOVE THIS FROM PROD/PREPROD CODE         *
+     ******************************************************/
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            // Select the checkbox by its name attribute
+            var rememberMeCheckbox = document.querySelector('input[name="rememberMe"]');
+
+            // Select the corresponding label using the 'for' attribute matching the checkbox's id
+            var rememberMeLabel = document.querySelector('label[for="input36"]');
+
+            if (rememberMeCheckbox) {
+                // Update the label's class to 'checked'
+                rememberMeCheckbox.click();
+            }
+        }, 500); // Adjust the delay as needed
+    });
+</script>
+</body>
+</html>

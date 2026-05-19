@@ -1,0 +1,24 @@
+languageCode: "fr"
+subject: "Activez votre compte"
+title: "Activation de votre compte"
+greeting: "Bonjour ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Nous vous remercions pour votre inscription."
+paragraph2: "<strong>Knauf</strong> utilise <strong>Okta</strong> pour
+  gérer vos applications web. Nous vous avons donc créé un compte utilisateur Okta. Veuillez cliquer sur le lien suivant
+  pour confirmer votre adresse e-mail et définir votre mot de passe afin d’activer votre compte:"
+paragraph3: "Ce lien expire dans ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}."
+paragraph4: 'Votre identifiant est:
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  <br />
+  La page d’inscription de votre entreprise se trouve ici:'
+paragraph5: "Si vous rencontrez des difficultés pour accéder à votre compte, n’hésitez pas à envoyer une demande d’aide à l’adresse suivante:"
+activateAccountButtonText: "Activez votre compte"
+footerText: "Cet e-mail a été généré automatiquement. Les réponses à cet e-mail ne seront ni lues, ni traitées."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München <br />
+  Allemagne"
+footerAddress2: "Siège: Munich<br />
+  Registre: Munich HRB 248534"

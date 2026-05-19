@@ -1,0 +1,23 @@
+languageCode: ro
+subject: Activați-vă contul
+title: Activați-vă contul
+greeting: 'Dragă ${f.escapeHtml($!user.profile.firstName)}, '
+paragraph1: 'Vă mulțumim pentru că v-ați înregistrat. '
+paragraph2: '<strong>Knauf</strong> utilizează <strong>Okta</strong> pentru a vă gestiona
+  aplicațiile web și a creat un cont de utilizator Okta pentru dvs.
+  Faceți clic pe următorul link pentru a vă verifica adresa de e-mail și pentru a vă seta parola pentru a vă activa contul: '
+paragraph3: Acest link expiră în ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}.
+paragraph4: 'Numele dvs. de utilizator este 
+  <strong> 
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a> 
+  </strong> 
+  <br /> 
+  Pagina de conectare a organizației dvs. este '
+paragraph5: 'Dacă întâmpinați dificultăți la accesarea contului dvs., puteți trimite o solicitare de ajutor la:'
+activateAccountButtonText: Activați-vă contul
+footerText: 'Acesta este un e-mail generat automat. Răspunsurile nu sunt monitorizate și nu se răspunde la acestea. '
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sediul social: München <br />
+  Registrul Comerțului: München HRB 248534'

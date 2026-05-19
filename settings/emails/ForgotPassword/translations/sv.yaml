@@ -1,0 +1,22 @@
+languageCode: "sv"
+subject: "Kontots lösenord återställs"
+title: "Återställning av Okta-lösenord begärd"
+greeting: "Bästa ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1:
+  "En begäran om återställning av lösenordet gjordes för ditt <strong>Okta</strong>-konto.
+  Om du inte gjorde denna begäran, kontakta din systemadministratör omedelbart."
+paragraph2:
+  'Klicka på den här länken för att återställa lösenordet för ditt användarnamn
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}:</a>
+  </strong>'
+paragraph3: "Denna länk går ut om ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4: "Om du har problem med att komma åt ditt konto kan du skicka en hjälpförfrågan till:"
+paragraph5: "Kan inte använda länken? Ange koden istället:"
+resetPasswordButtonText: "Återställ lösenord"
+footerText: "Det här är ett automatiserat e-postmeddelande. Svar övervakas och besvaras inte."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Plats: Munich<br />
+  Registernummer: Munich HRB 248534"

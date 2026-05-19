@@ -1,0 +1,29 @@
+languageCode: "pt-BR"
+subject: "Nova notificação de início de sessão"
+title: "Novo início de sessão detectado para a sua conta Okta "
+greeting: "Caro ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: 'A sua conta <strong>Okta</strong> acabou <strong><a style="color: #334870; text-decoration: none">${user.profile.login}</a></strong>
+ de ser utilizada para iniciar sessão a partir de um dispositivo, navegador ou aplicação novos ou não reconhecidos.'
+paragraph2: "<strong>Detalhes de registo</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Não reconhece esta atividade?</strong>
+  <br />
+  A sua conta pode ter sido comprometida; recomendamos que comunique a atividade suspeita à sua organização."
+paragraph4: "A segurança da sua conta é muito importante para nós e queremos garantir que é atualizado quando são tomadas medidas importantes."
+paragraph5:
+  "Não foi possível determinar se o utilizador já tinha iniciado sessão com este dispositivo anteriormente.
+   Esta notificação é comum se estiver a iniciar sessão num novo dispositivo, num novo browser,
+    se tiver eliminado os seus cookies ou se estiver a aceder ao Okta no Modo de navegação anónima."
+reportSuspiciousActivityButtonText: "Comunicar actividades suspeitas"
+footerText: "Este é um correio eletrónico automatizado. As respostas não são monitorizadas ou respondidas."
+footerWithDateTimeText:
+  "Este é um e-mail automático gerado em ${request.date} a ${request.time}. 
+  As respostas não são monitorizadas ou respondidas."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 Munique"
+footerAddress2: "Sede: Munique <br />
+  Registo: Munique HRB 248534"

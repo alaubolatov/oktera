@@ -1,0 +1,68 @@
+{
+    "localhost": {
+        "origin": "http://localhost:3000",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "localhost DS": {
+        "origin": "http://localhost:3001",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "Example App 1": {
+        "origin": "https://dev-example-app1.knauf.digital",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "GA (Global Account)": {
+        "origin": "https://account.dev.knauf.digital",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "KA (Knauf Admin)": {
+        "origin": "https://admin.dev.knauf.digital",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "AS (Applicator Suite)": {
+        "origin": "https://applicator-suite-dev.knauf.digital",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "AS (Material calculation)": {
+        "origin": "https://dev-material-calculation.knauf.com",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "CN": {
+        "origin": "https://dev.cn.knauf.digital",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "DS (Dealer Suite)": {
+        "origin": "https://dev-portal.knauf.com",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "PS (Planner Suite)": {
+        "origin": "https://development.plannersuite.knauf.com",
+        "scopes": [
+            "REDIRECT"
+        ]
+    },
+    "KUL": {
+        "origin": "https://dev-portal.knauf.digital",
+        "scopes": [
+            "REDIRECT"
+        ]
+    }
+}

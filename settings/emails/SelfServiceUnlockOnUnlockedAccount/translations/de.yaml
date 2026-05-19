@@ -1,0 +1,20 @@
+languageCode: "de"
+subject: "Konto entsperren"
+title: "Entsperrung des Okta-Kontos angefordert"
+greeting: "Lieber ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Für Ihr Konto wurde eine Anfrage zur Kontoentsperrung gestellt. Wenn Sie diese Anfrage nicht gestellt haben, wenden Sie sich bitte umgehend an Ihren Administrator. Jemand könnte versuchen, Zugriff auf Ihr Konto zu erhalten."
+paragraph2: "Wenn Sie diese Anfrage gestellt haben: Ihr Konto ist nicht gesperrt und Sie sollten sich anmelden können. Wenn Sie Probleme beim Anmelden haben, versuchen Sie, Ihr Passwort zurückzusetzen oder wenden Sie sich an Ihren Administrator."
+paragraph3: "Wenn Sie Probleme beim Zugriff auf Ihr Konto haben, senden Sie eine Hilfeanfrage an Ihren Administrator:"
+paragraph4: 'Gehen Sie zu Ihrer Seite 
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Hilfe zur Anmeldung</strong>
+  </a>.
+  Klicken Sie dann auf den Link „Hilfe anfordern“.'
+footerText:
+  "Dies ist eine automatisierte E-Mail. Die Antworten werden nicht geprüft oder
+  beantwortet"
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sitz: München<br />
+  Register: München HRB 248534"

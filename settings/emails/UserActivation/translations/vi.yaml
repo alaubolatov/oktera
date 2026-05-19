@@ -1,0 +1,21 @@
+languageCode: "vi"
+subject: "Kích hoạt tài khoản của bạn"
+title: "Kích hoạt tài khoản của bạn"
+greeting: "Kính gửi ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Cảm ơn bạn đã đăng ký."
+paragraph2: "<strong>Knauf</strong> sử dụng <strong>Okta</strong> để quản lý các ứng dụng web của bạn và đã tạo một tài khoản người dùng Okta cho bạn. Vui lòng nhấn vào liên kết sau để xác minh địa chỉ email và đặt mật khẩu để kích hoạt tài khoản của bạn:"
+paragraph3: "Liên kết này sẽ hết hạn sau ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}."
+paragraph4: 'Tên người dùng của bạn là
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  <br />
+  Trang đăng nhập của tổ chức bạn là'
+paragraph5: "Nếu bạn gặp khó khăn khi truy cập tài khoản, bạn có thể gửi yêu cầu hỗ trợ đến:"
+activateAccountButtonText: "Kích hoạt tài khoản"
+footerText: "Đây là email tự động. Phản hồi sẽ không được theo dõi hoặc trả lời."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Địa điểm: Munich<br />
+  Đăng ký: Munich HRB 248534"

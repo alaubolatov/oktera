@@ -1,0 +1,19 @@
+languageCode: "fi"
+subject: "Tilin salasanan palautus"
+title: "Okta-salasanan palautuspyyntö"
+greeting: "Hyvä ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Salasanan palautuspyyntö on tehty <strong>Okta</strong>-tilillesi. Jos et tehnyt tätä pyyntöä, ota välittömästi yhteyttä järjestelmänvalvojaasi."
+paragraph2: 'Napsauta tätä linkkiä palauttaaksesi käyttäjätunnuksesi salasanan
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Tämä linkki vanhenee ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4: "Jos sinulla on vaikeuksia tilillesi kirjautumisessa, voit lähettää tukipyynnön osoitteeseen:"
+paragraph5: "Etkö voi käyttää linkkiä? Syötä sen sijaan tämä koodi:"
+resetPasswordButtonText: "Palauta salasana"
+footerText: "Tämä on automaattinen sähköposti. Vastauksia ei käsitellä."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sijainti: München<br />
+  Rekisteri: München HRB 248534"

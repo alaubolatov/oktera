@@ -1,0 +1,24 @@
+languageCode: it
+subject: Attiva il tuo account
+title: Attiva il tuo account
+greeting: Caro ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: Grazie per la tua registrazione.
+paragraph2: '<strong>Knauf</strong> utilizza <strong>Okta</strong> per gestire le
+  tue applicazioni Web e ha creato un account utente Okta per te.
+  Fare clic sul seguente link per verificare il tuo indirizzo email e impostare la
+  password per attivare il tuo account:'
+paragraph3: Questo link scade in ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}.
+paragraph4: 'Il tuo nome utente è 
+  <strong> 
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a> 
+  </strong> 
+  <br /> 
+  La pagina di accesso della tua organizzazione è'
+paragraph5: 'Se hai difficoltà ad accedere al tuo account, puoi inviare una richiesta di aiuto a:'
+activateAccountButtonText: Attiva il tuo account
+footerText: Questa è un'e-mail automatizzata. Non rispondere a questa e-mail.
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Seat: München <br />
+  Register: München HRB 248534'

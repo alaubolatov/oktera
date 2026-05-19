@@ -1,0 +1,201 @@
+name: Destroy Terraform Resource from State
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        description: The deployment environment the resource should be destroyed in
+        required: true
+      resource_ID:
+        type: string
+        description: 'The resource identifier to be used in `terraform state rm` command.
+          Note: Single-quote this value and make sure any single-quotes are escaped within the value.'
+        required: true
+      force_destroy:
+        type: boolean
+        description: 'Whether to force destroy resources with prevent_destroy lifecycle rule'
+        required: false
+        default: false
+      # Azure backend config
+      AZURE_BACKEND_RESOURCE_GROUP_NAME:
+        type: string
+        required: true
+        description: resource_group_name value of AzureRM backend for Terraform
+      AZURE_BACKEND_STORAGE_ACCOUNT_NAME:
+        type: string
+        required: true
+        description: storage_account_name value of AzureRM backend for Terraform
+      AZURE_BACKEND_CONTAINER_NAME:
+        type: string
+        required: true
+        description: container_name value of AzureRM backend for Terraform
+      AZURE_BACKEND_KEY:
+        type: string
+        required: true
+        description: key value of AzureRM backend for Terraform
+      # Okta backend config
+      KEY_VAULT_NAME:
+        type: string
+        required: true
+        description: name of the KeyVault where OKTA_API_TOKEN is stored
+      KEY_VAULT_OKTA_API_TOKEN_KEY:
+        type: string
+        required: true
+        description: key name of the KeyVault secret where OKTA_API_TOKEN is stored
+      OKTA_ORG_NAME:
+        type: string
+        required: true
+        description: org name of the Okta account, for example dev-123456.oktapreview.com would have an org name of dev-123456
+      OKTA_BASE_URL:
+        type: string
+        required: true
+        description: domain of your Okta account, for example dev-123456.oktapreview.com would have a base url of oktapreview.com
+      # environment-specific Terraform variables
+      TF_VAR_accountLinkURL:
+        type: string
+        required: true
+        description: The URL to be used in emails to redirect the user to his account page, e.g. dev.account.knauf.digital
+      TF_VAR_emailSubjectSuffix:
+        type: string
+        required: true
+        default: ''
+        description: Optional text to add to every email subject sent by Okta.
+          Useful for distinguishing Okta environments where an email is sent from
+      TF_VAR_supportEmail:
+        type: string
+        required: true
+        description: Email used as support email
+  
+    secrets:
+      ARM_CLIENT_ID:
+        required: true
+        description: Client ID to be used when logging into Azure through Terraform
+      ARM_CLIENT_SECRET:
+        required: true
+        description: Client secret to be used when logging into Azure through Terraform
+      ARM_SUBSCRIPTION_ID:
+        required: true
+        description: Azure subscription ID to be used when logging into Azure through Terraform
+      ARM_TENANT_ID:
+        required: true
+        description: Tenant ID part of the Azure credentials to be used when logging into Azure through Terraform
+      PAT:
+        required: true
+        description: Github personal access token to use in checkout step
+
+env:
+  TF_ACTIONS_WORKING_DIR_SHARED: ./terraform/okta/
+
+  ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+  ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+
+  OKTA_ORG_NAME: ${{ inputs.OKTA_ORG_NAME }}
+  OKTA_BASE_URL: ${{ inputs.OKTA_BASE_URL }}
+
+  TF_VAR_accountLinkURL: ${{ inputs.TF_VAR_accountLinkURL }}
+  TF_VAR_emailSubjectSuffix: ${{ inputs.TF_VAR_emailSubjectSuffix }}
+  TF_VAR_supportEmail: ${{ inputs.TF_VAR_supportEmail }}
+  TF_VAR_deployment_env: ${{ inputs.environment }}
+
+jobs:
+  destroy_terraform_resource:
+    runs-on: [ubuntu-latest]
+    environment: ${{ inputs.environment }}
+
+    defaults:
+      run:
+        working-directory: ${{ env.TF_ACTIONS_WORKING_DIR_SHARED }}
+
+    timeout-minutes: 30
+
+    steps:
+      - name: Azure Login
+        uses: Azure/login@v1
+        with:
+          # https://github.com/marketplace/actions/azure-login#manually-creating-the-credentials-object
+          creds: '{
+            "clientId": "${{ env.ARM_CLIENT_ID }}",
+            "clientSecret": "${{ env.ARM_CLIENT_SECRET }}",
+            "subscriptionId": "${{ env.ARM_SUBSCRIPTION_ID }}",
+            "tenantId": "${{ env.ARM_TENANT_ID }}"
+            }'
+
+      - name: Checkout
+        uses: actions/checkout@v3.1.0
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Fetch Okta API token
+        run: |
+          VALUE=$(az keyvault secret show --vault-name ${{ inputs.KEY_VAULT_NAME }} --name ${{ inputs.KEY_VAULT_OKTA_API_TOKEN_KEY }} | jq -r '.value')
+          echo "::add-mask::$VALUE"
+          echo "OKTA_API_TOKEN=$VALUE" >> $GITHUB_ENV
+
+      - name: update git config for terraform
+        run: git config --global url."https://oauth2:${{secrets.PAT}}@github.com".insteadOf https://github.com
+
+      - name: Install Terraform v1.6.6
+        uses: hashicorp/setup-terraform@v2.0.3
+        with:
+          terraform_version: 1.6.6
+
+      - name: Terraform init
+        run: |
+          terraform init \
+            -backend-config="resource_group_name=${{ inputs.AZURE_BACKEND_RESOURCE_GROUP_NAME }}" \
+            -backend-config="storage_account_name=${{ inputs.AZURE_BACKEND_STORAGE_ACCOUNT_NAME }}" \
+            -backend-config="container_name=${{ inputs.AZURE_BACKEND_CONTAINER_NAME }}" \
+            -backend-config="key=${{ inputs.AZURE_BACKEND_KEY }}"
+
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate
+
+      - name: Show resource state before removal
+        run: |
+          echo "Current state of resource to be destroyed:"
+          terraform state show '${{ inputs.resource_ID }}' || echo "Resource not found in state"
+
+      - name: Remove prevent_destroy lifecycle rule (if force_destroy is true)
+        if: ${{ inputs.force_destroy == true }}
+        run: |
+          echo "Force destroy enabled - temporarily removing prevent_destroy lifecycle rules"
+          # Create backup of original files
+          find . -name "*.tf" -exec cp {} {}.backup \;
+          
+          # Remove prevent_destroy lifecycle rules
+          find . -name "*.tf" -exec sed -i.tmp '/lifecycle {/,/}/{ /prevent_destroy = true/d; /lifecycle {/{ N; /lifecycle {\s*}/d } }' {} \;
+          
+          echo "Lifecycle rules temporarily removed"
+
+      - name: Remove resource from Terraform state
+        run: |
+          echo "Removing resource from state: ${{ inputs.resource_ID }}"
+          terraform state rm '${{ inputs.resource_ID }}'
+
+      - name: Verify resource removal
+        run: |
+          echo "Verifying resource has been removed from state:"
+          terraform state list | grep '${{ inputs.resource_ID }}' && echo "WARNING: Resource still in state!" || echo "Resource successfully removed from state"
+
+      - name: Restore original files (if force_destroy was used)
+        if: ${{ inputs.force_destroy == true }}
+        run: |
+          echo "Restoring original terraform files"
+          find . -name "*.tf.backup" | while read backup; do
+            original="${backup%.backup}"
+            mv "$backup" "$original"
+          done
+          
+          # Clean up temporary files
+          find . -name "*.tf.tmp" -delete
+          
+          echo "Original files restored"
+
+      - name: Show final state
+        run: |
+          echo "Final Terraform state after resource removal:"
+          terraform state list

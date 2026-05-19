@@ -1,0 +1,20 @@
+languageCode: ro
+subject: 'Resetarea parolei contului '
+title: S-a solicitat resetarea parolei Okta
+greeting: 'Dragă ${f.escapeHtml($!user.profile.firstName)}, '
+paragraph1: 'S-a făcut o solicitare de resetare a parolei pentru contul dvs. <strong>Okta</strong>.
+  Dacă nu ați făcut această solicitare, contactați imediat administratorul de sistem. '
+paragraph2: 'Faceți clic pe acest link pentru a reseta parola pentru numele dvs. de
+  utilizator <strong><a style="color: #334870; text-decoration: none">${user.profile.login}</a></strong>: '
+paragraph3: 'Acest link expiră în ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}. '
+paragraph4: 'Dacă întâmpinați dificultăți la accesarea contului, trimiteți o solicitare
+  de ajutor administratorului:'
+paragraph5:  "Nu puteți utiliza linkul? Introduceți codul în schimb:"
+resetPasswordButtonText: Resetați parola
+footerText: 'Acesta este un e-mail generat automat. Răspunsurile nu sunt monitorizate
+  și nu se răspunde la acestea. '
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sediul social: München <br />
+  Registrul Comerțului: München HRB 248534'

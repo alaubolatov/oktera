@@ -1,0 +1,38 @@
+languageCode: es
+subject: Nueva notificación de inicio de sesión
+title: Nuevo inicio de sesión detectado para su cuenta Okta
+greeting: Estimado ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: 'Su cuenta de <strong>Okta</strong> 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong> 
+  ha sido usada para iniciar sesión desde un dispositivo, navegador o aplicación nuevo no reconocido.'
+paragraph2:
+  "<strong>Detalles de inicio de sesión</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>¿No reconoces esta actividad?</strong>
+  <br />
+  Su cuenta puede haber sido comprometida, recomendamos informar la actividad sospechosa
+  a su organización."
+paragraph4:
+  La seguridad de su cuenta es muy importante para nosotros y queremos asegurarnos
+  de que este actualizado cuando se realicen actividades importantes.
+paragraph5:
+  No pudimos reconocer a este dispositivo. Esta notificación es común si
+  está firmando en un nuevo dispositivo, un nuevo navegador, ha eliminado sus cookies
+  o está accediendo a Okta en modo de incógnito.
+reportSuspiciousActivityButtonText: Informar Actividad sospechosa
+footerText:
+  Este es un correo electrónico automatizado. Las respuestas no son monitoreadas
+  ni respondidas.
+footerWithDateTimeText:
+  Este es un correo electrónico automático generado en ${request.date}
+  a las ${request.time}. Las respuestas no se supervisan ni se contestan.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ubicación: Munich <br />
+  Registro: Munich HRB 248534"

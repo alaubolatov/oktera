@@ -1,0 +1,12 @@
+languageCode: "vi"
+subject: "Đặt lại mật khẩu tài khoản"
+title: "Yêu cầu đặt lại mật khẩu Okta"
+greeting: "Kính gửi ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Yêu cầu đặt lại mật khẩu đã được gửi cho tài khoản <strong>Okta</strong> của bạn. Nếu bạn không thực hiện yêu cầu này, vui lòng liên hệ ngay với quản trị viên hệ thống."
+paragraph2: "Hiện tại, mật khẩu của bạn chỉ có thể được đặt lại bởi quản trị viên. Vui lòng gửi yêu cầu hỗ trợ đến:"
+footerText: "Đây là email tự động. Phản hồi sẽ không được theo dõi hoặc trả lời."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Địa điểm: Munich<br />
+  Đăng ký: Munich HRB 248534"

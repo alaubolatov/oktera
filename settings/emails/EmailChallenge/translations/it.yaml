@@ -1,0 +1,18 @@
+languageCode: it
+subject: 'Azione richiesta: codice di verifica una tantum'
+title: 'Azione richiesta: codice di verifica una tantum'
+greeting: Caro ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: Stai ricevendo questa e-mail perché è stata presentata una richiesta per
+  un codice una tantum che può essere utilizzato per l'autenticazione.
+paragraph2: 'Immetti il seguente codice per la verifica:'
+paragraph3: Se ritieni di aver ricevuto questa e-mail per errore, contatta il tuo
+  amministratore di sistema.
+paragraph4: "Oppure clicca sul pulsante sottostante:"
+paragraph5: Questo link scade in ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}.
+signInButtonText: "Accedi"
+footerText: Questa è un'e-mail automatizzata. Non rispondere a questa e-mail.
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Seat: München <br />
+  Register: München HRB 248534'

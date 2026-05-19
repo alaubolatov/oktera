@@ -1,0 +1,16 @@
+languageCode: "hu"
+subject: "Szükséges művelet: Egyszeri ellenőrző kód"
+title: "Szükséges művelet: Egyszeri ellenőrző kód"
+greeting: "Kedves ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Azért kapta ezt az e-mailt, mert kérést nyújtottak be egy egyszeri kódra, amely felhasználható a hitelesítéshez."
+paragraph2: "Kérjük, írja be a következő kódot az ellenőrzéshez:"
+paragraph3: "Ha úgy gondolja, hogy tévesen kapta meg ezt az e-mailt, kérjük, vegye fel a kapcsolatot a rendszergazdával."
+paragraph4 : "Vagy kattintson az alábbi gombra:"
+paragraph5: "Ez a link a ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})} -ben jár le."
+signInButtonText: "Jelentkezzen be"
+footerText: "Ez egy automatizált e-mail. A válaszokat nem figyelik meg vagy nem válaszolnak."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ülés: München <br />
+  Regisztráció: München HRB 248534"

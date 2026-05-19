@@ -1,0 +1,16 @@
+languageCode: "uk"
+subject: "Розблокувати обліковий запис"
+title: "Запит на розблокування облікового запису Okta"
+greeting: "Шановний(-а) ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1: "Для Вашого облікового запису <strong>Okta</strong> надіслано запит на розблокування. Якщо Ви не робили цей запит, негайно зверніться до свого системного адміністратора. "
+paragraph2: 'Натисніть це посилання, щоб розблокувати обліковий запис для Вашого імені користувача <strong><a style="color: #334870; text-decoration: none">${user.profile.login}</a></strong>:'
+paragraph3: "Термін дії цього посилання закінчується через ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)}."
+paragraph4: "Якщо у Вас виникли труднощі з доступом до Вашого облікового запису, надішліть запит про допомогу своєму адміністратору:"
+unlockAccountButtonText: "Розблокувати обліковий запис"
+recoveryCode: "Код відновлення"
+footerText: "Це автоматичний електронний лист. Відповіді не відстежуються та не надаються."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Місцезнаходження: München <br />
+  Реєстр: München HRB 248534"

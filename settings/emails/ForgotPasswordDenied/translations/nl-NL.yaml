@@ -1,0 +1,16 @@
+languageCode: "nl-NL"
+subject: "Wachtwoord account resetten"
+title: "Wachtwoordreset Okta aangevraagd"
+greeting: "Beste ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1:
+  "Er is een verzoek gedaan om het wachtwoord van uw Okta-account te resetten.
+  Als u dit verzoek niet heeft gedaan, neem dan onmiddellijk contact op met uw systeembeheerder."
+paragraph2:
+  "Op dit moment kan uw wachtwoord alleen door een beheerder worden gereset.
+  Stuur een e-mail met een hulpverzoek naar:"
+footerText: "Dit is een geautomatiseerde e-mail. Antwoorden worden niet gecontroleerd of beantwoord."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sitz: München<br />
+  Register: München HRB 248534"

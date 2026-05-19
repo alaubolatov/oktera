@@ -1,0 +1,16 @@
+languageCode: "vi"
+subject: "Yêu cầu hành động: Mã xác minh một lần"
+title: "Yêu cầu hành động: Mã xác minh một lần"
+greeting: "Kính gửi ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Bạn nhận được email này vì đã có yêu cầu về mã một lần dùng để xác thực."
+paragraph2: "Vui lòng nhập mã sau để xác minh:"
+paragraph3: "Nếu bạn cho rằng mình nhận được email này do nhầm lẫn, vui lòng liên hệ với quản trị viên hệ thống của bạn."
+paragraph4: "Hoặc nhấn vào nút bên dưới:"
+paragraph5: "Liên kết này sẽ hết hạn sau ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}."
+signInButtonText: "Đăng nhập"
+footerText: "Đây là email tự động. Phản hồi sẽ không được theo dõi hoặc trả lời."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Địa điểm: Munich<br />
+  Đăng ký: Munich HRB 248534"

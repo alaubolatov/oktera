@@ -1,0 +1,25 @@
+languageCode: da
+subject: Aktivering af konto
+title: Aktivering af konto
+greeting: Kære ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: Tak for din registrering.
+paragraph2:
+  "<strong>Knauf</strong> bruger <strong>Okta</strong> til at administrere
+  dine webapplikationer og har oprettet en Okta -brugerkonto til dig.
+  Klik på følgende link for at bekræfte din e-mail, -adresse og indstil din adgangskode for, at aktivere din konto:"
+paragraph3: Dette link udløber om ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}.
+paragraph4:
+  'Dit brugernavn er 
+  <strong> 
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a> 
+  </strong> 
+  <br />
+  Din organisations login-side er'
+paragraph5: "Hvis du oplever vanskeligheder med at få adgang til din konto, kan du sende en hjælpanmodning til: "
+activateAccountButtonText: Aktivér din konto
+footerText: Dette er en automatiseret e-mail. Svar modtages og besvares ikke.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Beliggenhed: Munich <br />
+  Register: Munich HRB 248534"

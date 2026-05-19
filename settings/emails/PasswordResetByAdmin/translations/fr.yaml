@@ -1,0 +1,23 @@
+languageCode: "fr"
+subject: "Réinitialisation du mot de passe de votre compte"
+title: "Réinitialisation du mot de passe Okta par l’administrateur"
+greeting: "Bonjour ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Votre mot de passe <strong>Okta</strong> a été réinitialisé
+  par votre administrateur système <strong>Knauf</strong>,
+  ${f.escapeHtml($!technicalContact.fullName)}."
+paragraph2:
+  'Cliquez sur ce lien pour réinitialiser le mot de passe associé à votre identifiant
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Ce lien expire dans ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4: "Si vous rencontrez des difficultés pour accéder à votre
+  compte, n’hésitez pas à envoyer une demande d’aide à l’adresse suivante:"
+resetPasswordButtonText: "Réinitialiser le mot de passe"
+footerText: "Cet e-mail a été généré automatiquement. Les réponses à cet e-mail ne seront ni lues, ni traitées."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München <br />
+  Allemagne"
+footerAddress2: "Siège: Munich<br />
+  Registre: Munich HRB 248534"

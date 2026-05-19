@@ -1,0 +1,14 @@
+languageCode: "vi"
+subject: "Tài khoản bị khóa"
+title: "Tài khoản bị khóa"
+greeting: "Kính gửi ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Tài khoản <strong>Okta</strong> của bạn đã bị khóa do quá nhiều lần đăng nhập không thành công."
+paragraph2: "Để đặt lại tài khoản, bạn có thể sử dụng liên kết bên dưới:"
+paragraph3: "Nếu cách này không hiệu quả, hoặc nếu bạn không thực hiện các lần đăng nhập này, vui lòng liên hệ với quản trị viên của bạn:"
+unlockAccountButtonText: "Mở khóa tài khoản"
+footerText: "Đây là email tự động. Phản hồi sẽ không được theo dõi hoặc trả lời."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Địa điểm: Munich<br />
+  Đăng ký: Munich HRB 248534"

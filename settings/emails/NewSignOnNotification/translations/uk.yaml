@@ -1,0 +1,23 @@
+languageCode: "uk"
+subject: "Нове сповіщення про вхід"
+title: "Виявлено новий вхід для Вашого облікового запису Okta"
+greeting: "Шановний(-а) ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1: 'Ваш обліковий запис <strong>Okta</strong> <strong><a style="color: #334870; text-decoration: none">${user.profile.login}</a></strong> щойно було використано для входу з нового або нерозпізнаного пристрою, браузера чи програми.'
+paragraph2: "<strong>Дані для входу</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Не впізнаєте цю активність? </strong>
+  <br />
+  Ваш обліковий запис міг бути зламаний; рекомендуємо повідомити про підозрілу активність вашу організацію. "
+paragraph4: "Безпека Вашого облікового запису дуже важлива для нас, і ми хочемо переконатися, що Ви отримуєте актуальну інформацію про важливі дії."
+paragraph5: "Нам не вдалося визначити, чи Ви раніше входили в систему з цього пристрою. Це сповіщення з’являється, якщо Ви входите в систему на новому пристрої, в новому браузері, видалили файли cookie або використовуєте Okta в режимі анонімного перегляду."
+reportSuspiciousActivityButtonText: "Повідомити про підозрілу активність"
+footerText: "Це автоматичний електронний лист. Відповіді не відстежуються та не надаються."
+footerWithDateTimeText: "Це автоматичний електронний лист, згенерований ${request.date} о ${request.time}. Відповіді не відстежуються та не надаються."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Місцезнаходження: München <br />
+  Реєстр: München HRB 248534"

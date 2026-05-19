@@ -1,0 +1,44 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+skinparam sequence {
+    ArrowColor black
+    ActorBorderColor BACBFC
+    ActorBackgroundColor BACBFC
+    LifeLineBorderColor blue
+    LifeLineBackgroundColor lightblue
+
+    ParticipantBorderColor D6E0FD
+    ParticipantBackgroundColor D6E0FD
+}
+skinparam NoteBackgroundColor SmokeWhite
+
+autonumber
+
+actor User
+participant "Frontend\n(Browser)" as Frontend
+participant "NextJs Backend\n(NextAuth)" as Backend
+participant "Customer service" as Customer
+participant "Okta AuthorizationServer\n(default)" as Okta
+
+=== Logout flow ==
+
+User -> Frontend: User clicks logout button
+activate Frontend
+Frontend -> Backend: callGlobalSignOut(callbackUrl)
+activate Backend
+Backend -> Customer: clearSessionsAndTokens()
+activate Customer
+Customer -> Okta: DELETE /api/v1/users/{userId}/sessions
+activate Okta
+Backend -> Frontend: await response
+deactivate Customer
+deactivate Okta
+Frontend -> Backend: call signOut()
+Backend -> Frontend: return and delete session cookie
+Frontend -> Backend: Follow callbackUrl (usually landing page)
+Backend -> Frontend: Render /auth/signout-landing
+
+deactivate Backend
+Frontend -> Frontend: optional other activity (e.g. redirect to CMS landing page)
+@enduml

@@ -1,0 +1,158 @@
+name: Deploy to Okta
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        required: true
+        description: Name of the Github environment to deploy
+      # Azure backend config
+      AZURE_BACKEND_RESOURCE_GROUP_NAME:
+        type: string
+        required: true
+        description: resource_group_name value of AzureRM backend for Terraform
+      AZURE_BACKEND_STORAGE_ACCOUNT_NAME:
+        type: string
+        required: true
+        description: storage_account_name value of AzureRM backend for Terraform
+      AZURE_BACKEND_CONTAINER_NAME:
+        type: string
+        required: true
+        description: container_name value of AzureRM backend for Terraform
+      AZURE_BACKEND_KEY:
+        type: string
+        required: true
+        description: key value of AzureRM backend for Terraform
+      # Okta backend config
+      KEY_VAULT_NAME:
+        type: string
+        required: true
+        description: name of the KeyVault where OKTA_API_TOKEN is stored
+      KEY_VAULT_OKTA_API_TOKEN_KEY:
+        type: string
+        required: true
+        description: key name of the KeyVault secret where OKTA_API_TOKEN is stored
+      OKTA_ORG_NAME:
+        type: string
+        required: true
+        description: org name of the Okta account, for example dev-123456.oktapreview.com would have an org name of dev-123456
+      OKTA_BASE_URL:
+        type: string
+        required: true
+        description: domain of your Okta account, for example dev-123456.oktapreview.com would have a base url of oktapreview.com
+      # environment-specific Terraform variables
+      TF_VAR_accountLinkURL:
+        type: string
+        required: true
+        description: The URL to be used in emails to redirect the user to his account page, e.g. dev.account.knauf.digital
+      TF_VAR_emailSubjectSuffix:
+        type: string
+        required: true
+        default: ''
+        description: Optional text to add to every email subject sent by Okta.
+          Useful for distinguishing Okta environments where an email is sent from
+      TF_VAR_supportEmail:
+        type: string
+        required: true
+        description: Email used as support email
+
+    secrets:
+      ARM_CLIENT_ID:
+        required: true
+        description: Client ID to be used when logging into Azure through Terraform
+      ARM_CLIENT_SECRET:
+        required: true
+        description: Client secret to be used when logging into Azure through Terraform
+      ARM_SUBSCRIPTION_ID:
+        required: true
+        description: Azure subscription ID to be used when logging into Azure through Terraform
+      ARM_TENANT_ID:
+        required: true
+        description: Tenant ID part of the Azure credentials to be used when logging into Azure through Terraform
+      PAT:
+        required: true
+        description: Github personal access token to use in checkout step
+
+env:
+  TF_ACTIONS_WORKING_DIR_SHARED: ./terraform/okta/
+  TF_PLAN_FILENAME: okta
+
+  ARM_CLIENT_ID: ${{ secrets.ARM_CLIENT_ID }}
+  ARM_CLIENT_SECRET: ${{ secrets.ARM_CLIENT_SECRET }}
+  ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
+  ARM_TENANT_ID: ${{ secrets.ARM_TENANT_ID }}
+
+  OKTA_ORG_NAME: ${{ inputs.OKTA_ORG_NAME }}
+  OKTA_BASE_URL: ${{ inputs.OKTA_BASE_URL }}
+
+  TF_VAR_accountLinkURL: ${{ inputs.TF_VAR_accountLinkURL }}
+  TF_VAR_emailSubjectSuffix: ${{ inputs.TF_VAR_emailSubjectSuffix }}
+  TF_VAR_supportEmail: ${{ inputs.TF_VAR_supportEmail }}
+  TF_VAR_deployment_env: ${{ inputs.environment }}
+
+jobs:
+  deploy_to_okta:
+    runs-on: [ubuntu-latest]
+    environment: ${{ inputs.environment }}
+    defaults:
+      run:
+        working-directory: ${{ env.TF_ACTIONS_WORKING_DIR_SHARED }}
+    timeout-minutes: 30
+
+    steps:
+      - name: Azure Login
+        uses: Azure/login@v1
+        with:
+          # https://github.com/marketplace/actions/azure-login#manually-creating-the-credentials-object
+          creds: '{
+            "clientId": "${{ env.ARM_CLIENT_ID }}",
+            "clientSecret": "${{ env.ARM_CLIENT_SECRET }}",
+            "subscriptionId": "${{ env.ARM_SUBSCRIPTION_ID }}",
+            "tenantId": "${{ env.ARM_TENANT_ID }}"
+            }'
+
+      - name: Checkout
+        uses: actions/checkout@v3.1.0
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Fetch Okta API token
+        run: |
+          VALUE=$(az keyvault secret show --vault-name ${{ inputs.KEY_VAULT_NAME }} --name ${{ inputs.KEY_VAULT_OKTA_API_TOKEN_KEY }} | jq -r '.value')
+          echo "::add-mask::$VALUE"
+          echo "OKTA_API_TOKEN=$VALUE" >> $GITHUB_ENV
+
+      - name: update git config for terraform
+        run: git config --global url."https://oauth2:${{secrets.PAT}}@github.com".insteadOf https://github.com
+
+      - name: Install Terraform v1.6.6
+        uses: hashicorp/setup-terraform@v2.0.3
+        with:
+          terraform_version: 1.6.6
+
+      - name: Terraform init
+        run: |
+          terraform init \
+            -backend-config="resource_group_name=${{ inputs.AZURE_BACKEND_RESOURCE_GROUP_NAME }}" \
+            -backend-config="storage_account_name=${{ inputs.AZURE_BACKEND_STORAGE_ACCOUNT_NAME }}" \
+            -backend-config="container_name=${{ inputs.AZURE_BACKEND_CONTAINER_NAME }}" \
+            -backend-config="key=${{ inputs.AZURE_BACKEND_KEY }}"
+
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate
+
+      - name: Terraform plan
+        id: plan
+        run: terraform plan -out ${{ env.TF_PLAN_FILENAME }}.plan
+        continue-on-error: true
+
+      - name: Terraform Plan Status
+        if: steps.plan.outcome == 'failure'
+        run: exit 1
+
+      - name: Terraform apply
+        id: apply
+        if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || github.event_name == 'workflow_dispatch'
+        run: terraform apply -auto-approve ${{ env.TF_PLAN_FILENAME }}.plan

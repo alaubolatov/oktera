@@ -1,0 +1,25 @@
+languageCode: pl
+subject: Resetowanie hasła konta
+title: Prośba o zresetowanie hasła Okta
+greeting: Drogi ${f.escapeHtml($!user.profile.firstName)},
+paragraph1:
+  "Prośba o zresetowanie hasła do Twojego konta <strong>Okta</strong> została
+  zgłoszona. Jeśli nie zgłaszałeś tej prośby, niezwłocznie skontaktuj się z administratorem
+  systemu."
+paragraph2:
+  'Kliknij ten link, aby zresetować hasło dla <strong><a style="color: #334870;
+  text-decoration: none">${user.profile.login}</a></strong>'
+paragraph3: Ten link wygasa w ciągu ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}
+paragraph4:
+  "Jeśli masz trudności z dostępem do swojego konta, wyślij prośbę o pomoc
+  do administratora:"
+paragraph5: "Nie możesz użyć linku? Wprowadź kod zamiast tego:"
+resetPasswordButtonText: Zresetuj hasło
+footerText:
+  Ten e-mail został wysłany automatycznie. Nie odpowiadaj na niego. Twoje
+  wiadomości nie będą analizowane i nie otrzymasz na nie odpowiedzi.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Lokalizacja: München <br />
+  Rejestr: München HRB 248534"

@@ -1,0 +1,14 @@
+languageCode: "id"
+subject: "Akun Dikunci"
+title: "Akun dikunci"
+greeting: "Yth. ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Akun <strong>Okta</strong> Anda telah dikunci karena terlalu banyak percobaan login yang gagal."
+paragraph2: "Untuk mengatur ulang akun Anda, Anda dapat menggunakan tautan di bawah ini:"
+paragraph3: "Jika itu tidak berhasil, atau jika Anda tidak melakukan percobaan login ini, silakan hubungi administrator Anda:"
+unlockAccountButtonText: "Buka kunci akun"
+footerText: "Ini adalah email otomatis. Balasan tidak dipantau atau dijawab."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Lokasi: Munich<br />
+  Register: Munich HRB 248534"

@@ -1,0 +1,14 @@
+languageCode: ro
+subject: Cont blocat
+title: Cont blocat
+greeting: 'Dragă ${f.escapeHtml($!user.profile.firstName)}, '
+paragraph1: Contul dvs. <strong>Okta</strong> a fost blocat din cauza prea multor încercări eșuate de conectare.
+paragraph2: 'Pentru a vă reseta contul, puteți utiliza linkul de mai jos: '
+paragraph3: 'Dacă acest lucru nu funcționează sau dacă nu ați inițiat aceste încercări de conectare, vă rugăm să contactați administratorul: '
+unlockAccountButtonText: Deblocați contul
+footerText: 'Acesta este un e-mail generat automat. Răspunsurile nu sunt monitorizate și nu se răspunde la acestea. '
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sediul social: München <br />
+  Registrul Comerțului: München HRB 248534'

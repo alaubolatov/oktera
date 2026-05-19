@@ -1,0 +1,20 @@
+languageCode: da
+subject: "Handling påkrævet: engangsverifikationskode"
+title: "Handling påkrævet: engangsverifikationskode"
+greeting: Kære ${f.escapeHtml($!user.profile.firstName)},
+paragraph1:
+  Du modtager denne e-mail, fordi der blev anmodet om en engangskode, der
+  kan bruges til godkendelse.
+paragraph2: "Indtast følgende kode til verifikation:"
+paragraph3:
+  Hvis du mener, at du har modtaget denne e-mail ved en fejl, skal du kontakte
+  din systemadministrator.
+paragraph4:  "Eller klik på knappen nedenfor:"
+paragraph5: Dette link udløber efter ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}.
+signInButtonText: "Log ind"
+footerText: Dette er en automatiseret e-mail. Svar modtages og besvares ikke.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Beliggenhed: Munich <br />
+  Register: Munich HRB 248534"

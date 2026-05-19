@@ -1,0 +1,24 @@
+languageCode: "de"
+subject: "Konto-Passwort zurücksetzen"
+title: "Okta-Passwort durch Administrator zurücksetzen"
+greeting: "Hallo ${f.escapeHtml($!user.profile.firstName)} ${f.escapeHtml($!user.profile.lastName)},"
+paragraph1:
+  "Ihr <strong>Okta</strong>-Passwort wurde von Ihrem Systemadministrator
+  ${f.escapeHtml($!technicalContact.fullName)} bei <strong>Knauf</strong> zurückgesetzt."
+paragraph2: 'Klicken Sie auf diesen Link, um das Passwort für Ihren Benutzernamen
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  zurückzusetzen:'
+paragraph3: "Dieser Link läuft in ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)} ab."
+paragraph4: 'Wenn Sie Schwierigkeiten beim Zugriff auf Ihr Konto haben,
+  senden Sie eine Hilfeanfrage an Ihren Administrator:'
+resetPasswordButtonText: "Passwort zurücksetzen"
+footerText:
+  'Dies ist eine automatisierte E-Mail. Die Antworten werden nicht geprüft oder
+  beantwortet'
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sitz: München<br />
+  Register: München HRB 248534'

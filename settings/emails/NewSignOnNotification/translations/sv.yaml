@@ -1,0 +1,32 @@
+languageCode: "sv"
+subject: "Meddelande om ny inloggning"
+title: "En ny inloggning har upptäckts för ditt Okta-konto"
+greeting: "Bästa ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: 'Ditt <strong>Okta</strong>-konto
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  användes nyss för att logga in från en ny eller okänd enhet, webbläsare eller applikation.'
+paragraph2: "<strong>Inloggningsinformation</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Känner du inte igen den här aktiviteten?</strong>
+  <br />
+  Ditt konto kan ha utsatts för intrång; vi rekommenderar att du rapporterar den misstänkta aktiviteten till din organisation."
+paragraph4: "Ditt kontos säkerhet är mycket viktig för oss och vi vill säkerställa att du uppdateras när viktiga åtgärder vidtas."
+paragraph5: "Vi kunde inte fastställa om du hade loggat in med den här enheten
+  förut. Det här meddelandet är normalt om du loggar in en ny enhet,
+  en ny webbläsare, om du har raderat cookies eller om du använder
+  inkognitoläge för att komma åt Okta."
+reportSuspiciousActivityButtonText: "Rapportera misstänkt aktivitet"
+footerText: "Det här är ett automatiserat e-postmeddelande. Svar övervakas och besvaras inte."
+footerWithDateTimeText:
+  "Det här är ett automatiserat e-postmeddelande skapat ${request.date}
+  kl. ${request.time}. Svar övervakas och besvaras inte."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Plats: Munich<br />
+  Registernummer: Munich HRB 248534"

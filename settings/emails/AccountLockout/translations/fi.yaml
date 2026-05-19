@@ -1,0 +1,14 @@
+languageCode: "fi"
+subject: "Tili lukittu"
+title: "Tili lukittu"
+greeting: "Hyvä ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Sinun <strong>Okta</strong>-tilisi on lukittu liian monien epäonnistuneiden kirjautumisyritysten vuoksi."
+paragraph2: "Voit mahdollisesti palauttaa tilisi käyttämällä alla olevaa linkkiä:"
+paragraph3: "Jos tämä ei toimi tai et itse yrittänyt kirjautua, ota yhteyttä järjestelmänvalvojaan:"
+unlockAccountButtonText: "Avaa tili"
+footerText: "Tämä on automaattinen sähköposti. Vastauksia ei käsitellä."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sijainti: München<br />
+  Rekisteri: München HRB 248534"

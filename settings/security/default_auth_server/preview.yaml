@@ -1,0 +1,25 @@
+Name: default
+Audiences:
+  - api://default
+Description: Default Authorization Server for your Applications
+Issuer mode: CUSTOM_URL # options: `CUSTOM_URL`, `ORG_URL`, `DYNAMIC`
+Credentials rotation mode: AUTO # options: `AUTO`, `MANUAL`
+Active?: true
+
+Default access policy:
+  Default policy rule:
+    Name: Default Policy Rule
+    Grant types:
+      - client_credentials
+      - authorization_code
+      - implicit
+      - password
+
+    Groups:
+      - EVERYONE
+    Scopes:
+      - '*'
+
+    Access token lifetime (in minutes): 5
+    Refresh token lifetime (in minutes): 43200 # 30 days
+    Refresh token window (in minutes): 20160 # 14 days

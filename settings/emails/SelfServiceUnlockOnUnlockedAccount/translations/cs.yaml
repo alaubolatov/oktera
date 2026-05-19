@@ -1,0 +1,23 @@
+languageCode: "cs"
+subject: "Odblokování účtu"
+title: "Požadované odemknutí účtu Okta"
+greeting: "Vážený ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1:
+  "Pro váš účet byla podána žádost o odblokování účtu. Pokud jste provedli
+  tuto žádost nepodali, kontaktujte prosím svého správce
+  neprodleně. Někdo by se mohl pokoušet získat přístup k vašemu k účtu."
+paragraph2: "Pokud jste tuto žádost podali: váš účet není uzamčen a vy jste
+  by se měl být schopen přihlásit. Pokud máte potíže s přihlášením, zkuste obnovit heslo nebo se obraťte na správce."
+paragraph3: "Pokud máte potíže s přístupem ke svému účtu, pošlete zprávu žádost o pomoc svému správci:"
+paragraph4: 'Přejděte na stránku
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Nápověda k přihlášení</strong>
+  </a>.
+  Poté klikněte na odkaz Požádat o nápovědu.'
+footerText:
+  "Jedná se o automatický e-mail. Odpovědi nejsou monitorovány ani na ně není odpovídáno."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Umístění: Munich  <br />
+  Rejstříku: Munich HRB 248534"

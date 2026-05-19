@@ -1,0 +1,21 @@
+languageCode: "cs"
+subject: "Obnovení hesla k účtu "
+title: "Obnovení hesla Okta správcem"
+greeting: "Vážený/Vážená ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1: "Vaše heslo k účtu Okta bylo obnoveno správcem systému ${f.escapeHtml($!technicalContact.fullName)} ve společnosti Knauf."
+paragraph2:
+  'Kliknutím na tento odkaz obnovíte heslo pro své uživatelské jméno 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Tento odkaz vyprší za ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4: "Pokud máte potíže s přístupem k vašemu účtu, pošlete žádost o pomoc svému administrátorovi:"
+resetPasswordButtonText: "Obnovení hesla"
+footerText:
+  "Jedná se o automatický e-mail. Odpovědi nejsou monitorovány ani na ně
+  není odpovídáno."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Umístění: Munich  <br />
+  Rejstříku: Munich HRB 248534"

@@ -1,0 +1,14 @@
+languageCode: "nl-NL"
+subject: "Account geblokkeerd"
+title: "Account geblokkeerd"
+greeting: "Beste ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Je <strong>Okta</strong> account is geblokkeerd wegens te veel mislukte inlogpogingen."
+paragraph2: "Om je account te resetten is het misschien mogelijk de onderstaande link te gebruiken:"
+paragraph3: "Als dat niet werkt, of als je deze inlogpogingen niet gestart hebt, neem dan contact op met je beheerder:"
+unlockAccountButtonText: "Ontgrendel account"
+footerText: "Dit is een geautomatiseerde e-mail. Antwoorden worden niet gecontroleerd of beantwoord."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sitz: München<br />
+  Register: München HRB 248534"

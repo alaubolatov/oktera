@@ -1,0 +1,23 @@
+languageCode: "de"
+subject: "Aktivieren Sie Ihr Konto"
+title: "Aktivieren Sie Ihr Konto"
+greeting: "Hallo ${f.escapeHtml($!user.profile.firstName)} ${f.escapeHtml($!user.profile.lastName)},"
+paragraph1: "Vielen Dank für Ihre Registrierung."
+paragraph2: "<strong>Knauf</strong> verwendet <strong>Okta</strong> zur
+  Verwaltung von Webanwendungen und hat ein Okta-Benutzerkonto für Sie erstellt. Bitte klicken Sie auf den folgenden Link, um
+  Ihre E-Mail-Adresse zu verifizieren und Ihr Passwort festzulegen, um Ihr Konto zu aktivieren:"
+paragraph3: "Dieser Link läuft in ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)} ab."
+paragraph4: 'Ihr Benutzername ist
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  <br />
+  Die Anmeldeseite Ihrer Organisation lautet'
+paragraph5: 'Wenn Sie Schwierigkeiten beim Zugriff auf Ihr Konto haben, können Sie eine Hilfeanfrage an folgende Adresse senden:'
+activateAccountButtonText: "Aktivieren Sie Ihr Konto"
+footerText: 'Dies ist eine automatisierte E-Mail. Die Antworten werden nicht geprüft oder beantwortet'
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sitz: München <br />
+  Register: München HRB 248534'

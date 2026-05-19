@@ -1,0 +1,16 @@
+languageCode: "id"
+subject: "Tindakan Diperlukan: Kode verifikasi sekali pakai"
+title: "Tindakan Diperlukan: Kode verifikasi sekali pakai"
+greeting: "Yth. ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Anda menerima email ini karena ada permintaan untuk kode sekali pakai yang dapat digunakan untuk otentikasi."
+paragraph2: "Silakan masukkan kode berikut untuk verifikasi:"
+paragraph3: "Jika Anda merasa menerima email ini secara tidak sengaja, silakan hubungi administrator sistem Anda."
+paragraph4: "Atau klik tombol di bawah ini:"
+paragraph5: "Tautan ini akan kedaluwarsa dalam ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}."
+signInButtonText: "Masuk"
+footerText: "Ini adalah email otomatis. Balasan tidak dipantau atau dijawab."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Lokasi: Munich<br />
+  Register: Munich HRB 248534"

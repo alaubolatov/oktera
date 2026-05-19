@@ -1,0 +1,33 @@
+languageCode: it
+subject: Nuova notifica di accesso
+title: Nuovo accesso rilevato per il tuo account Okta
+greeting: Caro ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: 'Il tuo account <strong>Okta</strong>
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  è stato utilizzato per accedere da un dispositivo, browser o applicazione nuovo o non riconosciuto.'
+paragraph2: "<strong>Dettagli di accesso</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: '<strong>Non riconosci questa attività? </strong>
+  <br />
+  Il tuo account potrebbe essere stato compromesso; Si consiglia di segnalare l''attività
+  sospetta alla tua organizzazione.'
+paragraph4: La sicurezza del tuo account è molto importante per noi e vogliamo assicurarci
+  di essere aggiornati quando vengono intraprese azioni importanti.
+paragraph5: Non siamo stati in grado di determinare se avevi già effettuato l'accesso
+  con questo dispositivo in passato. Questa notifica è comune se si sta facendo l'accesso
+  da un nuovo dispositivo o da un nuovo browser, se hai eliminato i cookie o se accedi
+  a Okta in Modalità Incognito.
+reportSuspiciousActivityButtonText: Segnala attività sospette
+footerText: Questa è un'e-mail automatizzata. Non rispondere a questa e-mail.
+footerWithDateTimeText: Questa è un'e-mail automatizzata generata il ${request.date}
+  alle ${request.time}. Non rispondere a questa e-mail.
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Seat: München <br />
+  Register: München HRB 248534'

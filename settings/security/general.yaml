@@ -1,0 +1,9 @@
+Security notification emails:
+  New sign-on notification email: true
+  Password changed notification email: false
+  MFA enrolled notification email: true
+  MFA reset notification email: true
+  Report suspicious activity via email: true
+
+Okta ThreatInsight settings:
+  Action: block

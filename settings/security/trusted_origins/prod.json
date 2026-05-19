@@ -1,0 +1,44 @@
+{
+  "GA (Global Account)": {
+    "origin": "https://account.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "KA (Knauf Admin)": {
+    "origin": "https://admin.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "AS (Applicator Suite)": {
+    "origin": "https://applicator-suite.knauf.digital",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "AS (Material Calculation)": {
+    "origin": "https://material-calculation.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "DS (Dealer Suite)": {
+    "origin": "https://portal.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "PS (Planner Suite)": {
+    "origin": "https://plannersuite.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "KUL": {
+    "origin": "https://portal.knauf.digital",
+    "scopes": [
+      "REDIRECT"
+    ]
+  }
+}

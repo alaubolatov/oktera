@@ -1,0 +1,172 @@
+ID claims:
+  aboutYou:
+    Name: aboutYou
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: 'user.aboutYou'
+    Scopes:
+      - profile
+  countryCode:
+    Name: countryCode
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: 'user.countryCode'
+    Scopes:
+      - profile
+  preferredLanguage:
+    Name: preferredLanguage
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: 'user.preferredLanguage'
+    Scopes:
+      - profile
+  firstName:
+    Name: firstName
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: 'user.firstName'
+    Scopes:
+      - profile
+  lastName:
+    Name: lastName
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: 'user.lastName'
+    Scopes:
+      - profile
+  localeCode:
+    Name: localeCode
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: 'user.locale'
+    Scopes:
+      - profile
+
+Access claims:
+  knaufId:
+    Name: knaufId
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: 'user.knaufId'
+    Scopes:
+      - profile
+    # Status: inactive  # active by default
+  aboutYou:
+    Name: aboutYou
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: 'user.aboutYou'
+    Scopes:
+      - profile
+  groups:
+    Name: groups
+    Always include in token?: true
+    Value type: Groups
+    Group filter type: STARTS_WITH # alternatives: EQUALS, CONTAINS, REGEX
+    Value: 'CT_'
+    Scopes:
+      - openid
+  sub:
+    Name: sub
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: '(appuser != null) ? appuser.userName : app.clientId'
+    Scopes:
+  email:
+    Name: email
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.email
+    Scopes:
+      - email
+  locale:
+    Name: locale
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.locale
+    Scopes:
+      - profile
+  firstName:
+    Name: firstName
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.firstName
+    Scopes:
+      - profile
+  lastName:
+    Name: lastName
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.lastName
+    Scopes:
+      - profile
+  preferredLanguage:
+    Name: preferredLanguage
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.preferredLanguage
+    Scopes:
+      - profile
+  phoneNumber:
+    Name: phoneNumber
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.primaryPhone
+    Scopes:
+      - profile
+  mobileNumber:
+    Name: mobileNumber
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.mobilePhone
+    Scopes:
+      - profile
+  countryCode:
+    Name: countryCode
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.countryCode
+    Scopes:
+      - profile
+  middleName:
+    Name: middleName
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.middleName
+    Scopes:
+      - profile
+  companyName:
+    Name: companyName
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.companyName
+    Scopes:
+      - profile
+  companyCity:
+    Name: companyCity
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.companyCity
+    Scopes:
+      - profile
+  companyStreet:
+    Name: companyStreet
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.companyStreet
+    Scopes:
+      - profile
+  companyZipCode:
+    Name: companyZipCode
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.companyZipCode
+    Scopes:
+      - profile
+  companyCountryCode:
+    Name: companyCountryCode
+    Always include in token?: true
+    Value type: Expression # or Groups
+    Value: user.companyCountryCode
+    Scopes:
+      - profile

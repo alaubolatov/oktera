@@ -1,0 +1,32 @@
+{
+  "GA (Global Account)": {
+    "origin": "https://account.preprod.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "KA (Knauf Admin)": {
+    "origin": "https://admin.preprod.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "DS (Dealer Suite)": {
+    "origin": "https://preprod-portal.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "PS (Planner Suite)": {
+    "origin": "https://development.plannersuite.knauf.com",
+    "scopes": [
+      "REDIRECT"
+    ]
+  },
+  "KUL": {
+    "origin": "https://preprod-portal.knauf.digital",
+    "scopes": [
+      "REDIRECT"
+    ]
+  }
+}

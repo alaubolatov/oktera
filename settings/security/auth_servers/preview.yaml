@@ -1,0 +1,15 @@
+# sample authorization server name:
+#   Audiences:
+#     - sample audience
+#   Description: it works!
+#   Issuer mode: CUSTOM_URL # options: `CUSTOM_URL`, `ORG_URL`, `DYNAMIC`
+#   Credentials rotation mode: AUTO # options: `AUTO`, `MANUAL`
+#   Active?: true
+
+knauf:
+  Audiences:
+    - api://knauf
+  Description:
+  Issuer mode: DYNAMIC
+  Credentials rotation mode: AUTO
+  Active?: false

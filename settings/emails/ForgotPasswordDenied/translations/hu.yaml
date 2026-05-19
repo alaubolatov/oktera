@@ -1,0 +1,12 @@
+languageCode: "hu"
+subject: "A fiók jelszavának visszaállítása"
+title: "Az Okta jelszó visszaállításá kérte"
+greeting: "Kedves ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Jelszó -visszaállítási kérést tettek az Okta -fiókjához. Ha nem ön nyújtotta be ezt a kérést, kérjük, azonnal vegye fel a kapcsolatot a rendszergazdával."
+paragraph2: "Ebben az időben a jelszavát csak adminisztrátor állíthatja vissza. Kérjük, küldjön egy súgó kérést a következő címre:"
+footerText: "Ez egy automatizált e-mail. A válaszokat nem figyelik meg vagy nem válaszolnak."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ülés: München <br />
+  Regisztráció: München HRB 248534"

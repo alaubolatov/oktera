@@ -1,0 +1,21 @@
+languageCode: "fi"
+subject: "Aktivoi tilisi"
+title: "Aktivoi tilisi"
+greeting: "Hyvä ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Kiitos rekisteröitymisestäsi."
+paragraph2: "<strong>Knauf</strong> käyttää <strong>Okta</strong>-palvelua hallinnoidakseen verkkosovelluksiasi ja sinulle on luotu Okta-käyttäjätili. Ole hyvä ja klikkaa alla olevaa linkkiä vahvistaaksesi sähköpostiosoitteesi ja asettaaksesi salasanasi aktivoidaksesi tilisi:"
+paragraph3: "Tämä linkki vanhenee ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)} tunnin kuluttua."
+paragraph4: 'Käyttäjätunnuksesi on
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  <br />
+  Organisaatiosi kirjautumissivu on'
+paragraph5: "Jos sinulla on ongelmia tilillesi kirjautumisessa, voit lähettää tukipyynnön osoitteeseen:"
+activateAccountButtonText: "Aktivoi tili"
+footerText: "Tämä on automaattinen sähköposti. Vastauksia ei lueta tai käsitellä."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sijainti: München<br />
+  Rekisteri: München HRB 248534"

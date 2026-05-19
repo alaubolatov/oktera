@@ -1,0 +1,33 @@
+languageCode: ro
+subject: Notificare de conectare nouă
+title: 'S-a detectat o conectare nouă pentru contul dvs. Okta '
+greeting: 'Dragă ${f.escapeHtml($!user.profile.firstName)}, '
+paragraph1: 'Contul dvs. <strong>Okta</strong> 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong> 
+  tocmai s-a utilizat pentru conectare de pe un dispozitiv, un browser, o aplicație nerecunoscut/ă. '
+paragraph2: "<strong>Detalii de conectare</strong> <br />
+  ${request.browser} <br/>
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: '<strong>Nu recunoașteți această activitate? </strong>
+  <br />
+  Este posibil ca contul dvs. să fi fost compromis; vă recomandăm să raportați activitatea
+  suspectă organizației dvs. '
+paragraph4: 'Securitatea contului dvs. este foarte importantă pentru noi și dorim
+  să ne asigurăm că sunteți informat când se întreprind acțiuni importante. '
+paragraph5: 'Nu am putut stabili dacă v-ați conectat anterior de pe acest dispozitiv.
+  Această notificare este obișnuită dacă vă conectați de pe un dispozitiv nou, un
+  browser nou, dacă ați șters modulele cookie sau ați accesat Okta în modul incognito. '
+reportSuspiciousActivityButtonText: Raportați activitatea suspectă
+footerText: 'Acesta este un e-mail generat automat. Răspunsurile nu sunt monitorizate
+  și nu se răspunde la acestea. '
+footerWithDateTimeText: Acesta este un e-mail generat automat în ${request.date} la
+  ${request.time}. Răspunsurile nu sunt monitorizate și nu se răspunde la acestea.
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sediul social: München <br />
+  Registrul Comerțului: München HRB 248534'

@@ -1,0 +1,12 @@
+languageCode: "en"
+subject: "Account password reset"
+title: "Okta password reset requested"
+greeting: "Dear ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "A password reset request was made for your Okta account. If you did not make this request, please contact your system administrator immediately."
+paragraph2: "At this time your password can only be reset by an administrator. Please send a help request to:"
+footerText: "This is an automated email. Replies are not monitored or answered."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Location: Munich<br />
+  Register: Munich HRB 248534"

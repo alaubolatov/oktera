@@ -1,0 +1,16 @@
+languageCode: "ko"
+subject: "계정 잠금 해제"
+title: "Okta 계정 잠금 해제 요청"
+greeting: "안녕하세요 ${f.escapeHtml($!user.profile.firstName)}님,"
+paragraph1: "귀하의 <strong>Okta</strong> 계정에 대한 계정 잠금 해제를 요청받았습니다. 본인이 요청한 것이 아니면 시스템 관리자에게 즉시 문의하세요."
+paragraph2: '아래 링크를 클릭하여 사용자 이름 <strong><a style="color: #334870; text-decoration: none">${user.profile.login}</a></strong>의 계정을 잠금 해제하세요:'
+paragraph3: "이 링크는 ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)} 후에 만료됩니다."
+paragraph4: "계정에 접속하는 데 어려움이 있으시면 관리자에게 도움 요청을 보내주세요:"
+unlockAccountButtonText: "계정 잠금 해제"
+recoveryCode: "복구 코드"
+footerText: "이 메일은 자동으로 발송되었습니다. 회신은 확인되거나 답변되지 않습니다."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "본사: 뮌헨 <br /> 
+  등록: 뮌헨 HRB 248534"

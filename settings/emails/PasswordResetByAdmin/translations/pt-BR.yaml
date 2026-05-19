@@ -1,0 +1,20 @@
+languageCode: "pt-BR"
+subject: "Redefinição da palavra-passe da conta"
+title: "Reposição da palavra-passe Okta pelo administrador "
+greeting: "Caro ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "A sua palavra-passe Okta foi redefinida pelo seu administrador
+  de sistema ${f.escapeHtml($!technicalContact.fullName)} na Knauf."
+paragraph2:
+  'Clique nesta ligação para redefinir a palavra-passe do seu nome de utilizador
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Esta ligação expira em ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}."
+paragraph4: "Se tiver dificuldades em aceder à sua conta, pode enviar um pedido de ajuda para:"
+resetPasswordButtonText: "Repor a palavra-passe"
+footerText: "Este é um correio eletrónico automatizado. As respostas não são monitorizadas ou respondidas. "
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 Munique"
+footerAddress2: "Sede: Munique <br />
+  Registo: Munique HRB 248534"

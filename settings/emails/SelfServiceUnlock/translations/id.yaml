@@ -1,0 +1,19 @@
+languageCode: "id"
+subject: "Buka kunci akun"
+title: "Permintaan buka kunci akun Okta"
+greeting: "Yth. ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Permintaan buka kunci akun telah dibuat untuk akun <strong>Okta</strong> Anda. Jika Anda tidak membuat permintaan ini, segera hubungi administrator sistem Anda."
+paragraph2: 'Klik tautan ini untuk membuka kunci akun untuk nama pengguna
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Tautan ini akan kedaluwarsa dalam ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)}."
+paragraph4: "Jika Anda mengalami kesulitan mengakses akun Anda, kirim permintaan bantuan ke administrator Anda:"
+unlockAccountButtonText: "Buka kunci akun"
+recoveryCode: "Kode pemulihan"
+footerText: "Ini adalah email otomatis. Balasan tidak dipantau atau dijawab."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Lokasi: Munich <br />
+  Register: Munich HRB 248534"

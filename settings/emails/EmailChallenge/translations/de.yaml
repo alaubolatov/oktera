@@ -1,0 +1,20 @@
+languageCode: "de"
+subject: "Eingabe erforderlich: einmaliger Verifizierungscode"
+title: "Eingabe erforderlich: einmaliger Verifizierungscode"
+greeting: "Liebe*r ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Sie erhalten diese E-Mail, da ein einmaliger Code zur
+  Authentifizierung angefordert wurde."
+paragraph2: "Bitte geben Sie den folgenden Code zur Verifizierung ein:"
+paragraph3: "Sollten Sie diese E-Mail irrtümlicherweise erhalten haben,
+  wenden Sie sich bitte an Ihren Systemadministrator."
+paragraph4: "Oder klicke auf die Schaltfläche unten:"
+paragraph5: "Dieser Link läuft in ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}. ab."
+signInButtonText: "Anmelden"
+footerText:
+  'Dies ist eine automatisierte E-Mail. Die Antworten werden nicht geprüft oder
+  beantwortet'
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sitz: München<br />
+  Register: München HRB 248534'

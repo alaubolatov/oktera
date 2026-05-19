@@ -1,0 +1,25 @@
+languageCode: cs
+subject: Aktivace vašeho účtu
+title: Aktivujte svuj ucet
+greeting: "Vážený/Vážená ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1: Děkujeme za Vaši registraci.
+paragraph2:
+  "Společnost <strong>Knauf</strong> používá ke správě Vašich webových aplikací
+  službu <strong>Okta</strong> a vytvořila pro Vás uživatelský účet Okta.
+  Kliknutím na následující odkaz ověřte svou e-mailovou adresu a nastavte si heslo pro aktivaci účtu: "
+paragraph3: Tento odkaz vyprší za ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}.
+paragraph4:
+  'Vaše uživatelské jméno je 
+  <strong> 
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  <br />
+  Přihlašovací stránka Vaší organizace je '
+paragraph5: "Pokud máte potíže s přístupem ke svému účtu, můžete zaslat žádost o pomoc na adresu:"
+footerText: Jedná se o automatický e-mail. Odpovědi nejsou monitorovány ani na ně není odpovídáno.
+activateAccountButtonText: Aktivace účtu
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Umístění: Munich  <br />
+  Rejstříku: Munich HRB 248534"

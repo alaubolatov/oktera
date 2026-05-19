@@ -1,0 +1,14 @@
+languageCode: "en"
+subject: "Account Locked"
+title: "Account locked"
+greeting: "Dear ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Your <strong>Okta</strong> account has been locked due to too many failed login attempts."
+paragraph2: "To reset your account, it may be possible to use the link below:"
+paragraph3: "If that doesn't work, or if you did not initiate these login attempts, please contact your administrator:"
+unlockAccountButtonText: "Unlock account"
+footerText: "This is an automated email. Replies are not monitored or answered."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Location: Munich<br />
+  Register: Munich HRB 248534"

@@ -1,0 +1,12 @@
+languageCode: "fi"
+subject: "Tilin salasanan palautus"
+title: "Okta-salasanan palautusta pyydetty"
+greeting: "Hyvä ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Okta-tilillesi on tehty salasanan palautuspyyntö. Jos et tehnyt tätä pyyntöä, ota välittömästi yhteyttä järjestelmänvalvojaan."
+paragraph2: "Tällä hetkellä vain järjestelmänvalvoja voi palauttaa salasanasi. Lähetä tukipyyntö osoitteeseen:"
+footerText: "Tämä on automaattinen sähköposti. Vastauksia ei käsitellä."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sijainti: München<br />
+    Rekisteri: München HRB 248534"

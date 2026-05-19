@@ -1,0 +1,18 @@
+languageCode: "en"
+subject: "Unlock account"
+title: "Okta account unlock requested"
+greeting: "Dear ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "An account unlock request was made for your account. If you did not make this request, please contact your administrator immediately. Someone could be trying to gain access to your account."
+paragraph2: "If you did make this request: your account is not locked and you should be able to log in. If you are having trouble logging in, try resetting your password or contacting your admin."
+paragraph3: "If you experience difficulties accessing your account, send a help request to your administrator:"
+paragraph4: 'Go to your 
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Sign-in Help</strong>
+  </a> 
+  page. Then click the Request help link.'
+footerText: "This is an automated email. Replies are not monitored or answered."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Seat: München<br />
+  Register: München HRB 248534"

@@ -1,0 +1,39 @@
+name: Destroy Terraform Resource from State (DEV)
+
+concurrency: dev
+
+on:
+  workflow_dispatch:
+    inputs:
+      resource_ID:
+        type: string
+        description:
+          'The resource identifier to be removed from terraform state.
+          Note: Single-quote this value and make sure any single-quotes are escaped within the value.'
+        required: true
+      force_destroy:
+        type: boolean
+        description: 'Force destroy resources with prevent_destroy lifecycle rule (temporarily removes the rule)'
+        required: false
+        default: false
+
+jobs:
+  destroy_terraform_resource_dev:
+    uses: ./.github/workflows/_destroy_terraform_resource.yml
+    with:
+      environment: dev
+      resource_ID: ${{ inputs.resource_ID }}
+      force_destroy: ${{ inputs.force_destroy }}
+
+      AZURE_BACKEND_RESOURCE_GROUP_NAME: 'rg-kul-dev-tfstate-westeurope'
+      AZURE_BACKEND_STORAGE_ACCOUNT_NAME: 'kuldevtfstatewesteurope'
+      AZURE_BACKEND_CONTAINER_NAME: 'tfstate'
+      AZURE_BACKEND_KEY: 'okta-dev'
+      KEY_VAULT_NAME: kv-kul-dev-001
+      KEY_VAULT_OKTA_API_TOKEN_KEY: kul-dev-OKTA-API-KEY
+      OKTA_ORG_NAME: 'dev-knaufcustomer'
+      OKTA_BASE_URL: 'okta.com'
+      TF_VAR_accountLinkURL: 'account.dev.knauf.digital'
+      TF_VAR_emailSubjectSuffix: '(Dev)'
+      TF_VAR_supportEmail: 'app-support@knauf.com'
+    secrets: inherit

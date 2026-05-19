@@ -1,0 +1,18 @@
+languageCode: "nl-NL"
+subject: "Actie vereist: eenmalige verificatiecode"
+title: "Actie vereist: eenmalige verificatiecode"
+greeting: "Beste ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Je ontvangt deze email omdat er een eenmalige verificatiecode
+  is aangevraagd."
+paragraph2: "Voer de volgende verificatiecode in:"
+paragraph3: "Als je denkt dat je deze e-mail ten onrechte hebt ontvangen,
+  neem dan contact op met je systeembeheerder."
+paragraph4: "Of klik op de knop hieronder:"
+paragraph5: "Deze link vervalt over ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}."
+signInButtonText: "Aanmelden"
+footerText: "Dit is een geautomatiseerde e-mail. Antwoorden worden niet gecontroleerd of beantwoord."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sitz: München<br />
+  Register: München HRB 248534"

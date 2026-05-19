@@ -1,0 +1,20 @@
+languageCode: "da"
+subject: "Lås konto op"
+title: "Anmodning om oplåsning af Okta-konto"
+greeting: "Kære ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Der blev anmodet om oplåsning af din konto. Hvis du ikke
+  ikke har foretaget denne anmodning, bedes du kontakte din administrator
+  med det samme. Nogen kunne forsøge at få adgang til din konto."
+paragraph2: "Hvis du har foretaget denne anmodning: Din konto er ikke låst, og du burde kunne logge ind. Hvis du har problemer med at logge ind, kan du prøve at nulstille din adgangskode eller kontakte din administrator."
+paragraph3: "Hvis du har problemer med at få adgang til din konto, skal du sende en anmodning om hjælp til din administrator:"
+paragraph4: 'Gå til din 
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>log-in-hjælpeside</strong>
+  </a>. 
+  Klik derefter på linket Anmod om hjælp.'
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Beliggenhed: Munich <br />
+  Register: Munich HRB 248534"
+footerText: "Dette er en automatiseret e-mail. Svar modtages og besvares ikke."

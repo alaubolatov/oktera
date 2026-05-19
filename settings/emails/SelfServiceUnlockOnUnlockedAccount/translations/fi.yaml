@@ -1,0 +1,18 @@
+languageCode: "fi"
+subject: "Avaa tili"
+title: "Okta-tilin avaamispyyntö"
+greeting: "Hyvä ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Tilillesi on tehty avaamispyyntö. Jos et tehnyt tätä pyyntöä, ota välittömästi yhteyttä järjestelmänvalvojaan. Joku saattaa yrittää päästä tilillesi."
+paragraph2: "Jos teit tämän pyynnön: tilisi ei ole lukittu ja sinun pitäisi pystyä kirjautumaan sisään. Jos sinulla on ongelmia kirjautumisessa, kokeile nollata salasanasi tai ota yhteyttä ylläpitäjään."
+paragraph3: "Jos sinulla on vaikeuksia päästä tilillesi, lähetä tukipyyntö järjestelmänvalvojalle:"
+paragraph4: 'Siirry 
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Kirjautumisapuun</strong>
+  </a> 
+  -sivulle. Napsauta sitten Pyydä apua -linkkiä.'
+footerText: "Tämä on automaattinen sähköposti. Vastauksia ei käsitellä tai lueta."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Toimipaikka: München<br />
+  Rekisteri: München HRB 248534"

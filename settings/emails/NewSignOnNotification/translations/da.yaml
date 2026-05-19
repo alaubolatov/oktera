@@ -1,0 +1,35 @@
+languageCode: da
+subject: Ny login meddelelse
+title: Ny login registreret for din Okta konto
+greeting: Kære ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: 'Din <strong>Okta</strong>-konto 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  er brugt til at logge ind fra en ny eller ukendt enhed, browser eller applikation.'
+paragraph2: "<strong>Tilmeldingsoplysninger</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Genkender ikke denne aktivitet?</strong>
+  <br />
+  Din konto kan have været kompromitteret; Vi anbefaler at rapportere den mistænkelige
+  aktivitet til din organisation."
+paragraph4:
+  Din kontosikkerhed er meget vigtig for os, og vi ønsker at sikre, at du
+  opdateres, når der tages vigtige handlinger.
+paragraph5:
+  Vi var ikke i stand til at afgøre, om du tidligere har logget ind med
+  denne enhed før. Denne meddelelse er almindelig, hvis du anvender en ny enhed, en
+  ny browser, har slettet dine cookies eller får adgang til Okta i inkognito-tilstand.
+reportSuspiciousActivityButtonText: Rapporter mistænksom aktivitet
+footerText: Dette er en automatiseret e-mail. Svar modtages og besvares ikke.
+footerWithDateTimeText:
+  Dette er en automatiseret e-mail, der blev genereret på ${request.date}
+  på ${request.time}. Svarene overvåges eller besvares ikke.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Beliggenhed: Munich <br />
+  Register: Munich HRB 248534"

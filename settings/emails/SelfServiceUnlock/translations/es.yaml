@@ -1,0 +1,21 @@
+languageCode: "es"
+subject: "Desbloquear cuenta"
+title: "Desbloqueo de la cuenta Okta solicitado"
+greeting: "Estimado ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Se realizó una solicitud de desbloqueo de cuenta para su cuenta <strong>Okta</strong>.
+  Si no realizó esta solicitud, comuníquese con el administrador de su sistema de inmediato."
+paragraph2:
+  'Haga clic en este enlace para desbloquear la cuenta para su usuario 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Este enlace expira en ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)}."
+paragraph4: "Si experimenta dificultades para acceder a su cuenta, envíe una solicitud de ayuda a su administrador:"
+unlockAccountButtonText: "Desbloquee la cuenta"
+recoveryCode: "Código de recuperación"
+footerText: "Este es un correo electrónico automatizado. Las respuestas no son monitoreadas ni respondidas."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ubicación: Munich <br />
+  Registro: Munich HRB 248534"

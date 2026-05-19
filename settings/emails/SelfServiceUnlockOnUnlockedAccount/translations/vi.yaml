@@ -1,0 +1,18 @@
+languageCode: "vi"
+subject: "Mở khóa tài khoản"
+title: "Yêu cầu mở khóa tài khoản Okta"
+greeting: "Kính gửi ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Yêu cầu mở khóa tài khoản đã được gửi cho tài khoản của bạn. Nếu bạn không thực hiện yêu cầu này, vui lòng liên hệ ngay với quản trị viên của bạn. Có thể ai đó đang cố gắng truy cập vào tài khoản của bạn."
+paragraph2: "Nếu bạn thực sự đã gửi yêu cầu này: tài khoản của bạn không bị khóa và bạn nên có thể đăng nhập. Nếu bạn gặp khó khăn khi đăng nhập, hãy thử đặt lại mật khẩu hoặc liên hệ với quản trị viên của bạn."
+paragraph3: "Nếu bạn gặp khó khăn khi truy cập tài khoản, hãy gửi yêu cầu hỗ trợ đến quản trị viên của bạn:"
+paragraph4: 'Truy cập trang
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Trợ giúp đăng nhập</strong>
+  </a>
+  của bạn. Sau đó nhấn vào liên kết Yêu cầu trợ giúp.'
+footerText: "Đây là email tự động. Phản hồi sẽ không được theo dõi hoặc trả lời."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Địa điểm: München<br />
+  Đăng ký: München HRB 248534"

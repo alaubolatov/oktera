@@ -1,0 +1,27 @@
+languageCode: "hu"
+subject: "Új bejelentkezési értesítés"
+title: "Új bejelentkezés észleltünk az Okta-fiókjához"
+greeting: "Kedves ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: 'Az Ön <strong>Okta</strong> fiókja 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  csak egy új vagy felismerhetetlen eszközről, böngészőből vagy alkalmazásból való bejelentkezéshez használták.'
+paragraph2: "<strong>Bejelentkezési részletek</strong><br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Nem ismeri fel ezt a tevékenységet?</strong>
+  <br />
+  Lehet, hogy fiókja veszélybe került; Javasoljuk, hogy jelentse a gyanús tevékenységet a szervezetének."
+paragraph4: "Fiókja biztonsága nagyon fontos számunkra, és azt szeretnénk biztosítani, hogy fontos intézkedések megtételekor frissüljenek."
+paragraph5: "Nem tudtuk meghatározni, hogy korábban bejelentkezett-e ezzel az eszközzel. Ez az értesítés gyakori, ha új eszközről vagy egy új böngészőből jelentkezik, törölte a sütiket, vagy inkognitó módban jeletkezik be az Oktába."
+reportSuspiciousActivityButtonText: "Jelentse a gyanús tevékenységet"
+footerText: "Ez egy automatizált e-mail. A válaszokat nem figyelik meg vagy nem válaszolnak."
+footerWithDateTimeText: "Ez egy automatizált e-mail, amelyet a ${request.date} -en generáltak a ${request.time} címen. A válaszokat nem figyelik meg vagy nem válaszolnak."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ülés: München <br />
+  Regisztráció: München HRB 248534"

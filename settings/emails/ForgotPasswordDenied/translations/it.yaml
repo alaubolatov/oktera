@@ -1,0 +1,15 @@
+languageCode: it
+subject: Ripristino della password dell'account
+title: Reimpostazione della password Okta richiesta
+greeting: Caro ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: È stata presentata una richiesta di reimpostazione della password per
+  il tuo account Okta. Se non hai fatto questa richiesta, contattare immediatamente
+  l'amministratore di sistema.
+paragraph2: 'In questo momento la password può essere ripristinata solo da un amministratore.
+  Si prega di inviare una richiesta di assistenza a:'
+footerText: Questa è un'e-mail automatizzata. Non rispondere a questa e-mail.
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Seat: München <br />
+  Register: München HRB 248534'

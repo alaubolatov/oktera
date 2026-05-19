@@ -1,0 +1,27 @@
+languageCode: "vi"
+subject: "Thông báo đăng nhập mới"
+title: "Phát hiện đăng nhập mới cho tài khoản Okta của bạn"
+greeting: "Kính gửi ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: 'Tài khoản <strong>Okta</strong> của bạn
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  vừa được sử dụng để đăng nhập từ thiết bị, trình duyệt hoặc ứng dụng mới hoặc không nhận diện.'
+paragraph2: "<strong>Chi tiết đăng nhập</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Bạn không nhận ra hoạt động này?</strong>
+  <br />
+  Tài khoản của bạn có thể đã bị xâm phạm; chúng tôi khuyến nghị bạn báo cáo hoạt động đáng ngờ này cho tổ chức của mình."
+paragraph4: "Bảo mật tài khoản của bạn rất quan trọng đối với chúng tôi và chúng tôi muốn đảm bảo bạn được cập nhật khi có các hành động quan trọng được thực hiện."
+paragraph5: "Chúng tôi không thể xác định liệu bạn đã từng đăng nhập bằng thiết bị này trước đây hay chưa. Thông báo này là phổ biến nếu bạn đăng nhập bằng thiết bị mới, trình duyệt mới, đã xóa cookie hoặc truy cập Okta ở chế độ Ẩn danh."
+reportSuspiciousActivityButtonText: "Báo cáo hoạt động đáng ngờ"
+footerText: "Đây là email tự động. Phản hồi sẽ không được theo dõi hoặc trả lời."
+footerWithDateTimeText: "Đây là email tự động được tạo vào ${request.date} lúc ${request.time}. Phản hồi sẽ không được theo dõi hoặc trả lời."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Địa điểm: Munich<br />
+  Đăng ký: Munich HRB 248534"

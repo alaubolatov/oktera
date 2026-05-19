@@ -1,0 +1,34 @@
+languageCode: tr
+subject: Yeni Oturum Açma Bildirimi
+title: Okta hesabınız ile yeni oturum açma talebi tespit edildi
+greeting: Sayın ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: 'Az önce <strong>Okta</strong> hesabınız 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong> 
+  yeni veya tanınmayan bir cihazdan, tarayıcıdan ya da uygulamadan oturum açmak için kullanıldı.'
+paragraph2: "<strong>Oturum açma ayrıntıları</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Bu aktivite bilginiz dahilinde değil mi?</strong>
+  <br />
+  Hesabınız tehlikede olabilir. Şüpheli aktiviteyi kuruluşunuza bildirmenizi öneririz."
+paragraph4:
+  Hesabınızın güvenliği bizim için çok önemlidir ve önemli işlemler yapıldığında
+  haberdar edildiğinizden emin olmak istiyoruz.
+paragraph5:
+  Daha önce bu cihazla oturum açıp açmadığınızı belirleyemedik. Bu bildirimi
+  almanız; yeni bir cihazda, yeni bir tarayıcıda oturum açmanız halinde, çerezlerinizi
+  silmeniz durumunda veya Gizli Modda Okta'ya erişiyorsanız olağandır.
+reportSuspiciousActivityButtonText: Şüpheli Etkinliği Bildirin
+footerText: Bu otomatik bir e -postadır. Yanıtlar takip edilmez ya da cevaplanmaz.
+footerWithDateTimeText:
+  Bu eposta ${request.date}, ${request.time} tarihinde otomatik
+  olarak oluşturulmuştur. Yanıtlar izlenmez veya yanıtlanmaz.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Konum: Munich <br />
+  Tescili: Munich HRB 248534"

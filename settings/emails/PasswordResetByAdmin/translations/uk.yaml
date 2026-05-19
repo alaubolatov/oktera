@@ -1,0 +1,15 @@
+languageCode: "uk"
+subject: "Скидання пароля облікового запису"
+title: "Скидання пароля Okta адміністратором"
+greeting: "Шановний(-а) ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1: "Ваш пароль для <strong>Okta</strong> було скинуто вашим системним адміністратором ${f.escapeHtml($!technicalContact.fullName)} at <strong>Knauf</strong>. "
+paragraph2: 'Натисніть це посилання, щоб скинути пароль для Вашого імені користувача <strong><a style="color: #334870; text-decoration: none">${user.profile.login}</a></strong>: '
+paragraph3: "Термін дії цього посилання закінчується через ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}. "
+paragraph4: "Якщо у Вас виникли труднощі з доступом до Вашого облікового запису, надішліть запит про допомогу своєму адміністратору:"
+resetPasswordButtonText: "Скинути пароль"
+footerText: "Це автоматичний електронний лист. Відповіді не відстежуються та не надаються."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Місцезнаходження: München <br />
+  Реєстр: München HRB 248534"

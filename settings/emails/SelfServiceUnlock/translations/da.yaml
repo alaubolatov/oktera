@@ -1,0 +1,22 @@
+languageCode: "da"
+subject: "Lås konto op"
+title: "Anmodning om oplåsning af Okta konto"
+greeting: "Kære ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1:
+  "Der blev fremsat en anmodning om oplåsning af din <strong>Okta</strong>-konto.
+  Hvis du ikke fremsatte denne anmodning, bedes du straks kontakte din systemadministrator."
+paragraph2:
+  'Klik på dette link for at låse kontoen op for dit brugernavn 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>:'
+paragraph3: "Dette link udløber efter ${f.formatTimeDiffDateNowInUserLocale($!unlockAccountTokenExpirationDate)}."
+paragraph4: "Hvis du oplever vanskeligheder med at få adgang til din konto, skal du sende en anmodning om hjælp til din administrator:"
+unlockAccountButtonText: "Lås konto op"
+recoveryCode: "Gendannelseskode"
+footerText: "Dette er en automatiseret e-mail. Svar modtages og besvares ikke."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Beliggenhed: Munich <br />
+  Register: Munich HRB 248534"

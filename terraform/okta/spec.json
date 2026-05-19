@@ -1,0 +1,166 @@
+{
+    "defaults": {
+        "EmailChallenge/en.yaml": {
+            "template_name": "EmailChallenge",
+            "filename": "en.yaml"
+        },
+        "AccountLockout/en.yaml": {
+            "template_name": "AccountLockout",
+            "filename": "en.yaml"
+        },
+        "ForgotPasswordDenied/en.yaml": {
+            "template_name": "ForgotPasswordDenied",
+            "filename": "en.yaml"
+        },
+        "UserActivation/en.yaml": {
+            "template_name": "UserActivation",
+            "filename": "en.yaml"
+        },
+        "PasswordResetByAdmin/en.yaml": {
+            "template_name": "PasswordResetByAdmin",
+            "filename": "en.yaml"
+        },
+        "ForgotPassword/en.yaml": {
+            "template_name": "ForgotPassword",
+            "filename": "en.yaml"
+        },
+        "SelfServiceUnlock/en.yaml": {
+            "template_name": "SelfServiceUnlock",
+            "filename": "en.yaml"
+        },
+        "NewSignOnNotification/en.yaml": {
+            "template_name": "NewSignOnNotification",
+            "filename": "en.yaml"
+        }
+    },
+    "alternatives": {
+        "EmailChallenge/de.yaml": {
+            "template_name": "EmailChallenge",
+            "filename": "de.yaml"
+        },
+        "EmailChallenge/fr.yaml": {
+            "template_name": "EmailChallenge",
+            "filename": "fr.yaml"
+        },
+        "EmailChallenge/sv.yaml": {
+            "template_name": "EmailChallenge",
+            "filename": "sv.yaml"
+        },
+        "EmailChallenge/nl-NL.yaml": {
+            "template_name": "EmailChallenge",
+            "filename": "nl-NL.yaml"
+        },
+        "AccountLockout/de.yaml": {
+            "template_name": "AccountLockout",
+            "filename": "de.yaml"
+        },
+        "AccountLockout/fr.yaml": {
+            "template_name": "AccountLockout",
+            "filename": "fr.yaml"
+        },
+        "AccountLockout/sv.yaml": {
+            "template_name": "AccountLockout",
+            "filename": "sv.yaml"
+        },
+        "AccountLockout/nl-NL.yaml": {
+            "template_name": "AccountLockout",
+            "filename": "nl-NL.yaml"
+        },
+        "ForgotPasswordDenied/de.yaml": {
+            "template_name": "ForgotPasswordDenied",
+            "filename": "de.yaml"
+        },
+        "ForgotPasswordDenied/fr.yaml": {
+            "template_name": "ForgotPasswordDenied",
+            "filename": "fr.yaml"
+        },
+        "ForgotPasswordDenied/sv.yaml": {
+            "template_name": "ForgotPasswordDenied",
+            "filename": "sv.yaml"
+        },
+        "ForgotPasswordDenied/nl-NL.yaml": {
+            "template_name": "ForgotPasswordDenied",
+            "filename": "nl-NL.yaml"
+        },
+        "UserActivation/de.yaml": {
+            "template_name": "UserActivation",
+            "filename": "de.yaml"
+        },
+        "UserActivation/fr.yaml": {
+            "template_name": "UserActivation",
+            "filename": "fr.yaml"
+        },
+        "UserActivation/sv.yaml": {
+            "template_name": "UserActivation",
+            "filename": "sv.yaml"
+        },
+        "UserActivation/nl-NL.yaml": {
+            "template_name": "UserActivation",
+            "filename": "nl-NL.yaml"
+        },
+        "PasswordResetByAdmin/de.yaml": {
+            "template_name": "PasswordResetByAdmin",
+            "filename": "de.yaml"
+        },
+        "PasswordResetByAdmin/fr.yaml": {
+            "template_name": "PasswordResetByAdmin",
+            "filename": "fr.yaml"
+        },
+        "PasswordResetByAdmin/sv.yaml": {
+            "template_name": "PasswordResetByAdmin",
+            "filename": "sv.yaml"
+        },
+        "PasswordResetByAdmin/nl-NL.yaml": {
+            "template_name": "PasswordResetByAdmin",
+            "filename": "nl-NL.yaml"
+        },
+        "ForgotPassword/de.yaml": {
+            "template_name": "ForgotPassword",
+            "filename": "de.yaml"
+        },
+        "ForgotPassword/fr.yaml": {
+            "template_name": "ForgotPassword",
+            "filename": "fr.yaml"
+        },
+        "ForgotPassword/sv.yaml": {
+            "template_name": "ForgotPassword",
+            "filename": "sv.yaml"
+        },
+        "ForgotPassword/nl-NL.yaml": {
+            "template_name": "ForgotPassword",
+            "filename": "nl-NL.yaml"
+        },
+        "SelfServiceUnlock/de.yaml": {
+            "template_name": "SelfServiceUnlock",
+            "filename": "de.yaml"
+        },
+        "SelfServiceUnlock/fr.yaml": {
+            "template_name": "SelfServiceUnlock",
+            "filename": "fr.yaml"
+        },
+        "SelfServiceUnlock/sv.yaml": {
+            "template_name": "SelfServiceUnlock",
+            "filename": "sv.yaml"
+        },
+        "SelfServiceUnlock/nl-NL.yaml": {
+            "template_name": "SelfServiceUnlock",
+            "filename": "nl-NL.yaml"
+        },
+        "NewSignOnNotification/de.yaml": {
+            "template_name": "NewSignOnNotification",
+            "filename": "de.yaml"
+        },
+        "NewSignOnNotification/fr.yaml": {
+            "template_name": "NewSignOnNotification",
+            "filename": "fr.yaml"
+        },
+        "NewSignOnNotification/sv.yaml": {
+            "template_name": "NewSignOnNotification",
+            "filename": "sv.yaml"
+        },
+        "NewSignOnNotification/nl-NL.yaml": {
+            "template_name": "NewSignOnNotification",
+            "filename": "nl-NL.yaml"
+        }
+    }
+}

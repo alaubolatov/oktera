@@ -1,0 +1,18 @@
+languageCode: "pt-BR"
+subject: "Desbloquear a conta"
+title: "Desbloqueio de conta Okta solicitado"
+greeting: "Querido ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Uma solicitação de desbloqueio de conta foi feita para sua conta. Se você não fez essa solicitação, entre em contato com seu administrador imediatamente. Alguém pode estar tentando obter acesso à sua conta."
+paragraph2: "Se você fez essa solicitação: sua conta não está bloqueada e você poderá fazer login. Se estiver com problemas para fazer login, tente redefinir sua senha ou entrar em contato com seu administrador."
+paragraph3: "Se você tiver dificuldades para acessar sua conta, envie uma solicitação de ajuda ao seu administrador:"
+paragraph4: 'Acesse a página 
+  <a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Ajuda para login</strong>
+  </a>. 
+  Em seguida, clique no link Solicitar ajuda.'
+footerText: "Este é um correio eletrónico automatizado. As respostas não são monitorizadas ou respondidas. "
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 Munique"
+footerAddress2: "Sede: Munique <br />
+  Registo: Munique HRB 248534"

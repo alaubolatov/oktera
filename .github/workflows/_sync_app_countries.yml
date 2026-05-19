@@ -1,0 +1,64 @@
+name: Sync app country mappings
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        required: true
+        description: Target environment (dev, stage, preprod, prod)
+    secrets:
+      PAT:
+        required: true
+        description: GitHub PAT with write access to ct-app-configuration
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout kul-okta-config
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
+
+      - name: Install pyyaml
+        run: pip install pyyaml --quiet
+
+      - name: Generate country mappings
+        run: python3 scripts/generate_country_mappings.py ${{ inputs.environment }} /tmp/okta-output
+
+      - name: Checkout ct-app-configuration
+        uses: actions/checkout@v3
+        with:
+          repository: Knauf-Group/ct-app-configuration
+          token: ${{ secrets.PAT }}
+          path: ct-app-configuration
+
+      - name: Copy generated config
+        run: |
+          mkdir -p ct-app-configuration/config/cst/appCountryCodes
+          cp /tmp/okta-output/${{ inputs.environment }}.json \
+             ct-app-configuration/config/cst/appCountryCodes/${{ inputs.environment }}.json
+
+      - name: Open PR in ct-app-configuration
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+        run: |
+          cd ct-app-configuration
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          BRANCH="okta-sync/app-countries-${{ inputs.environment }}-${{ github.run_id }}"
+          git checkout -b "$BRANCH"
+          git add config/cst/appCountryCodes/
+          if git diff --cached --quiet; then
+            echo "No changes detected — skipping PR"
+            exit 0
+          fi
+          git commit -m "chore: sync appCountryCodes from Okta group rules (${{ inputs.environment }})"
+          git push origin "$BRANCH"
+          gh pr create \
+            --repo Knauf-Group/ct-app-configuration \
+            --title "chore: sync appCountryCodes from Okta (${{ inputs.environment }})" \
+            --body "Auto-generated from [kul-okta-config run ${{ github.run_id }}](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})" \
+            --base main

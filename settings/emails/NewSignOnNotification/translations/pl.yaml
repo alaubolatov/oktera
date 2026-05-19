@@ -1,0 +1,38 @@
+languageCode: pl
+subject: Nowe powiadomienie o logowaniu
+title: Wykroto nowe logowanie na Twoim koncie Okta
+greeting: Drogi ${f.escapeHtml($!user.profile.firstName)},
+paragraph1: 'Twoje konto <strong>Okta</strong> 
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong> 
+  było właśnie używane do logowania się z nowego lub nierozpoznanego urządzenia, przeglądarki lub aplikacji.'
+paragraph2: "<strong>Szczegóły logowania</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Nie rozpoznajesz tej aktywności?</strong>
+  <br />
+  Bezpieczeństwo Twojego konto mogło zostać naruszone; Zalecamy zgłoszenie do Twojej
+  organizacji podejrzanej aktywności ."
+paragraph4:
+  Bezpieczeństwo Twojego konta jest dla nas bardzo ważne i chcemy upewnić
+  się, że zostaniesz zaktualizowany, gdy podejmowane są ważne działania.
+paragraph5:
+  Nie byliśmy w stanie ustalić, czy wcześniej logowałeś się na tym urządzeniu.
+  To powiadomienie jest powszechne, jeśli logujesz się na nowym urządzeniu, w nowej
+  przeglądarce, usunęłaś / usunąłeś swoje pliki cookie lub uzyskujesz dostęp do Okta
+  w trybie incognito.
+reportSuspiciousActivityButtonText: Zgłoś podejrzaną aktywność
+footerText:
+  Ten e-mail został wysłany automatycznie. Nie odpowiadaj na niego. Twoje
+  wiadomości nie będą analizowane i nie otrzymasz na nie odpowiedzi.
+footerWithDateTimeText:
+  To jest automatyczny e-mail wygenerowany w dniu ${request.date}
+  o godz. ${request.time}. Odpowiedzi nie są monitorowane ani nie odpowiadają na nie.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Lokalizacja: München <br />
+  Rejestr: München HRB 248534"

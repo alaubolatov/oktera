@@ -1,0 +1,27 @@
+languageCode: "id"
+subject: "Notifikasi masuk baru"
+title: "Deteksi masuk baru untuk akun Okta Anda"
+greeting: "Yth. ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: 'Akun <strong>Okta</strong> Anda
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  baru saja digunakan untuk masuk dari perangkat, browser, atau aplikasi baru atau yang tidak dikenali.'
+paragraph2: "<strong>Detail Masuk</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Tidak mengenali aktivitas ini?</strong>
+  <br />
+  Akun Anda mungkin telah dikompromikan; kami sarankan untuk melaporkan aktivitas mencurigakan ini ke organisasi Anda."
+paragraph4: "Keamanan akun Anda sangat penting bagi kami dan kami ingin memastikan Anda mendapatkan pembaruan saat tindakan penting dilakukan."
+paragraph5: "Kami tidak dapat menentukan apakah Anda sebelumnya pernah masuk dengan perangkat ini. Notifikasi ini umum jika Anda masuk dengan perangkat baru, browser baru, telah menghapus cookie, atau mengakses Okta dalam Mode Penyamaran."
+reportSuspiciousActivityButtonText: "Laporkan Aktivitas Mencurigakan"
+footerText: "Ini adalah email otomatis. Balasan tidak dipantau atau dijawab."
+footerWithDateTimeText: "Ini adalah email otomatis yang dibuat pada ${request.date} pukul ${request.time}. Balasan tidak dipantau atau dijawab."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Lokasi: Munich<br />
+  Register: Munich HRB 248534"

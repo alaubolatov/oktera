@@ -1,0 +1,18 @@
+languageCode: "tr"
+subject: "Hesabın kilidini aç"
+title: "Okta hesabının kilidinin açılması istendi"
+greeting: "Sevgili ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Hesabınız için bir hesap kilidi açma isteği yapıldı. Bu isteği siz yapmadıysanız lütfen hemen yöneticinizle iletişime geçin. Birisi hesabınıza erişmeye çalışıyor olabilir."
+paragraph2: "Bu isteği siz yaptıysanız: hesabınız kilitli değildir ve giriş yapabilmeniz gerekir. Giriş yapmakta sorun yaşıyorsanız şifrenizi sıfırlamayı veya yöneticinizle iletişime geçmeyi deneyin."
+paragraph3: "Hesabınıza erişimde zorluk yaşıyorsanız yöneticinize bir yardım isteği gönderin:"
+paragraph4:
+  '<a href="${baseURL}/help/login" style="text-decoration: none; color: #334870">
+  <strong>Oturum Açma Yardımı</strong>
+  </a> 
+  sayfanıza gidin. Daha sonra Yardım iste bağlantısını tıklayın.'
+footerText: "Bu otomatik bir e -postadır. Yanıtlar takip edilmez ya da cevaplanmaz."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Konum: Munich <br />
+  Tescili: Munich HRB 248534"

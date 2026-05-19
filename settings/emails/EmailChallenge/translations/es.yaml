@@ -1,0 +1,22 @@
+languageCode: es
+subject: "Acción requerida: código de verificación único"
+title: "Acción requerida: código de verificación único"
+greeting: Estimado ${f.escapeHtml($!user.profile.firstName)},
+paragraph1:
+  Está recibiendo este correo electrónico porque se realizó una solicitud
+  para un código único que se puede usar para la autenticación.
+paragraph2: "Ingrese el siguiente código para la verificación:"
+paragraph3:
+  Si cree que ha recibido este correo electrónico por error, comuníquese
+  con el administrador de su sistema.
+paragraph4: "O haz clic en el botón de abajo:"
+paragraph5: Este enlace expira en ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}.
+signInButtonText: "Iniciar sesión"
+footerText:
+  Este es un correo electrónico automatizado. Las respuestas no son monitoreadas
+  ni respondidas.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ubicación: Munich <br />
+  Registro: Munich HRB 248534"

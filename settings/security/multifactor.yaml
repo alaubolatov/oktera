@@ -1,0 +1,11 @@
+Okta Verify (Push Notification): true
+SMS Verification: true
+Voice Call Authentication: false
+Google Authenticator: true
+FIDO2 (WebAuthn): false
+YubiKey: false
+Duo Security: false
+Symantec VIP: false
+# On-Prem VIP: false
+Security Question: false
+Email Authentication: true

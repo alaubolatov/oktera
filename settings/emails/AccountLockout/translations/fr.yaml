@@ -1,0 +1,15 @@
+languageCode: "fr"
+subject: "Compte bloqué"
+title: "Votre compte est bloqué"
+greeting: "Bonjour ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Votre compte <strong>Okta</strong> a été bloqué en raison d’un trop grand nombre d’échecs de connexion."
+paragraph2: "Pour réinitialiser votre compte, vous pouvez utiliser le lien ci-dessous:"
+paragraph3: "Si vous rencontrez des difficultés pour accéder à votre compte, n’hésitez pas à envoyer une demande d’aide à l’adresse suivante:"
+unlockAccountButtonText: "Débloquer votre compte"
+footerText: "Cet e-mail a été généré automatiquement. Les réponses à cet e-mail ne seront ni lues, ni traitées."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München <br />
+  Allemagne"
+footerAddress2: "Siège: Munich<br />
+  Registre: Munich HRB 248534"

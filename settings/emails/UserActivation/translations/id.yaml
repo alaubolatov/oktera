@@ -1,0 +1,21 @@
+languageCode: "id"
+subject: "Aktifkan akun Anda"
+title: "Aktifkan akun Anda"
+greeting: "Yth. ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Terima kasih atas pendaftaran Anda."
+paragraph2: "<strong>Knauf</strong> menggunakan <strong>Okta</strong> untuk mengelola aplikasi web Anda dan telah membuat akun pengguna Okta untuk Anda. Silakan klik tautan berikut untuk memverifikasi alamat email Anda dan mengatur kata sandi untuk mengaktifkan akun Anda:"
+paragraph3: "Tautan ini akan kedaluwarsa dalam ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}."
+paragraph4: 'Nama pengguna Anda adalah
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  <br />
+  Halaman masuk organisasi Anda adalah'
+paragraph5: "Jika Anda mengalami kesulitan mengakses akun Anda, Anda dapat mengirim permintaan bantuan ke:"
+activateAccountButtonText: "Aktifkan Akun"
+footerText: "Ini adalah email otomatis. Balasan tidak dipantau atau dijawab."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Lokasi: Munich<br />
+  Register: Munich HRB 248534"

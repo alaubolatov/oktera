@@ -1,0 +1,22 @@
+languageCode: tr
+subject: Hesap Şifresi Sıfırlama
+title: Okta Şifresi Sıfırlama talebi alındı
+greeting: Sayın ${f.escapeHtml($!user.profile.firstName)},
+paragraph1:
+  <strong>Okta</strong> hesabınız için bir şifre sıfırlama talebinde bulunuldu.
+  Bu talep size ait değilse, lütfen hemen sistem yöneticinizle iletişime geçin.
+paragraph2:
+  'Kullanıcı adınız <strong><a style="color: #334870; text-decoration: none">${user.profile.login}</a></strong>''a
+  ait şifreyi sıfırlamak için bu bağlantıya tıklayın.'
+paragraph3:
+  Bu bağlantı ${f.formatTimeDiffDateNowInUserLocale($!resetPasswordTokenExpirationDate)}
+  içerisinde geçerliliğini kaybedecektir.
+paragraph4: "Hesabınıza erişmekte sorun yaşıyorsanız, yöneticinize yardım talebi gönderin:"
+paragraph5: "Bağlantıyı kullanamıyor musunuz? Bunun yerine kodu girin:"
+resetPasswordButtonText: Parolayı sıfırla
+footerText: Bu otomatik bir e -postadır. Yanıtlar takip edilmez ya da cevaplanmaz.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Konum: Munich <br />
+  Tescili: Munich HRB 248534"

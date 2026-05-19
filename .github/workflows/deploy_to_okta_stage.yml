@@ -1,0 +1,46 @@
+name: Plan and Deploy to Okta (STAGE)
+
+concurrency: stage
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'terraform/okta/**'
+      - 'settings/**'
+      - '.github/workflows/deploy_to_okta_stage.yml'
+  pull_request:
+    # we don't `terraform apply` when it's just a PR, we only validate+plan
+    branches:
+      - main
+    paths:
+      - 'terraform/okta/**'
+      - 'settings/emails/**'
+  workflow_dispatch:
+
+jobs:
+  deploy_to_okta_stage:
+    uses: ./.github/workflows/_deploy_to_okta.yml
+    with:
+      environment: stage
+      AZURE_BACKEND_RESOURCE_GROUP_NAME: 'rg-kul-stage-tfstate-westeurope'
+      AZURE_BACKEND_STORAGE_ACCOUNT_NAME: 'kulstagetfstatewesteu'
+      AZURE_BACKEND_CONTAINER_NAME: 'tfstate'
+      AZURE_BACKEND_KEY: 'okta-stage'
+      KEY_VAULT_NAME: kv-kul-stage-001
+      KEY_VAULT_OKTA_API_TOKEN_KEY: kul-stage-OKTA-API-KEY
+      OKTA_ORG_NAME: 'stage-knaufcustomer'
+      OKTA_BASE_URL: 'okta.com'
+      TF_VAR_accountLinkURL: 'account.stage.knauf.digital'
+      TF_VAR_emailSubjectSuffix: '(Stage)'
+      TF_VAR_supportEmail: 'app-support@knauf.com'
+    secrets: inherit
+
+  sync_app_countries:
+    needs: deploy_to_okta_stage
+    if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || github.event_name == 'workflow_dispatch'
+    uses: ./.github/workflows/_sync_app_countries.yml
+    with:
+      environment: stage
+    secrets: inherit

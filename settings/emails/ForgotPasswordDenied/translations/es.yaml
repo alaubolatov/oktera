@@ -1,0 +1,19 @@
+languageCode: es
+subject: Restablecer la contraseña de la cuenta
+title: Restablecimiento de contraseña de Okta solicitado
+greeting: Estimado ${f.escapeHtml($!user.profile.firstName)},
+paragraph1:
+  Se realizó una solicitud de reinicio de contraseña para su cuenta Okta.
+  Si no realizó esta solicitud, comuníquese con el administrador de su sistema de
+  inmediato.
+paragraph2:
+  "En este momento, solo un administrador puede restablecer su contraseña.
+  Contacte con nuestro equipo de soporte en:"
+footerText:
+  Este es un correo electrónico automatizado. Las respuestas no son monitoreadas
+  ni respondidas.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Ubicación: Munich <br />
+  Registro: Munich HRB 248534"

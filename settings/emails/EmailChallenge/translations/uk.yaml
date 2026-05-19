@@ -1,0 +1,16 @@
+languageCode: "uk"
+subject: "Необхідна дія: одноразовий код підтвердження"
+title: "Необхідна дія: одноразовий код підтвердження"
+greeting: "Шановний(-а) ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1: "Ви отримали цей електронний лист, оскільки було зроблено запит на одноразовий код, який можна використовувати для автентифікації."
+paragraph2: "Будь ласка, введіть наступний код для підтвердження:"
+paragraph3: "Якщо Ви вважаєте, що отримали цей електронний лист помилково, зверніться до свого системного адміністратора."
+paragraph4 : "Або натисніть кнопку нижче:"
+paragraph5: "Термін дії цього посилання закінчується через ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}."
+signInButtonText: "Увійти"
+footerText: "Це автоматичний електронний лист. Відповіді не відстежуються та не надаються."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Місцезнаходження: München <br />
+  Реєстр: München HRB 248534"

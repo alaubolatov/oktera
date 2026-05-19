@@ -1,0 +1,36 @@
+languageCode: cs
+subject: Oznámení o novém přihlášení
+title: "Zjištěno nové přihlášení k Vašemu účtu Okta "
+greeting: "Vážený/Vážená ${f.escapeHtml($!user.profile.firstName)}, "
+paragraph1: 'Váš účet <strong>Okta</strong>
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  byl právě použit k přihlášení z nového nebo nerozpoznaného zařízení, prohlížeče nebo aplikace.'
+paragraph2: "<strong>Podrobnosti o přihlášení</strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Nerozpoznáváte tuto aktivitu?</strong>
+  <br />
+  Váš účet mohl být napaden; doporučujeme nahlásit podezřelou aktivitu Vaší organizaci. "
+paragraph4:
+  Bezpečnost Vašeho účtu je pro nás velmi důležitá a chceme zajistit, abyste
+  byli informováni o důležitých krocích.
+paragraph5:
+  "Nepodařilo se nám zjistit, zda jste se již dříve přihlásili pomocí tohoto
+  zařízení. Toto oznámení je běžné, pokud se přihlašujete novým zařízením, novým prohlížečem,
+  odstranili jste soubory cookie nebo přistupujete k službě Okta v režimu inkognito. "
+reportSuspiciousActivityButtonText: Nahlášení podezřelé aktivity
+footerText:
+  Jedná se o automatický e-mail. Odpovědi nejsou monitorovány ani na ně
+  není odpovídáno.
+footerWithDateTimeText:
+  Toto je automatický e-mail vygenerovaný dne ${request.date}
+  na adrese ${request.time}. Odpovědi nejsou sledovány ani na ně není odpovídáno.
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Umístění: Munich  <br />
+  Rejstříku: Munich HRB 248534"

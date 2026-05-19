@@ -1,0 +1,15 @@
+languageCode: ro
+subject: 'Resetarea parolei contului '
+title: S-a solicitat resetarea parolei Okta
+greeting: 'Dragă ${f.escapeHtml($!user.profile.firstName)}, '
+paragraph1: S-a făcut o solicitare de resetare a parolei pentru contul dvs. Okta.
+  Dacă nu ați făcut această solicitare, contactați imediat administratorul de sistem.
+paragraph2: 'În acest moment, parola dvs. poate fi resetată numai de un administrator.
+  Vă rugăm să trimiteți o solicitare de ajutor la: '
+footerText: 'Acesta este un e-mail generat automat. Răspunsurile nu sunt monitorizate
+  și nu se răspunde la acestea. '
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sediul social: München <br />
+  Registrul Comerțului: München HRB 248534'

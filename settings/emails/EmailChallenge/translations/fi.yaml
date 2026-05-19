@@ -1,0 +1,16 @@
+languageCode: "fi"
+subject: "Toimenpiteitä vaaditaan: Kertakäyttöinen vahvistuskoodi"
+title: "Toimenpiteitä vaaditaan: Kertakäyttöinen vahvistuskoodi"
+greeting: "Hyvä ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Saat tämän sähköpostin, koska kertakäyttöistä koodia on pyydetty tunnistautumista varten."
+paragraph2: "Syötä seuraava koodi vahvistusta varten:"
+paragraph3: "Jos uskot saaneesi tämän sähköpostin virheellisesti, ota yhteyttä järjestelmänvalvojaan."
+paragraph4: "Tai napsauta alla olevaa painiketta:"
+paragraph5: "Tämä linkki vanhenee ${f.formatTimeDiffDateNowInUserLocale(${tokenExpirationDate})}."
+signInButtonText: "Kirjaudu sisään"
+footerText: "Tämä on automaattinen sähköposti. Vastauksia ei käsitellä."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Sijainti: München<br />
+  Rekisteri: München HRB 248534"

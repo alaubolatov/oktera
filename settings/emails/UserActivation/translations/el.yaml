@@ -1,0 +1,24 @@
+languageCode: "el"
+subject: "Ενεργοποίηση του λογαριασμού σας"
+title: "Ενεργοποίηση του λογαριασμού σας"
+greeting: "Αγαπητέ ${f.escapeHtml($!user.profile.firstName)},"
+paragraph1: "Σας ευχαριστούμε για την εγγραφή σας."
+paragraph2:
+  "Το <strong>Knauf</strong> χρησιμοποιεί το <strong>Okta</strong> για τη διαχείριση των εφαρμογών ιστού σας
+  και έχει δημιουργήσει έναν λογαριασμό χρήστη Okta για εσάς. Κάντε κλικ στον παρακάτω σύνδεσμο για επαλήθευση
+  τη διεύθυνση email σας και ορίστε τον κωδικό πρόσβασής σας για να ενεργοποιήσετε τον λογαριασμό σας:"
+paragraph3: "Αυτός ο σύνδεσμος λήγει σε ${f.formatTimeDiffHoursNowInUserLocale($!org.activationTokenExpirationHours)}."
+paragraph4: 'Το όνομα χρήστη σας είναι
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  <br />
+  Η σελίδα σύνδεσης του οργανισμού σας είναι'
+paragraph5: "Εάν αντιμετωπίζετε δυσκολίες πρόσβασης στον λογαριασμό σας, μπορείτε να στείλετε ένα αίτημα βοήθειας στη διεύθυνση:"
+activateAccountButtonText: "Ενεργοποίηση λογαριασμού"
+footerText: "Αυτό είναι ένα αυτοματοποιημένο μήνυμα ηλεκτρονικού ταχυδρομείου. Οι απαντήσεις δεν παρακολουθούνται ούτε απαντώνται."
+footerAddress1: "Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München"
+footerAddress2: "Έδρα: Μόναχο <br />
+  Μητρώο: Μόναχο HRB 248534"

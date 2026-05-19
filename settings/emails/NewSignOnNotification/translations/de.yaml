@@ -1,0 +1,36 @@
+languageCode: "de"
+subject: "Benachrichtigung bei Neuanmeldung"
+title: "Neue Anmeldung für Ihr Okta-Konto erkannt"
+greeting: "Hallo ${f.escapeHtml($!user.profile.firstName)} ${f.escapeHtml($!user.profile.lastName)},"
+paragraph1: 'Ihr <strong>Okta</strong>-Konto
+  <strong>
+  <a style="color: #334870; text-decoration: none">${user.profile.login}</a>
+  </strong>
+  wurde gerade für die Anmeldung von einem neuen oder nicht erkannten Gerät, Browser oder einer Anwendung verwendet.'
+paragraph2: "<strong>Details zur Anmeldung </strong> <br />
+  ${request.browser} <br />
+  ${request.date} <br />
+  ${request.location} <br />
+  IP: ${request.ipAddress}"
+paragraph3: "<strong>Haben Sie diese Aktivität nicht initiiert? </strong>
+  <br />
+  Ihr Konto wurde möglicherweise kompromittiert.
+  Wir empfehlen Ihnen, die verdächtigen Aktivitäten Ihrer Organisation zu melden."
+paragraph4: "Die Sicherheit Ihres Kontos ist uns sehr wichtig,
+  und wir möchten sicherstellen, dass Sie bei wichtigen Aktionen auf dem Laufenden sind."
+paragraph5:
+  "Wir konnten nicht feststellen, ob Sie sich zuvor mit diesem Gerät angemeldet haben.
+  Diese Meldung kommt häufig vor, wenn Sie sich mit einem neuen Gerät oder einem neuen Browser anmelden,
+  Ihre Cookies gelöscht haben oder im Inkognito-Modus auf Okta zugreifen."
+reportSuspiciousActivityButtonText: "Verdächtige Aktivität melden"
+footerText:
+  'Dies ist eine automatisierte E-Mail. Die Antworten werden nicht geprüft oder
+  beantwortet'
+footerWithDateTimeText:
+  'Dies ist eine automatisierte E-Mail generiert am ${request.date} um
+  ${request.time}. Die Antworten werden nicht geprüft oder beantwortet.'
+footerAddress1: 'Knauf Digital GmbH <br />
+  Landshuter Allee 10 <br />
+  80637 München'
+footerAddress2: 'Sitz: München<br />
+  Register: München HRB 248534'
