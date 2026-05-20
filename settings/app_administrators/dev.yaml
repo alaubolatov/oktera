@@ -2,9 +2,5 @@
 # IMPORTANT: make sure admins have `APP_ADMIN` role!
 # Check administrators configuration.
 ###################################################################
-Dante.Neumann@knauf.com:
-  - CT_UP_APP
-Uladzislau.Melanchyk@knauf.com:
-  - CT_UP_APP
-  - CT_PS_APP
-  - CT_PS_API
+---
+{}

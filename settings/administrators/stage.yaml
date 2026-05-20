@@ -1,6 +1,3 @@
-Dante.Neumann@knauf.com:
-  - GROUP_MEMBERSHIP_ADMIN
-  - APP_ADMIN
-Uladzislau.Melanchyk@knauf.com:
-  - GROUP_MEMBERSHIP_ADMIN
-  - APP_ADMIN
+# options for Admin roles: https://developer.okta.com/docs/reference/api/roles/#role-types
+---
+{}
