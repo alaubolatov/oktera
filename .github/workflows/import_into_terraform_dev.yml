@@ -28,8 +28,8 @@ jobs:
       resource_ID: ${{ inputs.resource_ID }}
       ID: ${{ inputs.ID }}
 
-      AZURE_BACKEND_RESOURCE_GROUP_NAME: 'rg-kul-dev-tfstate-westeurope'
-      AZURE_BACKEND_STORAGE_ACCOUNT_NAME: 'kuldevtfstatewesteurope'
+      AZURE_BACKEND_RESOURCE_GROUP_NAME: 'rg-kul-dev-tfstate-westus'
+      AZURE_BACKEND_STORAGE_ACCOUNT_NAME: 'kuldevtfstatewestus'
       AZURE_BACKEND_CONTAINER_NAME: 'tfstate'
       AZURE_BACKEND_KEY: 'okta-dev'
       KEY_VAULT_NAME: kv-kul-dev-001
