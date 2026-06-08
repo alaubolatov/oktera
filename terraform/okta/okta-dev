@@ -1,0 +1,1092 @@
+{
+  "version": 4,
+  "terraform_version": "1.15.2",
+  "serial": 365,
+  "lineage": "ca2a06a1-a4cf-015c-82b9-b5ab15a80942",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "okta_auth_server_policy",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "assigned_clients": [
+              "ALL_CLIENTS"
+            ],
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "description": "Default Policy",
+            "id": "00p1389d8grHGUQHl698",
+            "name": "Default Policy",
+            "priority": 1
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "data",
+      "type": "okta_brands",
+      "name": "brands",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "brands": [
+              {
+                "custom_privacy_policy_url": "",
+                "id": "bnd1386wz82eQiiUi698",
+                "links": "{\"self\":{\"hints\":{\"allow\":[\"GET\",\"PUT\",\"DELETE\"]},\"href\":\"https://trial-8318319.okta.com/api/v1/brands/bnd1386wz82eQiiUi698\"},\"themes\":{\"hints\":{\"allow\":[\"GET\"]},\"href\":\"https://trial-8318319.okta.com/api/v1/brands/bnd1386wz82eQiiUi698/themes\"}}",
+                "name": "usg-trial-8318319",
+                "remove_powered_by_okta": false
+              },
+              {
+                "custom_privacy_policy_url": "",
+                "id": "bnd1387gn2fDQpNQH698",
+                "links": "{\"self\":{\"hints\":{\"allow\":[\"GET\",\"PUT\",\"DELETE\"]},\"href\":\"https://trial-8318319.okta.com/api/v1/brands/bnd1387gn2fDQpNQH698\"},\"themes\":{\"hints\":{\"allow\":[\"GET\"]},\"href\":\"https://trial-8318319.okta.com/api/v1/brands/bnd1387gn2fDQpNQH698/themes\"}}",
+                "name": "alau.dev",
+                "remove_powered_by_okta": false
+              }
+            ],
+            "id": "brands"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_auth_server_claim",
+      "name": "access_claims",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "index_key": "aboutYou",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl138802duRR5JzR698",
+            "name": "aboutYou",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.aboutYou",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "companyCity",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl1387z3r6LRWx1m698",
+            "name": "companyCity",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.companyCity",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "companyCountryCode",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl13884zkxlmatAL698",
+            "name": "companyCountryCode",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.companyCountryCode",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "companyName",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl138806bcNpMi5J698",
+            "name": "companyName",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.companyName",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "companyStreet",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl13880pl7MqM9MZ698",
+            "name": "companyStreet",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.companyStreet",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "companyZipCode",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl13885qgqC1kk88698",
+            "name": "companyZipCode",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.companyZipCode",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "countryCode",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl1387x9lxP7RQru698",
+            "name": "countryCode",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.countryCode",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "email",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl1387y21peqLvr2698",
+            "name": "email",
+            "scopes": [
+              "email"
+            ],
+            "status": "ACTIVE",
+            "value": "user.email",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "firstName",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl13881bv5bIUjys698",
+            "name": "firstName",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.firstName",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "groups",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "STARTS_WITH",
+            "id": "ocl1387xy7bzx55gJ698",
+            "name": "groups",
+            "scopes": [
+              "openid"
+            ],
+            "status": "ACTIVE",
+            "value": "CT_",
+            "value_type": "GROUPS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "knaufId",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl13882ui5f8t7uI698",
+            "name": "knaufId",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.knaufId",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "lastName",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl13883hj8AV91Lr698",
+            "name": "lastName",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.lastName",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "locale",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl1387xlxpGyKU6J698",
+            "name": "locale",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.locale",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "middleName",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl1387y4fpcQQZul698",
+            "name": "middleName",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.middleName",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "mobileNumber",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl1387yt33L0Cco8698",
+            "name": "mobileNumber",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.mobilePhone",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "phoneNumber",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl1387x9lvcmqCkn698",
+            "name": "phoneNumber",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.primaryPhone",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "preferredLanguage",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "RESOURCE",
+            "group_filter_type": "",
+            "id": "ocl13883cbma53lXr698",
+            "name": "preferredLanguage",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.preferredLanguage",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_auth_server_claim",
+      "name": "id_claims",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "index_key": "aboutYou",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "IDENTITY",
+            "group_filter_type": "",
+            "id": "ocl1387xbwbp1yppE698",
+            "name": "aboutYou",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.aboutYou",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "countryCode",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "IDENTITY",
+            "group_filter_type": "",
+            "id": "ocl1387z2uiA78Orq698",
+            "name": "countryCode",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.countryCode",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "firstName",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "IDENTITY",
+            "group_filter_type": "",
+            "id": "ocl13881o24R3MCrn698",
+            "name": "firstName",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.firstName",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "lastName",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "IDENTITY",
+            "group_filter_type": "",
+            "id": "ocl1387ygr5eHicXB698",
+            "name": "lastName",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.lastName",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "localeCode",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "IDENTITY",
+            "group_filter_type": "",
+            "id": "ocl1387y3lr4II1eZ698",
+            "name": "localeCode",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.locale",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        },
+        {
+          "index_key": "preferredLanguage",
+          "schema_version": 0,
+          "attributes": {
+            "always_include_in_token": true,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "claim_type": "IDENTITY",
+            "group_filter_type": "",
+            "id": "ocl1387xz1rpFT1qQ698",
+            "name": "preferredLanguage",
+            "scopes": [
+              "profile"
+            ],
+            "status": "ACTIVE",
+            "value": "user.preferredLanguage",
+            "value_type": "EXPRESSION"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "okta_auth_server_default.default_auth_server",
+            "okta_user_schema_property.default_user"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_auth_server_default",
+      "name": "default_auth_server",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "audiences": [
+              "api://default"
+            ],
+            "credentials_last_rotated": "2026-05-20 16:34:37 +0000 UTC",
+            "credentials_next_rotation": "2026-08-18 16:34:37 +0000 UTC",
+            "credentials_rotation_mode": "AUTO",
+            "description": "Default Authorization Server for your Applications",
+            "id": "aus1386wzg4WIoRlg698",
+            "issuer": "https://identity.alau.dev/oauth2/default",
+            "issuer_mode": "CUSTOM_URL",
+            "kid": "uYAkt4oxm9c7WRQ_z-g-fCvRY5OnfQ_ZvT11LDBTE-8",
+            "name": "default",
+            "status": "ACTIVE"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_auth_server_policy_rule",
+      "name": "knauf_default",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "access_token_lifetime_minutes": 5,
+            "auth_server_id": "aus1386wzg4WIoRlg698",
+            "grant_type_whitelist": [
+              "authorization_code",
+              "client_credentials"
+            ],
+            "group_blacklist": [],
+            "group_whitelist": [
+              "EVERYONE"
+            ],
+            "id": "0pr1389aglc25eCAf698",
+            "inline_hook_id": null,
+            "name": "Default Policy Rule",
+            "policy_id": "00p1389d8grHGUQHl698",
+            "priority": 1,
+            "refresh_token_lifetime_minutes": 43200,
+            "refresh_token_window_minutes": 20160,
+            "scope_whitelist": [
+              "*"
+            ],
+            "status": "ACTIVE",
+            "system": false,
+            "type": "RESOURCE_ACCESS",
+            "user_blacklist": [],
+            "user_whitelist": []
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "data.okta_auth_server_policy.default",
+            "okta_auth_server_default.default_auth_server"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_authenticator",
+      "name": "authenticators",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "index_key": "Email",
+          "schema_version": 0,
+          "attributes": {
+            "agree_to_terms": null,
+            "id": "aut1386wzdtuqjvYf698",
+            "key": "okta_email",
+            "legacy_ignore_name": true,
+            "name": "Email",
+            "provider_auth_port": null,
+            "provider_host": null,
+            "provider_hostname": "localhost",
+            "provider_instance_id": null,
+            "provider_integration_key": null,
+            "provider_json": null,
+            "provider_secret_key": null,
+            "provider_shared_secret": null,
+            "provider_type": null,
+            "provider_user_name_template": "global.assign.userName.login",
+            "settings": "{\"allowedFor\":\"any\",\"tokenLifetimeInMinutes\":30}",
+            "status": "ACTIVE",
+            "type": "email"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "provider_shared_secret"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Google Authenticator",
+          "schema_version": 0,
+          "attributes": {
+            "agree_to_terms": null,
+            "id": "aut1387iqkqTFXrh5698",
+            "key": "google_otp",
+            "legacy_ignore_name": true,
+            "name": "Google Authenticator",
+            "provider_auth_port": null,
+            "provider_host": null,
+            "provider_hostname": "localhost",
+            "provider_instance_id": null,
+            "provider_integration_key": null,
+            "provider_json": null,
+            "provider_secret_key": null,
+            "provider_shared_secret": null,
+            "provider_type": null,
+            "provider_user_name_template": "global.assign.userName.login",
+            "settings": "{}",
+            "status": "ACTIVE",
+            "type": "app"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "provider_shared_secret"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Okta Verify",
+          "schema_version": 0,
+          "attributes": {
+            "agree_to_terms": null,
+            "id": "aut1386wze1e07vRw698",
+            "key": "okta_verify",
+            "legacy_ignore_name": true,
+            "name": "Okta Verify",
+            "provider_auth_port": null,
+            "provider_host": null,
+            "provider_hostname": "localhost",
+            "provider_instance_id": null,
+            "provider_integration_key": null,
+            "provider_json": null,
+            "provider_secret_key": null,
+            "provider_shared_secret": null,
+            "provider_type": null,
+            "provider_user_name_template": "global.assign.userName.login",
+            "settings": "{\"channelBinding\":{\"required\":\"NEVER\",\"style\":\"NUMBER_CHALLENGE\"},\"compliance\":{\"fips\":\"OPTIONAL\"},\"userVerification\":\"PREFERRED\"}",
+            "status": "ACTIVE",
+            "type": "app"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "provider_shared_secret"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Password",
+          "schema_version": 0,
+          "attributes": {
+            "agree_to_terms": null,
+            "id": "aut1386wzdsGVrTRy698",
+            "key": "okta_password",
+            "legacy_ignore_name": true,
+            "name": "Password",
+            "provider_auth_port": null,
+            "provider_host": null,
+            "provider_hostname": "localhost",
+            "provider_instance_id": null,
+            "provider_integration_key": null,
+            "provider_json": null,
+            "provider_secret_key": null,
+            "provider_shared_secret": null,
+            "provider_type": null,
+            "provider_user_name_template": "global.assign.userName.login",
+            "settings": null,
+            "status": "ACTIVE",
+            "type": "password"
+          },
+          "sensitive_attributes": [
+            [
+              {
+                "type": "get_attr",
+                "value": "provider_shared_secret"
+              }
+            ]
+          ],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_factor",
+      "name": "multifactor_auth_options",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "index_key": "Duo Security",
+          "schema_version": 0,
+          "attributes": {
+            "active": false,
+            "id": "duo",
+            "provider_id": "duo"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Email Authentication",
+          "schema_version": 0,
+          "attributes": {
+            "active": true,
+            "id": "okta_email",
+            "provider_id": "okta_email"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "FIDO2 (WebAuthn)",
+          "schema_version": 0,
+          "attributes": {
+            "active": false,
+            "id": "fido_webauthn",
+            "provider_id": "fido_webauthn"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Google Authenticator",
+          "schema_version": 0,
+          "attributes": {
+            "active": true,
+            "id": "google_otp",
+            "provider_id": "google_otp"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Okta Verify (Push Notification)",
+          "schema_version": 0,
+          "attributes": {
+            "active": true,
+            "id": "okta_push",
+            "provider_id": "okta_push"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "SMS Verification",
+          "schema_version": 0,
+          "attributes": {
+            "active": true,
+            "id": "okta_sms",
+            "provider_id": "okta_sms"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Security Question",
+          "schema_version": 0,
+          "attributes": {
+            "active": false,
+            "id": "okta_question",
+            "provider_id": "okta_question"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Symantec VIP",
+          "schema_version": 0,
+          "attributes": {
+            "active": false,
+            "id": "symantec_vip",
+            "provider_id": "symantec_vip"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "Voice Call Authentication",
+          "schema_version": 0,
+          "attributes": {
+            "active": false,
+            "id": "okta_call",
+            "provider_id": "okta_call"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        },
+        {
+          "index_key": "YubiKey",
+          "schema_version": 0,
+          "attributes": {
+            "active": false,
+            "id": "yubikey_token",
+            "provider_id": "yubikey_token"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_policy_password_default",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "call_recovery": "INACTIVE",
+            "default_auth_provider": "OKTA",
+            "default_included_group_id": "00g1386wz9wszxXBJ698",
+            "description": "The default policy applies in all situations if no other policy applies.",
+            "email_recovery": "ACTIVE",
+            "id": "00p1386wzbxfJ6elH698",
+            "name": "Default Policy",
+            "password_auto_unlock_minutes": 0,
+            "password_dictionary_lookup": true,
+            "password_exclude_first_name": false,
+            "password_exclude_last_name": false,
+            "password_exclude_username": false,
+            "password_expire_warn_days": 0,
+            "password_history_count": 0,
+            "password_lockout_notification_channels": [
+              "EMAIL"
+            ],
+            "password_max_age_days": 0,
+            "password_max_lockout_attempts": 10,
+            "password_min_age_minutes": 0,
+            "password_min_length": 12,
+            "password_min_lowercase": 1,
+            "password_min_number": 1,
+            "password_min_symbol": 0,
+            "password_min_uppercase": 1,
+            "password_show_lockout_failures": false,
+            "priority": 1,
+            "question_min_length": 4,
+            "question_recovery": "INACTIVE",
+            "recovery_email_token": 2880,
+            "skip_unlock": false,
+            "sms_recovery": "INACTIVE",
+            "status": "ACTIVE"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_security_notification_emails",
+      "name": "security_notification_emails",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "security_notification_emails",
+            "report_suspicious_activity_enabled": true,
+            "send_email_for_factor_enrollment_enabled": true,
+            "send_email_for_factor_reset_enabled": true,
+            "send_email_for_new_device_enabled": true,
+            "send_email_for_password_changed_enabled": false
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "okta_threat_insight_settings",
+      "name": "threat_insight_settings",
+      "provider": "provider[\"registry.terraform.io/okta/okta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "action": "block",
+            "id": "threat_insight_settings",
+            "network_excludes": []
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA=="
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

@@ -39,7 +39,7 @@ jobs:
 
   sync_app_countries:
     needs: deploy_to_okta_dev
-    if: (github.ref == 'refs/heads/main' && github.event_name == 'push') || github.event_name == 'workflow_dispatch'
+    if: false && (github.ref == 'refs/heads/main' && github.event_name == 'push') || github.event_name == 'workflow_dispatch'
     uses: ./.github/workflows/_sync_app_countries.yml
     with:
       environment: dev
