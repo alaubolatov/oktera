@@ -21,7 +21,8 @@ locals {
 }
 
 resource "okta_email_customization" "default_translations" {
-  for_each = local.defaults
+  # for_each = local.defaults # in free tier email customizations are not supported
+  for_each = {}
 
   brand_id = local.okta_knauf_brand_id
 
@@ -44,7 +45,8 @@ resource "okta_email_customization" "default_translations" {
 }
 
 resource "okta_email_customization" "translations" {
-  for_each = local.alternatives
+  # for_each = local.alternatives # in free tier email customizations are not supported
+  for_each = {}
 
   brand_id = local.okta_knauf_brand_id
 

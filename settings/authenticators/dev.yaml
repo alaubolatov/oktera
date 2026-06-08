@@ -23,10 +23,10 @@ Password:
   key: okta_password
   active?: true
 
-Phone:
-  key: phone_number
-  active?: true
-  settings:
-    allowedFor: any
-    allowedMethods: [sms]
+# Phone:
+#   key: phone_number
+#   active?: true
+#   settings:
+#     allowedFor: any
+#     allowedMethods: [sms]
 

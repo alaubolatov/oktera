@@ -21,7 +21,7 @@ resource "okta_auth_server_default" "default_auth_server" {
   status                    = local.default_auth_server_config["Active?"] ? "ACTIVE" : "INACTIVE"
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
@@ -36,7 +36,7 @@ resource "okta_auth_server" "auth_servers" {
   status                    = each.value["Active?"] ? "ACTIVE" : "INACTIVE"
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
@@ -62,7 +62,7 @@ resource "okta_auth_server_policy_rule" "knauf_default" {
   refresh_token_window_minutes   = local.default_policy_rule["Refresh token window (in minutes)"]
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 

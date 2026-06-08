@@ -66,12 +66,12 @@ Access claims:
     Value: 'CT_'
     Scopes:
       - openid
-  sub:
-    Name: sub
-    Always include in token?: true
-    Value type: Expression # or Groups
-    Value: '(appuser != null) ? appuser.userName : app.clientId'
-    Scopes:
+  # sub:
+  #   Name: sub
+  #   Always include in token?: true
+  #   Value type: Expression # or Groups
+  #   Value: '(appuser != null) ? appuser.userName : app.clientId'
+  #   Scopes:
   email:
     Name: email
     Always include in token?: true
