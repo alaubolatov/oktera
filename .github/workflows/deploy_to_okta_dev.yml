@@ -28,9 +28,9 @@ jobs:
       AZURE_BACKEND_STORAGE_ACCOUNT_NAME: 'kuldevtfstatewestus'
       AZURE_BACKEND_CONTAINER_NAME: 'tfstate'
       AZURE_BACKEND_KEY: 'okta-dev'
-      KEY_VAULT_NAME: kv-kul-dev-001
+      KEY_VAULT_NAME: kv-kul-dev-001-kz
       KEY_VAULT_OKTA_API_TOKEN_KEY: kul-dev-OKTA-API-KEY
-      OKTA_ORG_NAME: 'dev-knaufcustomer'
+      OKTA_ORG_NAME: 'trial-8318319'
       OKTA_BASE_URL: 'okta.com'
       TF_VAR_accountLinkURL: 'account.dev.knauf.digital'
       TF_VAR_emailSubjectSuffix: '(Dev)'
